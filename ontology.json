@@ -201,7 +201,7 @@
   "@id" : "https://w3id.org/rains#Bias",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@value" : "A type of :Risk  which records a specific piece of  information detailng a potential inclination or prejudice related to some aspects of :AI_Sytem (e.g., a training dataset containg more data about males when both genders will be considered by the ML model)"
+    "@value" : "A type of :Risk  which records a specific piece of  information detailing a potential inclination or prejudice related to some aspects of :AI_Sytem (e.g., a training dataset containing more data about males when both genders will be considered by the ML model)"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "Bias"
@@ -249,7 +249,7 @@
   "@id" : "https://w3id.org/rains#DataCollectionProcedure",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@value" : "A specific type of sao:InformationElement which records a specific piece of  information detailng how the data is collected. This includes the information about mechanism used for collecting data (e.g. hardware sensors, software program, or manually), the timeframe over which the data was collected, any consent reporting, etc."
+    "@value" : "A specific type of sao:InformationElement which records a specific piece of  information detailing how the data is collected. This includes the information about mechanism used for collecting data (e.g. hardware sensors, software program, or manually), the timeframe over which the data was collected, any consent reporting, etc."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "Data Collection Procedure"
@@ -261,7 +261,7 @@
   "@id" : "https://w3id.org/rains#DataPreprocessingProcedure",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@value" : "A specific type of sao:InformationElement which records a specific piece of  information detailng how the data is preprocessed. This includes infomration on is done to the data (e.g., cleaning, sampling, flitering, feature engineering, etc) and how it is done (e.g., manually, programmatically, or using feature engineering software)."
+    "@value" : "A specific type of sao:InformationElement which records a specific piece of  information detailing how the data is preprocessed. This includes information on what is done to the data (e.g., cleaning, sampling, filtering, feature engineering, etc) and how it is done (e.g., manually, programmatically, or using feature engineering software)."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "Data Preprocessing Procedure"
@@ -273,7 +273,7 @@
   "@id" : "https://w3id.org/rains#DatasetSpecification",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@value" : "A specific type of design specification  which represents the description of planned requirenments, characteristics, risks, etc. related to a dataset (e.g., a training dataset for ML model) expected to be used as part of the AI system lifecyle."
+    "@value" : "A specific type of design specification  which represents the description of planned requirements, characteristics, risks, etc. related to a dataset (e.g., a training dataset for ML model) expected to be used as part of the AI system life cycle."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "Dataset Specification"
@@ -317,7 +317,7 @@
   "@id" : "https://w3id.org/rains#DesignStageAccountabilityPlan",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@value" : "A plan that identifies sao:AccountableAcction(s) and sao:AccountableResult(s) relevnt to the design stage of an AI system and  which are required to be documented for accountability purposes."
+    "@value" : "A plan that identifies sao:AccountableAcction(s) and sao:AccountableResult(s) relevant to the design stage of an AI system and  which are required to be documented for accountability purposes."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "Design Stage Accountability Plan"
@@ -329,7 +329,7 @@
   "@id" : "https://w3id.org/rains#EvaluationMeassure",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@value" : "A  sao:InformationElement which records a specific piece of  information detailng some meassure used as part of an evaluation process. This is brader than mls:EvaluationMeassure which describes a meassure related to a model performance."
+    "@value" : "A  sao:InformationElement which records a specific piece of  information detailing some measure used as part of an evaluation process. This is broader than mls:EvaluationMeassure which describes a measure related to a model performance."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "Evaluation Measure"
@@ -341,7 +341,7 @@
   "@id" : "https://w3id.org/rains#EvaluationProcedure",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@value" : "A sao:Informationelement  which records a specific piece of  information detailng procedure by which some aspects of an :AI_Sytem were evaluated. this is broader than mls:EvaluationProcedure which relates to model evaluation."
+    "@value" : "A sao:Informationelement  which records a specific piece of  information detailing procedure by which some aspects of an :AI_Sytem were evaluated. this is broader than mls:EvaluationProcedure which relates to model evaluation."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "Evaluation Procedure"
@@ -377,7 +377,7 @@
   "@id" : "https://w3id.org/rains#Funding",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@value" : "A sao:InformationElement  which records a specific piece of  information detailng a funding source."
+    "@value" : "A sao:InformationElement  which records a specific piece of  information detailing a funding source."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "Funding"
@@ -416,7 +416,7 @@
   "@id" : "https://w3id.org/rains#IncorrectUseCase",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@value" : "A type of :UseCase detailng a situation in which any component of :AI_System or the system as whole should not be used."
+    "@value" : "A type of :UseCase detailing a situation in which any component of :AI_System or the system as whole should not be used."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "Incorrect Use Case"
@@ -431,7 +431,7 @@
   "@id" : "https://w3id.org/rains#IntendedUseCase",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@value" : "A type of :UseCase detailng a situation in which any component of :AI_System or the system as whole is expected to be used."
+    "@value" : "A type of :UseCase detailing a situation in which any component of :AI_System or the system as whole is expected to be used."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "Intended Use Case"
@@ -443,7 +443,7 @@
   "@id" : "https://w3id.org/rains#IntendedUserGroup",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@value" : "A sao:InformationElement  which records a specific piece of  information detailng the target user audience for the functionality of the overall :AI_System or the components used to develop such system (e.g., a reused public training dataset or a model woudl be associated with this information)."
+    "@value" : "A sao:InformationElement  which records a specific piece of  information detailing the target user audience for the functionality of the overall :AI_System or the components used to develop such system (e.g., a reused public training dataset or a model would be associated with this information)."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "Intended User Group"
@@ -455,7 +455,7 @@
   "@id" : "https://w3id.org/rains#Limitation",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@value" : "A sao:InformationElement  which records a specific piece of  information detailng the limitations of any aspect related to an :AI_System including the system as whole, its components (e.g., ML model),  or associated processes (e.g., evalaution)."
+    "@value" : "A sao:InformationElement  which records a specific piece of  information detailing the limitations of any aspect related to an :AI_System including the system as whole, its components (e.g., ML model),  or associated processes (e.g., evaluation)."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "Limitation"
@@ -467,7 +467,7 @@
   "@id" : "https://w3id.org/rains#ModelSpecification",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@value" : "A specific type of design specification  which represents the description of planned requirenments, characteristics, performance, etc. related to an AI model."
+    "@value" : "A specific type of design specification  which represents the description of planned requirements, characteristics, performance, etc. related to an AI model."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "Model Specification"
@@ -493,7 +493,7 @@
   "@id" : "https://w3id.org/rains#RealizableObject",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@value" : "A sao:InformationElement  which records  information detailng  a piece of data, software or hardware that may be realized during the Implementation stage. A reused objects (e.g., public training datasets) is also considered as :RealizableObject during the Design stage as it is not yet imlemented (i.e., physical copies have not yet been integrated withing the ML pipeline)"
+    "@value" : "A sao:InformationElement  which records  information detailing  a piece of data, software or hardware that may be realized during the Implementation stage. A reused objects (e.g., public training datasets) is also considered as :RealizableObject during the Design stage as it is not yet implemented (i.e., physical copies have not yet been integrated withing the ML pipeline)"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "Realizable Object"
@@ -505,7 +505,7 @@
   "@id" : "https://w3id.org/rains#RealizableObjectCharacteristic",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@value" : "A sao:InformationElement  which records  information detailng  a specific quality of :ReallizableObject."
+    "@value" : "A sao:InformationElement  which records  information detailing  a specific quality of :ReallizableObject."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "Realizable Object Characteristic"
@@ -517,7 +517,7 @@
   "@id" : "https://w3id.org/rains#Risk",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@value" : "A sao:InformationElement  which records a specific piece of  information detailng possible undesired or dangerous outcomes caused by any aspects of :AI_Sytem."
+    "@value" : "A sao:InformationElement  which records a specific piece of  information detailing possible undesired or dangerous outcomes caused by any aspects of :AI_Sytem."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "Risk"
@@ -529,7 +529,7 @@
   "@id" : "https://w3id.org/rains#SoftLaw",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@value" : "A specific type of compliance entity which  records a specific piece of  information about the the procedures, standards, protocols, etc that complying with is desired or encouraged as part of an information realization collection."
+    "@value" : "A specific type of compliance entity which  records a specific piece of  information about the procedures, standards, protocols, etc that complying with is desired or encouraged as part of an information realization collection."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "Soft Law"
@@ -553,7 +553,7 @@
   "@id" : "https://w3id.org/rains#SupportingInfrastructureSpecification",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@value" : "A specific type of design specification which represents the specification description of planned requirenments, characteristics, performance, etc. related to all the hardware and software 'plumbing' that is not generally considered part of the AI processes, however, may also be source of erroneous behaviour in AI systems."
+    "@value" : "A specific type of design specification which represents the specification description of planned requirements, characteristics, performance, etc. related to all the hardware and software 'plumbing' that is not generally considered part of the AI processes, however, may also be source of erroneous behaviour in AI systems."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "Supporting Infrastructure Specification"
@@ -601,7 +601,7 @@
   "@id" : "https://w3id.org/rains#SystemPurposeSpecification",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@value" : "A specific type of design specification which represents  the  description of the purpose(s) for which an AI system is designed and to used for."
+    "@value" : "A specific type of design specification which represents  the  description of the purpose(s) for which an AI system is designed and used for."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "System Purpose Specification"
@@ -613,7 +613,7 @@
   "@id" : "https://w3id.org/rains#UseCase",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@value" : "A sao:InformationElement which records a specific piece of information detailng a situation in which any component of :AI_System or the system as whole could petentially be used."
+    "@value" : "A sao:InformationElement which records a specific piece of information detailing a situation in which any component of :AI_System or the system as whole could potentially be used."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "Use Case"

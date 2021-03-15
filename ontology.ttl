@@ -131,7 +131,7 @@
 ###  https://w3id.org/rains#Bias
 :Bias rdf:type owl:Class ;
       rdfs:subClassOf :Risk ;
-      rdfs:comment "A type of :Risk  which records a specific piece of  information detailng a potential inclination or prejudice related to some aspects of :AI_Sytem (e.g., a training dataset containg more data about males when both genders will be considered by the ML model)" ;
+      rdfs:comment "A type of :Risk  which records a specific piece of  information detailing a potential inclination or prejudice related to some aspects of :AI_Sytem (e.g., a training dataset containing more data about males when both genders will be considered by the ML model)" ;
       rdfs:label "Bias" .
 
 
@@ -159,21 +159,21 @@
 ###  https://w3id.org/rains#DataCollectionProcedure
 :DataCollectionProcedure rdf:type owl:Class ;
                          rdfs:subClassOf <https://w3id.org/sao#InformationElement> ;
-                         rdfs:comment "A specific type of sao:InformationElement which records a specific piece of  information detailng how the data is collected. This includes the information about mechanism used for collecting data (e.g. hardware sensors, software program, or manually), the timeframe over which the data was collected, any consent reporting, etc." ;
+                         rdfs:comment "A specific type of sao:InformationElement which records a specific piece of  information detailing how the data is collected. This includes the information about mechanism used for collecting data (e.g. hardware sensors, software program, or manually), the timeframe over which the data was collected, any consent reporting, etc." ;
                          rdfs:label "Data Collection Procedure" .
 
 
 ###  https://w3id.org/rains#DataPreprocessingProcedure
 :DataPreprocessingProcedure rdf:type owl:Class ;
                             rdfs:subClassOf <https://w3id.org/sao#InformationElement> ;
-                            rdfs:comment "A specific type of sao:InformationElement which records a specific piece of  information detailng how the data is preprocessed. This includes infomration on is done to the data (e.g., cleaning, sampling, flitering, feature engineering, etc) and how it is done (e.g., manually, programmatically, or using feature engineering software)." ;
+                            rdfs:comment "A specific type of sao:InformationElement which records a specific piece of  information detailing how the data is preprocessed. This includes information on what is done to the data (e.g., cleaning, sampling, filtering, feature engineering, etc) and how it is done (e.g., manually, programmatically, or using feature engineering software)." ;
                             rdfs:label "Data Preprocessing Procedure" .
 
 
 ###  https://w3id.org/rains#DatasetSpecification
 :DatasetSpecification rdf:type owl:Class ;
                       rdfs:subClassOf :DesignSpecification ;
-                      rdfs:comment "A specific type of design specification  which represents the description of planned requirenments, characteristics, risks, etc. related to a dataset (e.g., a training dataset for ML model) expected to be used as part of the AI system lifecyle." ;
+                      rdfs:comment "A specific type of design specification  which represents the description of planned requirements, characteristics, risks, etc. related to a dataset (e.g., a training dataset for ML model) expected to be used as part of the AI system life cycle." ;
                       rdfs:label "Dataset Specification" .
 
 
@@ -201,21 +201,21 @@
 ###  https://w3id.org/rains#DesignStageAccountabilityPlan
 :DesignStageAccountabilityPlan rdf:type owl:Class ;
                                rdfs:subClassOf <https://w3id.org/sao#AccountabilityPlan> ;
-                               rdfs:comment "A plan that identifies sao:AccountableAcction(s) and sao:AccountableResult(s) relevnt to the design stage of an AI system and  which are required to be documented for accountability purposes." ;
+                               rdfs:comment "A plan that identifies sao:AccountableAcction(s) and sao:AccountableResult(s) relevant to the design stage of an AI system and  which are required to be documented for accountability purposes." ;
                                rdfs:label "Design Stage Accountability Plan" .
 
 
 ###  https://w3id.org/rains#EvaluationMeassure
 :EvaluationMeassure rdf:type owl:Class ;
                     rdfs:subClassOf <https://w3id.org/sao#InformationElement> ;
-                    rdfs:comment "A  sao:InformationElement which records a specific piece of  information detailng some meassure used as part of an evaluation process. This is brader than mls:EvaluationMeassure which describes a meassure related to a model performance." ;
+                    rdfs:comment "A  sao:InformationElement which records a specific piece of  information detailing some measure used as part of an evaluation process. This is broader than mls:EvaluationMeassure which describes a measure related to a model performance." ;
                     rdfs:label "Evaluation Measure" .
 
 
 ###  https://w3id.org/rains#EvaluationProcedure
 :EvaluationProcedure rdf:type owl:Class ;
                      rdfs:subClassOf <https://w3id.org/sao#InformationElement> ;
-                     rdfs:comment "A sao:Informationelement  which records a specific piece of  information detailng procedure by which some aspects of an :AI_Sytem were evaluated. this is broader than mls:EvaluationProcedure which relates to model evaluation." ;
+                     rdfs:comment "A sao:Informationelement  which records a specific piece of  information detailing procedure by which some aspects of an :AI_Sytem were evaluated. this is broader than mls:EvaluationProcedure which relates to model evaluation." ;
                      rdfs:label "Evaluation Procedure" .
 
 
@@ -236,7 +236,7 @@
 ###  https://w3id.org/rains#Funding
 :Funding rdf:type owl:Class ;
          rdfs:subClassOf <https://w3id.org/sao#InformationElement> ;
-         rdfs:comment "A sao:InformationElement  which records a specific piece of  information detailng a funding source." ;
+         rdfs:comment "A sao:InformationElement  which records a specific piece of  information detailing a funding source." ;
          rdfs:label "Funding" .
 
 
@@ -259,35 +259,35 @@
 :IncorrectUseCase rdf:type owl:Class ;
                   rdfs:subClassOf :UseCase ;
                   owl:disjointWith :IntendedUseCase ;
-                  rdfs:comment "A type of :UseCase detailng a situation in which any component of :AI_System or the system as whole should not be used." ;
+                  rdfs:comment "A type of :UseCase detailing a situation in which any component of :AI_System or the system as whole should not be used." ;
                   rdfs:label "Incorrect Use Case" .
 
 
 ###  https://w3id.org/rains#IntendedUseCase
 :IntendedUseCase rdf:type owl:Class ;
                  rdfs:subClassOf :UseCase ;
-                 rdfs:comment "A type of :UseCase detailng a situation in which any component of :AI_System or the system as whole is expected to be used." ;
+                 rdfs:comment "A type of :UseCase detailing a situation in which any component of :AI_System or the system as whole is expected to be used." ;
                  rdfs:label "Intended Use Case" .
 
 
 ###  https://w3id.org/rains#IntendedUserGroup
 :IntendedUserGroup rdf:type owl:Class ;
                    rdfs:subClassOf <https://w3id.org/sao#InformationElement> ;
-                   rdfs:comment "A sao:InformationElement  which records a specific piece of  information detailng the target user audience for the functionality of the overall :AI_System or the components used to develop such system (e.g., a reused public training dataset or a model woudl be associated with this information)." ;
+                   rdfs:comment "A sao:InformationElement  which records a specific piece of  information detailing the target user audience for the functionality of the overall :AI_System or the components used to develop such system (e.g., a reused public training dataset or a model would be associated with this information)." ;
                    rdfs:label "Intended User Group" .
 
 
 ###  https://w3id.org/rains#Limitation
 :Limitation rdf:type owl:Class ;
             rdfs:subClassOf <https://w3id.org/sao#InformationElement> ;
-            rdfs:comment "A sao:InformationElement  which records a specific piece of  information detailng the limitations of any aspect related to an :AI_System including the system as whole, its components (e.g., ML model),  or associated processes (e.g., evalaution)." ;
+            rdfs:comment "A sao:InformationElement  which records a specific piece of  information detailing the limitations of any aspect related to an :AI_System including the system as whole, its components (e.g., ML model),  or associated processes (e.g., evaluation)." ;
             rdfs:label "Limitation" .
 
 
 ###  https://w3id.org/rains#ModelSpecification
 :ModelSpecification rdf:type owl:Class ;
                     rdfs:subClassOf :DesignSpecification ;
-                    rdfs:comment "A specific type of design specification  which represents the description of planned requirenments, characteristics, performance, etc. related to an AI model." ;
+                    rdfs:comment "A specific type of design specification  which represents the description of planned requirements, characteristics, performance, etc. related to an AI model." ;
                     rdfs:label "Model Specification" .
 
 
@@ -306,28 +306,28 @@
 ###  https://w3id.org/rains#RealizableObject
 :RealizableObject rdf:type owl:Class ;
                   rdfs:subClassOf <https://w3id.org/sao#InformationElement> ;
-                  rdfs:comment "A sao:InformationElement  which records  information detailng  a piece of data, software or hardware that may be realized during the Implementation stage. A reused objects (e.g., public training datasets) is also considered as :RealizableObject during the Design stage as it is not yet imlemented (i.e., physical copies have not yet been integrated withing the ML pipeline)" ;
+                  rdfs:comment "A sao:InformationElement  which records  information detailing  a piece of data, software or hardware that may be realized during the Implementation stage. A reused objects (e.g., public training datasets) is also considered as :RealizableObject during the Design stage as it is not yet implemented (i.e., physical copies have not yet been integrated withing the ML pipeline)" ;
                   rdfs:label "Realizable Object" .
 
 
 ###  https://w3id.org/rains#RealizableObjectCharacteristic
 :RealizableObjectCharacteristic rdf:type owl:Class ;
                                 rdfs:subClassOf <https://w3id.org/sao#InformationElement> ;
-                                rdfs:comment "A sao:InformationElement  which records  information detailng  a specific quality of :ReallizableObject." ;
+                                rdfs:comment "A sao:InformationElement  which records  information detailing  a specific quality of :ReallizableObject." ;
                                 rdfs:label "Realizable Object Characteristic" .
 
 
 ###  https://w3id.org/rains#Risk
 :Risk rdf:type owl:Class ;
       rdfs:subClassOf <https://w3id.org/sao#InformationElement> ;
-      rdfs:comment "A sao:InformationElement  which records a specific piece of  information detailng possible undesired or dangerous outcomes caused by any aspects of :AI_Sytem." ;
+      rdfs:comment "A sao:InformationElement  which records a specific piece of  information detailing possible undesired or dangerous outcomes caused by any aspects of :AI_Sytem." ;
       rdfs:label "Risk" .
 
 
 ###  https://w3id.org/rains#SoftLaw
 :SoftLaw rdf:type owl:Class ;
          rdfs:subClassOf :ComplianceEntity ;
-         rdfs:comment "A specific type of compliance entity which  records a specific piece of  information about the the procedures, standards, protocols, etc that complying with is desired or encouraged as part of an information realization collection." ;
+         rdfs:comment "A specific type of compliance entity which  records a specific piece of  information about the procedures, standards, protocols, etc that complying with is desired or encouraged as part of an information realization collection." ;
          rdfs:label "Soft Law" .
 
 
@@ -341,7 +341,7 @@
 ###  https://w3id.org/rains#SupportingInfrastructureSpecification
 :SupportingInfrastructureSpecification rdf:type owl:Class ;
                                        rdfs:subClassOf :DesignSpecification ;
-                                       rdfs:comment "A specific type of design specification which represents the specification description of planned requirenments, characteristics, performance, etc. related to all the hardware and software 'plumbing' that is not generally considered part of the AI processes, however, may also be source of erroneous behaviour in AI systems." ;
+                                       rdfs:comment "A specific type of design specification which represents the specification description of planned requirements, characteristics, performance, etc. related to all the hardware and software 'plumbing' that is not generally considered part of the AI processes, however, may also be source of erroneous behaviour in AI systems." ;
                                        rdfs:label "Supporting Infrastructure Specification" .
 
 
@@ -369,14 +369,14 @@
 ###  https://w3id.org/rains#SystemPurposeSpecification
 :SystemPurposeSpecification rdf:type owl:Class ;
                             rdfs:subClassOf :DesignSpecification ;
-                            rdfs:comment "A specific type of design specification which represents  the  description of the purpose(s) for which an AI system is designed and to used for." ;
+                            rdfs:comment "A specific type of design specification which represents  the  description of the purpose(s) for which an AI system is designed and used for." ;
                             rdfs:label "System Purpose Specification" .
 
 
 ###  https://w3id.org/rains#UseCase
 :UseCase rdf:type owl:Class ;
          rdfs:subClassOf <https://w3id.org/sao#InformationElement> ;
-         rdfs:comment "A sao:InformationElement which records a specific piece of information detailng a situation in which any component of :AI_System or the system as whole could petentially be used." ;
+         rdfs:comment "A sao:InformationElement which records a specific piece of information detailing a situation in which any component of :AI_System or the system as whole could potentially be used." ;
          rdfs:label "Use Case" .
 
 
