@@ -1530,6 +1530,9 @@
     } ]
   } ]
 }, {
+  "@id" : "http://creativecommons.org/ns#license",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
   "@id" : "http://ontosoft.org/software#Software",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
@@ -1555,10 +1558,25 @@
   "@id" : "http://purl.org/dc/terms/creator",
   "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
 }, {
-  "@id" : "http://purl.org/dc/terms/license",
+  "@id" : "http://purl.org/dc/terms/description",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://purl.org/dc/terms/issued",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://purl.org/dc/terms/modified",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://purl.org/dc/terms/rights",
   "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
 }, {
   "@id" : "http://purl.org/dc/terms/title",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://purl.org/vocab/vann/preferredNamespacePrefix",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://purl.org/vocab/vann/preferredNamespaceUri",
   "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
 }, {
   "@id" : "http://www.w3.org/ns/mls#Algorithm",
@@ -1646,7 +1664,7 @@
   "@id" : "http://www.w3.org/ns/mls#ModelCharacteristic",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@value" : "Imported Definition: ModelCharacteristic is a distinguishing quality or property that distinguish one model from another. An example model characetristic may be interpretabilty or a complexity of the model.\n\nIn RAInS, this includes the type of model, programming method, excluded features, emphasized features, decision thresholds, basis of prioritisation, semantics and similarity functions, editorial criteria, and type of uncertainty. Plus, how those were chosen.\n\nThere are separate concepts that represent the algorithm and parameters."
+    "@value" : "Imported Definition: ModelCharacteristic is a distinguishing quality or property that distinguish one model from another. An example model characteristic may be interpretabilty or a complexity of the model.\n\nIn RAInS, this includes the type of model, programming method, excluded features, emphasized features, decision thresholds, basis of prioritisation, semantics and similarity functions, editorial criteria, and type of uncertainty. Plus, how those were chosen.\n\nThere are separate concepts that represent the algorithm and parameters."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://w3id.org/rains#RealizableObjectCharacteristic"
@@ -1720,21 +1738,45 @@
 }, {
   "@id" : "https://w3id.org/rains",
   "@type" : [ "http://www.w3.org/2002/07/owl#Ontology" ],
+  "http://creativecommons.org/ns#license" : [ {
+    "@id" : "https://creativecommons.org/licenses/by-nc-sa/4.0/"
+  } ],
   "http://purl.org/dc/terms/creator" : [ {
     "@id" : "https://www.abdn.ac.uk/ncs/profiles/iman.naja"
   }, {
-    "@id" : "https://www.abdn.ac.uk/ncs/profiles/milan.markovic/"
+    "@id" : "https://www.abdn.ac.uk/ncs/profiles/p.edwards"
   }, {
-    "@value" : "https://www.abdn.ac.uk/ncs/profiles/p.edwards"
+    "@id" : "https://www.abdn.ac.uk/ncs/profiles/milan.markovic/"
   } ],
-  "http://purl.org/dc/terms/license" : [ {
-    "@id" : "https://creativecommons.org/licenses/by-nc-sa/4.0/"
+  "http://purl.org/dc/terms/description" : [ {
+    "@language" : "en",
+    "@value" : "An ontology to model accountability of AI systems which use machine learning."
+  } ],
+  "http://purl.org/dc/terms/issued" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#date",
+    "@value" : "2020-12-18"
+  } ],
+  "http://purl.org/dc/terms/modified" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#date",
+    "@value" : "2021-12-30"
+  } ],
+  "http://purl.org/dc/terms/rights" : [ {
+    "@value" : "Copyright 2020 University of Aberdeen"
   } ],
   "http://purl.org/dc/terms/title" : [ {
     "@language" : "en",
     "@value" : "The RAInS Ontology"
   } ],
+  "http://purl.org/vocab/vann/preferredNamespacePrefix" : [ {
+    "@value" : "rains"
+  } ],
+  "http://purl.org/vocab/vann/preferredNamespaceUri" : [ {
+    "@value" : "https://w3id.org/rains#"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "-Version 2.0.1: minor edits and additions to the ontology metadata to reflect LOV requirements. \n\t\t\t\t\t\t\t\t\t-Version 2.0: added classes and relationships to model the Implementation stage of an AI system \n\t\t\t\t\t\t\t\t\t-Version 1.1: creation, models the Design stage of an AI system"
+  }, {
     "@language" : "en",
     "@value" : "To contact the RAInS team, please send an email to therainsproject [at] gmail [dot] com"
   } ],
@@ -1743,8 +1785,8 @@
     "@value" : "The RAInS Ontology"
   } ],
   "http://www.w3.org/2002/07/owl#versionInfo" : [ {
-    "@language" : "en",
-    "@value" : "2.0, Sep 2021"
+    "@type" : "http://www.w3.org/2001/XMLSchema#decimal",
+    "@value" : "2.0"
   } ]
 }, {
   "@id" : "https://w3id.org/rains#AI_System",
@@ -1780,7 +1822,7 @@
   "@id" : "https://w3id.org/rains#AutoConstraint",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@value" : "A specific type of planned Constraint that describes a constraint whcih can be evaluated automatically against corresponding accountability trace. Such constraint woudl normally link to its implementation (e.g., a SHACL rule) using the  https://w3id.org/ep-plan#hasConstraintImplementation property."
+    "@value" : "A specific type of planned Constraint that describes a constraint which can be evaluated automatically against corresponding accountability trace. Such constraint would normally link to its implementation (e.g., a SHACL rule) using the  https://w3id.org/ep-plan#hasConstraintImplementation property."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "Auto Constraint"
@@ -2241,7 +2283,7 @@
   "@id" : "https://w3id.org/rains#ExcludedObject",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@value" : "A sao:InformationElement which records information detailing a piece of data, software or hardware that should have been realized but was not.\n\nFor example, assume the dataset design specification specifices that dataset foorbar is to be realised (to be used to train the model), but the implementation team realises dataset xyzzy instead. In this case, the dataset foobar should be indicated by the implementation team as an Excluded Object - whereas the dataset xyzzy should be created as an instance of :RealizedObject."
+    "@value" : "A sao:InformationElement which records information detailing a piece of data, software or hardware that should have been realized but was not.\n\nFor example, assume the dataset design specification specifies that dataset foorbar is to be realised (to be used to train the model), but the implementation team realises dataset xyzzy instead. In this case, the dataset foobar should be indicated by the implementation team as an Excluded Object - whereas the dataset xyzzy should be created as an instance of :RealizedObject."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "Excluded Object"
@@ -2393,7 +2435,7 @@
   "@id" : "https://w3id.org/rains#HumanConstraint",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@value" : "A specific type of planned ep-plan:Constraint that describes some constraint which cannot be evaluated autoatically against the accountability trace. This can be, for example, because the constraint is too high level or difficult to express as a rule. Such constriant would be typically expected to be evaluated manually by a human."
+    "@value" : "A specific type of planned ep-plan:Constraint that describes some constraint which cannot be evaluated automatically against the accountability trace. This can be, for example, because the constraint is too high level or difficult to express as a rule. Such constraint would be typically expected to be evaluated manually by a human."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "Human Constraint"
@@ -2607,7 +2649,7 @@
   "@id" : "https://w3id.org/rains#RealizableObjectCharacteristic",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@value" : "A sao:InformationElement  which records  information detailing  a specific quality of :ReallizableObject."
+    "@value" : "A sao:InformationElement  which records  information detailing  a specific quality of :RealizableObject."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "Realizable Object Characteristic"
@@ -2637,7 +2679,7 @@
   "@id" : "https://w3id.org/rains#RealizededObject",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@value" : "A sao:InformationElement which records information detailing a piece of data, software or hardware that was realized - whether or not it followed a design specification or a guideline.\n\nFor example, assume the dataset design specification specifices that dataset foorbar is to be realised (to be used to train the model), but the implementation team realises dataset xyzzy. In this case, only dataset xyzzy is created as an instance of Realized Object."
+    "@value" : "A sao:InformationElement which records information detailing a piece of data, software or hardware that was realized - whether or not it followed a design specification or a guideline.\n\nFor example, assume the dataset design specification specifies that dataset foorbar is to be realised (to be used to train the model), but the implementation team realises dataset xyzzy. In this case, only dataset xyzzy is created as an instance of Realized Object."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "Realized Object"
@@ -2978,7 +3020,7 @@
   "@id" : "https://w3id.org/rains#computedOnSlice",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty", "http://www.w3.org/2002/07/owl#FunctionalProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@value" : "The description of slice taht the metric which  produced evaluation result was computed on. Inspired by the Model Card Toolkit schema https://github.com/tensorflow/model-card-toolkit/blob/master/model_card_toolkit/schema/v0.0.1/model_card.schema.json"
+    "@value" : "The description of slice that the metric which  produced evaluation result was computed on. Inspired by the Model Card Toolkit schema https://github.com/tensorflow/model-card-toolkit/blob/master/model_card_toolkit/schema/v0.0.1/model_card.schema.json"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "https://w3id.org/rains#EvaluationResult"
@@ -3020,6 +3062,18 @@
     "@id" : "https://w3id.org/rains#isEvaluationResultOf"
   } ]
 }, {
+  "@id" : "https://w3id.org/rains#hasInputFormat",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "A value describing the format of an input. Inspired by the Model Card Toolkit schema https://github.com/tensorflow/model-card-toolkit/blob/master/model_card_toolkit/schema/v0.0.1/model_card.schema.json"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "hasInputFormat"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ]
+}, {
   "@id" : "https://w3id.org/rains#hasMitigationStrategy",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
@@ -3030,6 +3084,18 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "hasMitigationStrategy"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ]
+}, {
+  "@id" : "https://w3id.org/rains#hasOutputFormat",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "A value describing the format of an output. Inspired by the Model Card Toolkit schema https://github.com/tensorflow/model-card-toolkit/blob/master/model_card_toolkit/schema/v0.0.1/model_card.schema.json"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "hasOutputFormat"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "http://www.w3.org/2001/XMLSchema#string"
@@ -3146,7 +3212,7 @@
     "@value" : "version"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "http://www.w3.org/2001/XMLSchema#positiveInteger"
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
   } ]
 }, {
   "@id" : "https://w3id.org/rains#versionDate",

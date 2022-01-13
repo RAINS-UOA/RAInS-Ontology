@@ -1,12 +1,19 @@
 <https://w3id.org/rains> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Ontology> .
+<https://w3id.org/rains> <http://creativecommons.org/ns#license> <https://creativecommons.org/licenses/by-nc-sa/4.0/> .
 <https://w3id.org/rains> <http://purl.org/dc/terms/creator> <https://www.abdn.ac.uk/ncs/profiles/iman.naja> .
+<https://w3id.org/rains> <http://purl.org/dc/terms/creator> <https://www.abdn.ac.uk/ncs/profiles/p.edwards> .
 <https://w3id.org/rains> <http://purl.org/dc/terms/creator> <https://www.abdn.ac.uk/ncs/profiles/milan.markovic/> .
-<https://w3id.org/rains> <http://purl.org/dc/terms/creator> "https://www.abdn.ac.uk/ncs/profiles/p.edwards" .
-<https://w3id.org/rains> <http://purl.org/dc/terms/license> <https://creativecommons.org/licenses/by-nc-sa/4.0/> .
+<https://w3id.org/rains> <http://purl.org/dc/terms/description> "An ontology to model accountability of AI systems which use machine learning."@en .
+<https://w3id.org/rains> <http://purl.org/dc/terms/issued> "2020-12-18"^^<http://www.w3.org/2001/XMLSchema#date> .
+<https://w3id.org/rains> <http://purl.org/dc/terms/modified> "2021-12-30"^^<http://www.w3.org/2001/XMLSchema#date> .
+<https://w3id.org/rains> <http://purl.org/dc/terms/rights> "Copyright 2020 University of Aberdeen" .
 <https://w3id.org/rains> <http://purl.org/dc/terms/title> "The RAInS Ontology"@en .
+<https://w3id.org/rains> <http://purl.org/vocab/vann/preferredNamespacePrefix> "rains" .
+<https://w3id.org/rains> <http://purl.org/vocab/vann/preferredNamespaceUri> "https://w3id.org/rains#" .
+<https://w3id.org/rains> <http://www.w3.org/2000/01/rdf-schema#comment> "-Version 2.0.1: minor edits and additions to the ontology metadata to reflect LOV requirements. \n\t\t\t\t\t\t\t\t\t-Version 2.0: added classes and relationships to model the Implementation stage of an AI system \n\t\t\t\t\t\t\t\t\t-Version 1.1: creation, models the Design stage of an AI system"@en .
 <https://w3id.org/rains> <http://www.w3.org/2000/01/rdf-schema#comment> "To contact the RAInS team, please send an email to therainsproject [at] gmail [dot] com"@en .
 <https://w3id.org/rains> <http://www.w3.org/2000/01/rdf-schema#label> "The RAInS Ontology"@en .
-<https://w3id.org/rains> <http://www.w3.org/2002/07/owl#versionInfo> "2.0, Sep 2021"@en .
+<https://w3id.org/rains> <http://www.w3.org/2002/07/owl#versionInfo> "2.0"^^<http://www.w3.org/2001/XMLSchema#decimal> .
 # 
 # 
 # #################################################################
@@ -16,14 +23,32 @@
 # #################################################################
 # 
 # 
+# http://creativecommons.org/ns#license
+<http://creativecommons.org/ns#license> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
 # http://purl.org/dc/terms/creator
 <http://purl.org/dc/terms/creator> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
 # 
-# http://purl.org/dc/terms/license
-<http://purl.org/dc/terms/license> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# http://purl.org/dc/terms/description
+<http://purl.org/dc/terms/description> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/terms/issued
+<http://purl.org/dc/terms/issued> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/terms/modified
+<http://purl.org/dc/terms/modified> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/terms/rights
+<http://purl.org/dc/terms/rights> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
 # 
 # http://purl.org/dc/terms/title
 <http://purl.org/dc/terms/title> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/vocab/vann/preferredNamespacePrefix
+<http://purl.org/vocab/vann/preferredNamespacePrefix> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/vocab/vann/preferredNamespaceUri
+<http://purl.org/vocab/vann/preferredNamespaceUri> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
 # 
 # 
 # 
@@ -116,7 +141,7 @@
 <https://w3id.org/rains#computedOnSlice> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
 <https://w3id.org/rains#computedOnSlice> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
 <https://w3id.org/rains#computedOnSlice> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/rains#EvaluationResult> .
-<https://w3id.org/rains#computedOnSlice> <http://www.w3.org/2000/01/rdf-schema#comment> "The description of slice taht the metric which  produced evaluation result was computed on. Inspired by the Model Card Toolkit schema https://github.com/tensorflow/model-card-toolkit/blob/master/model_card_toolkit/schema/v0.0.1/model_card.schema.json" .
+<https://w3id.org/rains#computedOnSlice> <http://www.w3.org/2000/01/rdf-schema#comment> "The description of slice that the metric which  produced evaluation result was computed on. Inspired by the Model Card Toolkit schema https://github.com/tensorflow/model-card-toolkit/blob/master/model_card_toolkit/schema/v0.0.1/model_card.schema.json" .
 <https://w3id.org/rains#computedOnSlice> <http://www.w3.org/2000/01/rdf-schema#label> "computedOnSlice" .
 # 
 # https://w3id.org/rains#hasBase64Image
@@ -126,12 +151,24 @@
 <https://w3id.org/rains#hasBase64Image> <http://www.w3.org/2000/01/rdf-schema#comment> "A value indicating what an :InformationElement's base 64 image is in String format. Inspired by the Model Card Toolkit schema https://github.com/tensorflow/model-card-toolkit/blob/master/model_card_toolkit/schema/v0.0.1/model_card.schema.json" .
 <https://w3id.org/rains#hasBase64Image> <http://www.w3.org/2000/01/rdf-schema#label> "hasBase64Image" .
 # 
+# https://w3id.org/rains#hasInputFormat
+<https://w3id.org/rains#hasInputFormat> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/rains#hasInputFormat> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://w3id.org/rains#hasInputFormat> <http://www.w3.org/2000/01/rdf-schema#comment> "A value describing the format of an input. Inspired by the Model Card Toolkit schema https://github.com/tensorflow/model-card-toolkit/blob/master/model_card_toolkit/schema/v0.0.1/model_card.schema.json" .
+<https://w3id.org/rains#hasInputFormat> <http://www.w3.org/2000/01/rdf-schema#label> "hasInputFormat" .
+# 
 # https://w3id.org/rains#hasMitigationStrategy
 <https://w3id.org/rains#hasMitigationStrategy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
 <https://w3id.org/rains#hasMitigationStrategy> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/rains#Risk> .
 <https://w3id.org/rains#hasMitigationStrategy> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
 <https://w3id.org/rains#hasMitigationStrategy> <http://www.w3.org/2000/01/rdf-schema#comment> "A value indicating what a :Risk's mitigation strategy is, expressed in String format. Inspired by the Model Card Toolkit schema https://github.com/tensorflow/model-card-toolkit/blob/master/model_card_toolkit/schema/v0.0.1/model_card.schema.json" .
 <https://w3id.org/rains#hasMitigationStrategy> <http://www.w3.org/2000/01/rdf-schema#label> "hasMitigationStrategy" .
+# 
+# https://w3id.org/rains#hasOutputFormat
+<https://w3id.org/rains#hasOutputFormat> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/rains#hasOutputFormat> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://w3id.org/rains#hasOutputFormat> <http://www.w3.org/2000/01/rdf-schema#comment> "A value describing the format of an output. Inspired by the Model Card Toolkit schema https://github.com/tensorflow/model-card-toolkit/blob/master/model_card_toolkit/schema/v0.0.1/model_card.schema.json" .
+<https://w3id.org/rains#hasOutputFormat> <http://www.w3.org/2000/01/rdf-schema#label> "hasOutputFormat" .
 # 
 # https://w3id.org/rains#hasResultLowerBound
 <https://w3id.org/rains#hasResultLowerBound> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
@@ -194,7 +231,7 @@ _:genid8 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid7 .
 _:genid7 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
 _:genid7 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/rains#RealizededObject> .
 _:genid7 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
-<https://w3id.org/rains#version> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#positiveInteger> .
+<https://w3id.org/rains#version> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
 <https://w3id.org/rains#version> <http://www.w3.org/2000/01/rdf-schema#comment> "A value indicating what a :RealizableObject's version is. Inspired by the Model Card Toolkit schema https://github.com/tensorflow/model-card-toolkit/blob/master/model_card_toolkit/schema/v0.0.1/model_card.schema.json" .
 <https://w3id.org/rains#version> <http://www.w3.org/2000/01/rdf-schema#label> "version" .
 # 
@@ -323,7 +360,7 @@ _:genid25 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1
 # http://www.w3.org/ns/mls#ModelCharacteristic
 <http://www.w3.org/ns/mls#ModelCharacteristic> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <http://www.w3.org/ns/mls#ModelCharacteristic> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/rains#RealizableObjectCharacteristic> .
-<http://www.w3.org/ns/mls#ModelCharacteristic> <http://www.w3.org/2000/01/rdf-schema#comment> "Imported Definition: ModelCharacteristic is a distinguishing quality or property that distinguish one model from another. An example model characetristic may be interpretabilty or a complexity of the model.\n\nIn RAInS, this includes the type of model, programming method, excluded features, emphasized features, decision thresholds, basis of prioritisation, semantics and similarity functions, editorial criteria, and type of uncertainty. Plus, how those were chosen.\n\nThere are separate concepts that represent the algorithm and parameters." .
+<http://www.w3.org/ns/mls#ModelCharacteristic> <http://www.w3.org/2000/01/rdf-schema#comment> "Imported Definition: ModelCharacteristic is a distinguishing quality or property that distinguish one model from another. An example model characteristic may be interpretabilty or a complexity of the model.\n\nIn RAInS, this includes the type of model, programming method, excluded features, emphasized features, decision thresholds, basis of prioritisation, semantics and similarity functions, editorial criteria, and type of uncertainty. Plus, how those were chosen.\n\nThere are separate concepts that represent the algorithm and parameters." .
 # 
 # http://www.w3.org/ns/mls#ModelEvaluation
 <http://www.w3.org/ns/mls#ModelEvaluation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
@@ -389,7 +426,7 @@ _:genid34 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1
 <https://w3id.org/rains#AutoConstraint> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <https://w3id.org/rains#AutoConstraint> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/ep-plan#Constraint> .
 <https://w3id.org/rains#AutoConstraint> <http://www.w3.org/2002/07/owl#disjointWith> <https://w3id.org/rains#HumanConstraint> .
-<https://w3id.org/rains#AutoConstraint> <http://www.w3.org/2000/01/rdf-schema#comment> "A specific type of planned Constraint that describes a constraint whcih can be evaluated automatically against corresponding accountability trace. Such constraint woudl normally link to its implementation (e.g., a SHACL rule) using the  https://w3id.org/ep-plan#hasConstraintImplementation property." .
+<https://w3id.org/rains#AutoConstraint> <http://www.w3.org/2000/01/rdf-schema#comment> "A specific type of planned Constraint that describes a constraint which can be evaluated automatically against corresponding accountability trace. Such constraint would normally link to its implementation (e.g., a SHACL rule) using the  https://w3id.org/ep-plan#hasConstraintImplementation property." .
 <https://w3id.org/rains#AutoConstraint> <http://www.w3.org/2000/01/rdf-schema#label> "Auto Constraint" .
 # 
 # https://w3id.org/rains#Bias
@@ -944,7 +981,7 @@ _:genid151 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/
 <https://w3id.org/rains#ExcludedObject> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <https://w3id.org/rains#ExcludedObject> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/sao#InformationElement> .
 <https://w3id.org/rains#ExcludedObject> <http://www.w3.org/2002/07/owl#disjointWith> <https://w3id.org/rains#RealizededObject> .
-<https://w3id.org/rains#ExcludedObject> <http://www.w3.org/2000/01/rdf-schema#comment> "A sao:InformationElement which records information detailing a piece of data, software or hardware that should have been realized but was not.\n\nFor example, assume the dataset design specification specifices that dataset foorbar is to be realised (to be used to train the model), but the implementation team realises dataset xyzzy instead. In this case, the dataset foobar should be indicated by the implementation team as an Excluded Object - whereas the dataset xyzzy should be created as an instance of :RealizedObject." .
+<https://w3id.org/rains#ExcludedObject> <http://www.w3.org/2000/01/rdf-schema#comment> "A sao:InformationElement which records information detailing a piece of data, software or hardware that should have been realized but was not.\n\nFor example, assume the dataset design specification specifies that dataset foorbar is to be realised (to be used to train the model), but the implementation team realises dataset xyzzy instead. In this case, the dataset foobar should be indicated by the implementation team as an Excluded Object - whereas the dataset xyzzy should be created as an instance of :RealizedObject." .
 <https://w3id.org/rains#ExcludedObject> <http://www.w3.org/2000/01/rdf-schema#label> "Excluded Object" .
 # 
 # https://w3id.org/rains#FairnessOrBiasDetectionSoftware
@@ -1096,7 +1133,7 @@ _:genid180 <http://www.w3.org/2002/07/owl#allValuesFrom> <https://w3id.org/rains
 # https://w3id.org/rains#HumanConstraint
 <https://w3id.org/rains#HumanConstraint> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <https://w3id.org/rains#HumanConstraint> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/ep-plan#Constraint> .
-<https://w3id.org/rains#HumanConstraint> <http://www.w3.org/2000/01/rdf-schema#comment> "A specific type of planned ep-plan:Constraint that describes some constraint which cannot be evaluated autoatically against the accountability trace. This can be, for example, because the constraint is too high level or difficult to express as a rule. Such constriant would be typically expected to be evaluated manually by a human." .
+<https://w3id.org/rains#HumanConstraint> <http://www.w3.org/2000/01/rdf-schema#comment> "A specific type of planned ep-plan:Constraint that describes some constraint which cannot be evaluated automatically against the accountability trace. This can be, for example, because the constraint is too high level or difficult to express as a rule. Such constraint would be typically expected to be evaluated manually by a human." .
 <https://w3id.org/rains#HumanConstraint> <http://www.w3.org/2000/01/rdf-schema#label> "Human Constraint" .
 # 
 # https://w3id.org/rains#HumanDecision
@@ -1396,7 +1433,7 @@ _:genid248 <http://www.w3.org/2002/07/owl#allValuesFrom> <https://w3id.org/rains
 # https://w3id.org/rains#RealizableObjectCharacteristic
 <https://w3id.org/rains#RealizableObjectCharacteristic> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <https://w3id.org/rains#RealizableObjectCharacteristic> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/sao#InformationElement> .
-<https://w3id.org/rains#RealizableObjectCharacteristic> <http://www.w3.org/2000/01/rdf-schema#comment> "A sao:InformationElement  which records  information detailing  a specific quality of :ReallizableObject." .
+<https://w3id.org/rains#RealizableObjectCharacteristic> <http://www.w3.org/2000/01/rdf-schema#comment> "A sao:InformationElement  which records  information detailing  a specific quality of :RealizableObject." .
 <https://w3id.org/rains#RealizableObjectCharacteristic> <http://www.w3.org/2000/01/rdf-schema#label> "Realizable Object Characteristic" .
 # 
 # https://w3id.org/rains#RealizeComponent
@@ -1443,7 +1480,7 @@ _:genid259 <http://www.w3.org/2002/07/owl#allValuesFrom> <https://w3id.org/rains
 # https://w3id.org/rains#RealizededObject
 <https://w3id.org/rains#RealizededObject> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <https://w3id.org/rains#RealizededObject> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/sao#InformationElement> .
-<https://w3id.org/rains#RealizededObject> <http://www.w3.org/2000/01/rdf-schema#comment> "A sao:InformationElement which records information detailing a piece of data, software or hardware that was realized - whether or not it followed a design specification or a guideline.\n\nFor example, assume the dataset design specification specifices that dataset foorbar is to be realised (to be used to train the model), but the implementation team realises dataset xyzzy. In this case, only dataset xyzzy is created as an instance of Realized Object." .
+<https://w3id.org/rains#RealizededObject> <http://www.w3.org/2000/01/rdf-schema#comment> "A sao:InformationElement which records information detailing a piece of data, software or hardware that was realized - whether or not it followed a design specification or a guideline.\n\nFor example, assume the dataset design specification specifies that dataset foorbar is to be realised (to be used to train the model), but the implementation team realises dataset xyzzy. In this case, only dataset xyzzy is created as an instance of Realized Object." .
 <https://w3id.org/rains#RealizededObject> <http://www.w3.org/2000/01/rdf-schema#label> "Realized Object" .
 # 
 # https://w3id.org/rains#Risk
@@ -1814,4 +1851,4 @@ _:genid318 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/
 _:genid318 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/rains#FitnessConfirmationDecision> .
 _:genid318 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
 # 
-# Generated by the OWL API (version 5.1.9) https://github.com/owlcs/owlapi/
+# Generated by the OWL API (version 5.1.14) https://github.com/owlcs/owlapi/

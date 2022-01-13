@@ -7,29 +7,62 @@
 @base <https://w3id.org/rains> .
 
 <https://w3id.org/rains> rdf:type owl:Ontology ;
+                          <http://creativecommons.org/ns#license> <https://creativecommons.org/licenses/by-nc-sa/4.0/> ;
                           <http://purl.org/dc/terms/creator> <https://www.abdn.ac.uk/ncs/profiles/iman.naja> ,
-                                                             <https://www.abdn.ac.uk/ncs/profiles/milan.markovic/> ,
-                                                             "https://www.abdn.ac.uk/ncs/profiles/p.edwards" ;
-                          <http://purl.org/dc/terms/license> <https://creativecommons.org/licenses/by-nc-sa/4.0/> ;
+                                                             <https://www.abdn.ac.uk/ncs/profiles/p.edwards> ,
+                                                             <https://www.abdn.ac.uk/ncs/profiles/milan.markovic/> ;
+                          <http://purl.org/dc/terms/description> "An ontology to model accountability of AI systems which use machine learning."@en ;
+                          <http://purl.org/dc/terms/issued> "2020-12-18"^^xsd:date ;
+                          <http://purl.org/dc/terms/modified> "2021-12-30"^^xsd:date ;
+                          <http://purl.org/dc/terms/rights> "Copyright 2020 University of Aberdeen" ;
                           <http://purl.org/dc/terms/title> "The RAInS Ontology"@en ;
-                          rdfs:comment "To contact the RAInS team, please send an email to therainsproject [at] gmail [dot] com"@en ;
+                          <http://purl.org/vocab/vann/preferredNamespacePrefix> "rains" ;
+                          <http://purl.org/vocab/vann/preferredNamespaceUri> "https://w3id.org/rains#" ;
+                          rdfs:comment """-Version 2.0.1: minor edits and additions to the ontology metadata to reflect LOV requirements. 
+									-Version 2.0: added classes and relationships to model the Implementation stage of an AI system 
+									-Version 1.1: creation, models the Design stage of an AI system"""@en ,
+                                       "To contact the RAInS team, please send an email to therainsproject [at] gmail [dot] com"@en ;
                           rdfs:label "The RAInS Ontology"@en ;
-                          owl:versionInfo "2.0, Sep 2021"@en .
+                          owl:versionInfo 2.0 .
 
 #################################################################
 #    Annotation properties
 #################################################################
 
+###  http://creativecommons.org/ns#license
+<http://creativecommons.org/ns#license> rdf:type owl:AnnotationProperty .
+
+
 ###  http://purl.org/dc/terms/creator
 <http://purl.org/dc/terms/creator> rdf:type owl:AnnotationProperty .
 
 
-###  http://purl.org/dc/terms/license
-<http://purl.org/dc/terms/license> rdf:type owl:AnnotationProperty .
+###  http://purl.org/dc/terms/description
+<http://purl.org/dc/terms/description> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/issued
+<http://purl.org/dc/terms/issued> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/modified
+<http://purl.org/dc/terms/modified> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/rights
+<http://purl.org/dc/terms/rights> rdf:type owl:AnnotationProperty .
 
 
 ###  http://purl.org/dc/terms/title
 <http://purl.org/dc/terms/title> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/vocab/vann/preferredNamespacePrefix
+<http://purl.org/vocab/vann/preferredNamespacePrefix> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/vocab/vann/preferredNamespaceUri
+<http://purl.org/vocab/vann/preferredNamespaceUri> rdf:type owl:AnnotationProperty .
 
 
 #################################################################
@@ -128,7 +161,7 @@
 :computedOnSlice rdf:type owl:DatatypeProperty ,
                           owl:FunctionalProperty ;
                  rdfs:domain :EvaluationResult ;
-                 rdfs:comment "The description of slice taht the metric which  produced evaluation result was computed on. Inspired by the Model Card Toolkit schema https://github.com/tensorflow/model-card-toolkit/blob/master/model_card_toolkit/schema/v0.0.1/model_card.schema.json" ;
+                 rdfs:comment "The description of slice that the metric which  produced evaluation result was computed on. Inspired by the Model Card Toolkit schema https://github.com/tensorflow/model-card-toolkit/blob/master/model_card_toolkit/schema/v0.0.1/model_card.schema.json" ;
                  rdfs:label "computedOnSlice" .
 
 
@@ -140,12 +173,26 @@
                 rdfs:label "hasBase64Image" .
 
 
+###  https://w3id.org/rains#hasInputFormat
+:hasInputFormat rdf:type owl:DatatypeProperty ;
+                rdfs:range xsd:string ;
+                rdfs:comment "A value describing the format of an input. Inspired by the Model Card Toolkit schema https://github.com/tensorflow/model-card-toolkit/blob/master/model_card_toolkit/schema/v0.0.1/model_card.schema.json" ;
+                rdfs:label "hasInputFormat" .
+
+
 ###  https://w3id.org/rains#hasMitigationStrategy
 :hasMitigationStrategy rdf:type owl:DatatypeProperty ;
                        rdfs:domain :Risk ;
                        rdfs:range xsd:string ;
                        rdfs:comment "A value indicating what a :Risk's mitigation strategy is, expressed in String format. Inspired by the Model Card Toolkit schema https://github.com/tensorflow/model-card-toolkit/blob/master/model_card_toolkit/schema/v0.0.1/model_card.schema.json" ;
                        rdfs:label "hasMitigationStrategy" .
+
+
+###  https://w3id.org/rains#hasOutputFormat
+:hasOutputFormat rdf:type owl:DatatypeProperty ;
+                 rdfs:range xsd:string ;
+                 rdfs:comment "A value describing the format of an output. Inspired by the Model Card Toolkit schema https://github.com/tensorflow/model-card-toolkit/blob/master/model_card_toolkit/schema/v0.0.1/model_card.schema.json" ;
+                 rdfs:label "hasOutputFormat" .
 
 
 ###  https://w3id.org/rains#hasResultLowerBound
@@ -199,7 +246,7 @@ Inspired by the Model Card Toolkit schema https://github.com/tensorflow/model-ca
                                      :RealizededObject
                                    )
                      ] ;
-         rdfs:range xsd:positiveInteger ;
+         rdfs:range xsd:string ;
          rdfs:comment "A value indicating what a :RealizableObject's version is. Inspired by the Model Card Toolkit schema https://github.com/tensorflow/model-card-toolkit/blob/master/model_card_toolkit/schema/v0.0.1/model_card.schema.json" ;
          rdfs:label "version" .
 
@@ -315,7 +362,7 @@ When used to descriped a Training Dataset, Validation Dataset, or Evaluation Dat
 ###  http://www.w3.org/ns/mls#ModelCharacteristic
 <http://www.w3.org/ns/mls#ModelCharacteristic> rdf:type owl:Class ;
                                                rdfs:subClassOf :RealizableObjectCharacteristic ;
-                                               rdfs:comment """Imported Definition: ModelCharacteristic is a distinguishing quality or property that distinguish one model from another. An example model characetristic may be interpretabilty or a complexity of the model.
+                                               rdfs:comment """Imported Definition: ModelCharacteristic is a distinguishing quality or property that distinguish one model from another. An example model characteristic may be interpretabilty or a complexity of the model.
 
 In RAInS, this includes the type of model, programming method, excluded features, emphasized features, decision thresholds, basis of prioritisation, semantics and similarity functions, editorial criteria, and type of uncertainty. Plus, how those were chosen.
 
@@ -385,7 +432,7 @@ There are separate concepts that represent the algorithm and parameters.""" .
 :AutoConstraint rdf:type owl:Class ;
                 rdfs:subClassOf <https://w3id.org/ep-plan#Constraint> ;
                 owl:disjointWith :HumanConstraint ;
-                rdfs:comment "A specific type of planned Constraint that describes a constraint whcih can be evaluated automatically against corresponding accountability trace. Such constraint woudl normally link to its implementation (e.g., a SHACL rule) using the  https://w3id.org/ep-plan#hasConstraintImplementation property." ;
+                rdfs:comment "A specific type of planned Constraint that describes a constraint which can be evaluated automatically against corresponding accountability trace. Such constraint would normally link to its implementation (e.g., a SHACL rule) using the  https://w3id.org/ep-plan#hasConstraintImplementation property." ;
                 rdfs:label "Auto Constraint" .
 
 
@@ -949,7 +996,7 @@ It is discouraged that the information realization corresponding to the Evaluati
                 owl:disjointWith :RealizededObject ;
                 rdfs:comment """A sao:InformationElement which records information detailing a piece of data, software or hardware that should have been realized but was not.
 
-For example, assume the dataset design specification specifices that dataset foorbar is to be realised (to be used to train the model), but the implementation team realises dataset xyzzy instead. In this case, the dataset foobar should be indicated by the implementation team as an Excluded Object - whereas the dataset xyzzy should be created as an instance of :RealizedObject.""" ;
+For example, assume the dataset design specification specifies that dataset foorbar is to be realised (to be used to train the model), but the implementation team realises dataset xyzzy instead. In this case, the dataset foobar should be indicated by the implementation team as an Excluded Object - whereas the dataset xyzzy should be created as an instance of :RealizedObject.""" ;
                 rdfs:label "Excluded Object" .
 
 
@@ -1090,7 +1137,7 @@ When used as part of an information realization corresponding to a design specif
 ###  https://w3id.org/rains#HumanConstraint
 :HumanConstraint rdf:type owl:Class ;
                  rdfs:subClassOf <https://w3id.org/ep-plan#Constraint> ;
-                 rdfs:comment "A specific type of planned ep-plan:Constraint that describes some constraint which cannot be evaluated autoatically against the accountability trace. This can be, for example, because the constraint is too high level or difficult to express as a rule. Such constriant would be typically expected to be evaluated manually by a human." ;
+                 rdfs:comment "A specific type of planned ep-plan:Constraint that describes some constraint which cannot be evaluated automatically against the accountability trace. This can be, for example, because the constraint is too high level or difficult to express as a rule. Such constraint would be typically expected to be evaluated manually by a human." ;
                  rdfs:label "Human Constraint" .
 
 
@@ -1370,7 +1417,7 @@ It is discouraged that the information realization corresponding to the ModelSpe
 ###  https://w3id.org/rains#RealizableObjectCharacteristic
 :RealizableObjectCharacteristic rdf:type owl:Class ;
                                 rdfs:subClassOf <https://w3id.org/sao#InformationElement> ;
-                                rdfs:comment "A sao:InformationElement  which records  information detailing  a specific quality of :ReallizableObject." ;
+                                rdfs:comment "A sao:InformationElement  which records  information detailing  a specific quality of :RealizableObject." ;
                                 rdfs:label "Realizable Object Characteristic" .
 
 
@@ -1407,7 +1454,7 @@ It is discouraged that the information realization corresponding to the ModelSpe
                   rdfs:subClassOf <https://w3id.org/sao#InformationElement> ;
                   rdfs:comment """A sao:InformationElement which records information detailing a piece of data, software or hardware that was realized - whether or not it followed a design specification or a guideline.
 
-For example, assume the dataset design specification specifices that dataset foorbar is to be realised (to be used to train the model), but the implementation team realises dataset xyzzy. In this case, only dataset xyzzy is created as an instance of Realized Object.""" ;
+For example, assume the dataset design specification specifies that dataset foorbar is to be realised (to be used to train the model), but the implementation team realises dataset xyzzy. In this case, only dataset xyzzy is created as an instance of Realized Object.""" ;
                   rdfs:label "Realized Object" .
 
 
@@ -1801,4 +1848,4 @@ It is advisable that the information realization corresponding to SystemPurposeS
 ] .
 
 
-###  Generated by the OWL API (version 5.1.9) https://github.com/owlcs/owlapi/
+###  Generated by the OWL API (version 5.1.14) https://github.com/owlcs/owlapi/
