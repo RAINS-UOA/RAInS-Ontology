@@ -1,4 +1,4 @@
-<html><h2 id="crossreference" class="list">Cross reference for The RAInS Ontology classes, properties and dataproperties <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+<h2 id="crossreference" class="list">Cross reference for The RAInS Ontology classes, properties and dataproperties <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
 This section provides details for each class and property defined by The RAInS Ontology.
 <div id="classes">
    <h3 id="classes-headline" class="list">Classes</h3>
@@ -2673,6 +2673,16 @@ It is advisable that the information realization corresponding to SystemPurposeS
             title="https://w3id.org/rains#hasRealizableObjectCharacteristic">hasRealizableObjectCharacteristic</a>
       </li>
       <li>
+         <a href="#https://w3id.org/ep-plan#includesStep" title="https://w3id.org/ep-plan#includesStep">
+            <span>includes step</span>
+         </a>
+      </li>
+      <li>
+         <a href="#https://w3id.org/ep-plan#isOutputVariableOf" title="https://w3id.org/ep-plan#isOutputVariableOf">
+            <span>is output variable of</span>
+         </a>
+      </li>
+      <li>
          <a href="#isCharacteristicOfRealizableObject"
             title="https://w3id.org/rains#isCharacteristicOfRealizableObject">isCharacteristicOfRealizableObject</a>
       </li>
@@ -2742,8 +2752,39 @@ It is advisable that the information realization corresponding to SystemPurposeS
          </dl>
       </div>
    </div>
-  
-   
+   <div class="entity" id="https://w3id.org/ep-plan#includesStep">
+      <h3>includes step<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/ep-plan#includesStep</p>
+      <div class="description">
+         <dl>
+            <dt>is inverse of</dt>
+            <dd>
+               <span class="dotted" title="https://w3id.org/ep-plan#isStepOfPlan">is step of plan</span>
+               <sup class="type-op" title="object property">op</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="https://w3id.org/ep-plan#isOutputVariableOf">
+      <h3>is output variable of<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/ep-plan#isOutputVariableOf</p>
+      <div class="description">
+         <dl>
+            <dt>has super-properties</dt>
+            <dd>
+               <span class="dotted" title="http://www.w3.org/2002/07/owl#topObjectProperty">top object property</span>
+            </dd>
+         </dl>
+      </div>
+   </div>
    <div class="entity" id="isCharacteristicOfRealizableObject">
       <h3>isCharacteristicOfRealizableObject<sup class="type-op" title="object property">op</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
@@ -2820,7 +2861,13 @@ It is advisable that the information realization corresponding to SystemPurposeS
          <a href="#hasBase64Image" title="https://w3id.org/rains#hasBase64Image">hasBase64Image</a>
       </li>
       <li>
+         <a href="#hasInputFormat" title="https://w3id.org/rains#hasInputFormat">hasInputFormat</a>
+      </li>
+      <li>
          <a href="#hasMitigationStrategy" title="https://w3id.org/rains#hasMitigationStrategy">hasMitigationStrategy</a>
+      </li>
+      <li>
+         <a href="#hasOutputFormat" title="https://w3id.org/rains#hasOutputFormat">hasOutputFormat</a>
       </li>
       <li>
          <a href="#hasResultLowerBound" title="https://w3id.org/rains#hasResultLowerBound">hasResultLowerBound</a>
@@ -2912,6 +2959,25 @@ It is advisable that the information realization corresponding to SystemPurposeS
          </dl>
       </div>
    </div>
+   <div class="entity" id="hasInputFormat">
+      <h3>hasInputFormat<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/rains#hasInputFormat</p>
+      <div class="comment">
+         <span class="markdown">A value describing the format of an input. Inspired by the Model Card Toolkit schema https://github.com/tensorflow/model-card-toolkit/blob/master/model_card_toolkit/schema/v0.0.1/model_card.schema.json</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has range</dt>
+            <dd>
+               <span class="dotted" title="http://www.w3.org/2001/XMLSchema#string">string</span>
+            </dd>
+         </dl>
+      </div>
+   </div>
    <div class="entity" id="hasMitigationStrategy">
       <h3>hasMitigationStrategy<sup class="type-dp" title="data property">dp</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
@@ -2929,6 +2995,25 @@ It is advisable that the information realization corresponding to SystemPurposeS
                <a href="#Risk" title="https://w3id.org/rains#Risk">Risk</a>
                <sup class="type-c" title="class">c</sup>
             </dd>
+            <dt>has range</dt>
+            <dd>
+               <span class="dotted" title="http://www.w3.org/2001/XMLSchema#string">string</span>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="hasOutputFormat">
+      <h3>hasOutputFormat<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/rains#hasOutputFormat</p>
+      <div class="comment">
+         <span class="markdown">A value describing the format of an output. Inspired by the Model Card Toolkit schema https://github.com/tensorflow/model-card-toolkit/blob/master/model_card_toolkit/schema/v0.0.1/model_card.schema.json</span>
+      </div>
+      <div class="description">
+         <dl>
             <dt>has range</dt>
             <dd>
                <span class="dotted" title="http://www.w3.org/2001/XMLSchema#string">string</span>
@@ -3069,7 +3154,7 @@ Inspired by the Model Card Toolkit schema https://github.com/tensorflow/model-ca
             </dd>
             <dt>has range</dt>
             <dd>
-               <span class="dotted" title="http://www.w3.org/2001/XMLSchema#positiveInteger">positive integer</span>
+               <span class="dotted" title="http://www.w3.org/2001/XMLSchema#string">string</span>
             </dd>
          </dl>
       </div>
@@ -3151,4 +3236,3 @@ Inspired by the Model Card Toolkit schema https://github.com/tensorflow/model-ca
 <sup class="type-ni" title="Named Individuals">ni</sup>: Named Individuals
 </div>
 </div>
-</html>
