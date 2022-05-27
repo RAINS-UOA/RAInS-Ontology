@@ -18,12 +18,13 @@
                           <http://purl.org/dc/terms/title> "The RAInS Ontology"@en ;
                           <http://purl.org/vocab/vann/preferredNamespacePrefix> "rains" ;
                           <http://purl.org/vocab/vann/preferredNamespaceUri> "https://w3id.org/rains#" ;
-                          rdfs:comment """-Version 2.0.1: minor edits and additions to the ontology metadata to reflect LOV requirements. 
-									-Version 2.0: added classes and relationships to model the Implementation stage of an AI system 
-									-Version 1.1: creation, models the Design stage of an AI system"""@en ,
+                          rdfs:comment """-Version 2.2: Some more minor edits to Guideline, Guideance, and Log classes and their subclasses . Plus minor edits to rdf:comments describing some Entities and Properties so that the description is clearer to the reader.
+-Version 2.1: minor edits and additions of relationships: corrected the range of version and added the dropped properties hasInputFormat and hasOutputFormat. Plus minor edits and additions to the ontology metadata to reflect LOV requirements. 
+-Version 2.0: added classes and relationships to model the Implementation stage of an AI system 
+-Version 1.1: creation, models the Design stage of an AI system"""@en ,
                                        "To contact the RAInS team, please send an email to therainsproject [at] gmail [dot] com"@en ;
                           rdfs:label "The RAInS Ontology"@en ;
-                          owl:versionInfo 2.0 .
+                          owl:versionInfo 2.1 .
 
 #################################################################
 #    Annotation properties
@@ -116,7 +117,7 @@
                      owl:inverseOf :isEvaluationResultOf ;
                      rdfs:domain :EvaluationMeassure ;
                      rdfs:range :EvaluationResult ;
-                     rdfs:comment "A relation that links some evaluation measure to one or more results produced for this measure." ;
+                     rdfs:comment "A relation that links some evaluation measure to one or more results produced for this measure. This property is the inverse of hasEvaluationResult." ;
                      rdfs:label "hasEvaluationResult" .
 
 
@@ -289,13 +290,13 @@ Inspired by the Model Card Toolkit schema https://github.com/tensorflow/model-ca
                                         rdfs:subClassOf <http://www.w3.org/ns/prov#SoftwareAgent> ,
                                                         <https://w3id.org/ep-plan#Agent> ,
                                                         <https://w3id.org/sao#InformationElement> ;
-                                        rdfs:comment "A Software is any piece of code that is described in Ontosoft. This could some visualisation software, software package, library, componentised scripts, etc. This can be subclassed if software categories with extra properties are required, otherwise one should use SoftwareTag to categorise software." .
+                                        rdfs:comment "Imported definition: A Software is any piece of code that is described in Ontosoft. This could some visualisation software, software package, library, componentised scripts, etc. This can be subclassed if software categories with extra properties are required, otherwise one should use SoftwareTag to categorise software." .
 
 
 ###  http://purl.org/dc/terms/LicenseDocument
 <http://purl.org/dc/terms/LicenseDocument> rdf:type owl:Class ;
                                            rdfs:subClassOf <https://w3id.org/sao#InformationElement> ;
-                                           rdfs:comment "A legal document giving official permission to do something with a resource." .
+                                           rdfs:comment "Imported definition: A legal document giving official permission to do something with a resource." .
 
 
 ###  http://www.w3.org/ns/mls#Algorithm
@@ -312,7 +313,7 @@ Inspired by the Model Card Toolkit schema https://github.com/tensorflow/model-ca
                                                                    :RealizededObject
                                                                  )
                                                    ] ;
-                                   rdfs:comment "A data item composed of data examples." ;
+                                   rdfs:comment "A set composed of data item(s)." ;
                                    rdfs:label "Dataset" .
 
 
@@ -323,27 +324,29 @@ Inspired by the Model Card Toolkit schema https://github.com/tensorflow/model-ca
 
 In RAInS, this includes how many instances make up the dataset, what do the instances represent, what are the types of instances, whether the instances have associated labels or targets, whether the relationships between instances are explicit, as well as the errors, noises, redundancies in the dataset and whether is there any information missing from instances.
 
-When used to descriped a Training Dataset, Validation Dataset, or Evaluation Dataset produced by splitting the Dataset Component, it is advisable to describe how the dataset was split, including the ratios of train-validate-test and the class representation percentage in each.""" .
+When used to describe a Training Dataset, Validation Dataset, or Evaluation Dataset produced by splitting the Dataset Component, it is advisable to describe how the dataset was split, including the ratios of train-validate-test and the class representation percentage in each.""" .
 
 
 ###  http://www.w3.org/ns/mls#EvaluationMeasure
 <http://www.w3.org/ns/mls#EvaluationMeasure> rdf:type owl:Class ;
                                              rdfs:subClassOf :EvaluationMeassure ;
-                                             rdfs:comment "EvaluationMeasure is a measure to assess the performance of the model generated by the process that realizes the task. Examples are predictive accuracy or f-measure." ;
+                                             rdfs:comment """A  specific rains:EvaluationMeasure which records a specific piece of  information detailing some measure used as part of an evaluation process of the Model Component.
+Imported defintion from ML-Schema: EvaluationMeasure is a measure to assess the performance of the model generated by the process that realizes the task. Examples are predictive accuracy or f-measure.""" ;
                                              rdfs:label "Evaluation Measure" .
 
 
 ###  http://www.w3.org/ns/mls#EvaluationProcedure
 <http://www.w3.org/ns/mls#EvaluationProcedure> rdf:type owl:Class ;
                                                rdfs:subClassOf :EvaluationProcedure ;
-                                               rdfs:comment "EvaluationProcedure is a technique to evaluate machine learning models. Examples are cross-validation and leave-one-out." ;
+                                               rdfs:comment """A specific type of rains:EvaluationProcedure which records a specific piece of  information detailing the procedure by which a Model Component was evaluated.
+Imported Definition from ML-Schema: EvaluationProcedure is a technique to evaluate machine learning models. Examples are cross-validation and leave-one-out.""" ;
                                                rdfs:label "Evaluation Procedure" .
 
 
 ###  http://www.w3.org/ns/mls#HyperParameter
 <http://www.w3.org/ns/mls#HyperParameter> rdf:type owl:Class ;
                                           rdfs:subClassOf :Parameter ;
-                                          rdfs:comment "Hyperparameter is a prior parameter of an implementation, i.e., a parameter which is set before its execution (e.g. C, the complexity parameter, in weka.SMO)." ;
+                                          rdfs:comment "Imported Definition: Hyperparameter is a prior parameter of an implementation, i.e., a parameter which is set before its execution (e.g. C, the complexity parameter, in weka.SMO)." ;
                                           rdfs:label "Hyperparameter" .
 
 
@@ -355,7 +358,7 @@ When used to descriped a Training Dataset, Validation Dataset, or Evaluation Dat
                                                                  :RealizededObject
                                                                )
                                                  ] ;
-                                 rdfs:comment "Model is a generalization of a set of training data able to predict values for unseen instances. It is an output from an execution of a data mining algorithm implementation. Models have a dual nature. They can be treated as data structures and as such represented, stored and manipulated. On the other hand, they act as functions and are executed, taking as input data examples and giving as output the result of applying the function to a data example. Models can also be divided into global or local ones. A global model has global coverage of a data set, i.e., it generalizes the whole data set. A local model, such as a pattern set, is a set of local hypotheses, i.e. each applies to a limited region of the data set." ;
+                                 rdfs:comment "Imported Definition: Model is a generalization of a set of training data able to predict values for unseen instances. It is an output from an execution of a data mining algorithm implementation. Models have a dual nature. They can be treated as data structures and as such represented, stored and manipulated. On the other hand, they act as functions and are executed, taking as input data examples and giving as output the result of applying the function to a data example. Models can also be divided into global or local ones. A global model has global coverage of a data set, i.e., it generalizes the whole data set. A local model, such as a pattern set, is a set of local hypotheses, i.e. each applies to a limited region of the data set." ;
                                  rdfs:label "Model" .
 
 
@@ -372,8 +375,9 @@ There are separate concepts that represent the algorithm and parameters.""" .
 ###  http://www.w3.org/ns/mls#ModelEvaluation
 <http://www.w3.org/ns/mls#ModelEvaluation> rdf:type owl:Class ;
                                            rdfs:subClassOf :EvaluationResult ;
-                                           rdfs:comment "ModelEvaluation is a setting of a value of the performance measure  specified by the evaluation specification. It connects a measure specification with its value." ;
-                                           rdfs:label "model Evaluation" .
+                                           rdfs:comment """A  specific rains:EvaluationResult which records a specific piece of  information detailing the result of an evaluation process of a Model Component.
+Imported Definition from ML-Schema: ModelEvaluation is a setting of a value of the performance measure specified by the evaluation specification. It connects a measure specification with its value.""" ;
+                                           rdfs:label "Model Evaluation" .
 
 
 ###  http://www.w3.org/ns/prov#Agent
@@ -479,6 +483,13 @@ If a mitigation strategy is used to abate the bias, then these can be indicated 
                        rdfs:label "Certification Decision" .
 
 
+###  https://w3id.org/rains#Change
+:Change rdf:type owl:Class ;
+        rdfs:subClassOf <https://w3id.org/sao#InformationElement> ;
+        rdfs:comment "A sao:InformnationElement which records information describing the deviation from the Design Specification or a Guideline." ;
+        rdfs:label "Change" .
+
+
 ###  https://w3id.org/rains#ChangeJustification
 :ChangeJustification rdf:type owl:Class ;
                      rdfs:subClassOf <https://w3id.org/sao#InformationElement> ;
@@ -488,7 +499,7 @@ If a mitigation strategy is used to abate the bias, then these can be indicated 
 
 ###  https://w3id.org/rains#ChangeLog
 :ChangeLog rdf:type owl:Class ;
-           rdfs:subClassOf <https://w3id.org/sao#AccountableResult> ,
+           rdfs:subClassOf :Log ,
                            [ rdf:type owl:Restriction ;
                              owl:onProperty <https://w3id.org/ep-plan#isElementOfPlan> ;
                              owl:allValuesFrom :ImplementationStageAccountabilityPlan
@@ -515,7 +526,9 @@ If a mitigation strategy is used to abate the bias, then these can be indicated 
                             :SupportingInfrastructureComponent ;
            rdfs:comment """A specific type of planned sao:AccountableResult that describes any change from a design specification or guideline. It is expected to be the result of any accountable action that has an input a design specification or a guideline.
 
-It is advisable that the information realization corresponding to the Evaluation contains the following information element ChangeJustification.""" ;
+It is advisable that the information realization corresponding to the Change Log contains the following information elements:
+1.  Change
+2. ChangeJustification.""" ;
            rdfs:label "Change Log" .
 
 
@@ -603,6 +616,13 @@ There is a separate concept that represents the data collection software see rai
                         rdfs:subClassOf <http://ontosoft.org/software#Software> ;
                         rdfs:comment "A sao:InformationElement (which is also an osw:Software and a prov:SoftwareAgent)  which records  information detailing  a software that was used to collect data that formed the dataset which was used to train the ML Model" ;
                         rdfs:label "Data Collection Software" .
+
+
+###  https://w3id.org/rains#DataItem
+:DataItem rdf:type owl:Class ;
+          rdfs:subClassOf <https://w3id.org/sao#InformationElement> ;
+          rdfs:comment "A sao:InformnationElement which records information describing a piece of data, e.g. user's picture or user's passcode as part of the Configuration Data or Runtime Input Data of a facial recognition AI System." ;
+          rdfs:label "Data Item" .
 
 
 ###  https://w3id.org/rains#DataPreprocessingProcedure
@@ -937,7 +957,7 @@ It is discouraged that the information realization corresponding to the Evaluati
 ###  https://w3id.org/rains#EvaluationProcedure
 :EvaluationProcedure rdf:type owl:Class ;
                      rdfs:subClassOf <https://w3id.org/sao#InformationElement> ;
-                     rdfs:comment "A sao:InformationElement  which records a specific piece of  information detailing procedure by which some aspects of an :AI_Sytem were evaluated. This is broader than mls:EvaluationProcedure which relates to model evaluation." ;
+                     rdfs:comment "A sao:InformationElement  which records a specific piece of  information detailing the procedure by which some aspects of an :AI_Sytem were evaluated. This is broader than mls:EvaluationProcedure which relates to model evaluation." ;
                      rdfs:label "Evaluation Procedure" .
 
 
@@ -1241,6 +1261,30 @@ When used as part of an information realization corresponding to a design specif
             rdfs:label "Limitation" .
 
 
+###  https://w3id.org/rains#Log
+:Log rdf:type owl:Class ;
+     rdfs:subClassOf <https://w3id.org/sao#AccountableResult> ,
+                     [ rdf:type owl:Restriction ;
+                       owl:onProperty <https://w3id.org/ep-plan#isElementOfPlan> ;
+                       owl:allValuesFrom :ImplementationStageAccountabilityPlan
+                     ] ,
+                     [ rdf:type owl:Restriction ;
+                       owl:onProperty <https://w3id.org/ep-plan#isOutputVariableOf> ;
+                       owl:allValuesFrom [ rdf:type owl:Class ;
+                                           owl:unionOf ( :Evaluate
+                                                         :MergeAndSplitDataset
+                                                         :RealizeComponent
+                                                       )
+                                         ]
+                     ] ,
+                     [ rdf:type owl:Restriction ;
+                       owl:onProperty <https://w3id.org/ep-plan#isVariableOfPlan> ;
+                       owl:allValuesFrom :ImplementationStageAccountabilityPlan
+                     ] ;
+     rdfs:comment "A specific type of planned sao:AccountableResult which represents a high level reference to logs of information pertaining either to Changes. This class has the subclass Change Log, which  reflects changes which occur throughtout the Implementation stage." ;
+     rdfs:label "Log" .
+
+
 ###  https://w3id.org/rains#MergeAndSplitDataset
 :MergeAndSplitDataset rdf:type owl:Class ;
                       rdfs:subClassOf <https://w3id.org/sao#AccountableAction> ,
@@ -1265,7 +1309,7 @@ When used as part of an information realization corresponding to a design specif
                                       ] ;
                       owl:disjointWith :ProduceSpecification ,
                                        :RealizeComponent ;
-                      rdfs:comment "A planned step that has some impact on the AI System where the dataset(s) used to produce the ML Model are merged and/or split. Merging takes place when there is more than one dataset in use. Typically, splitting results in three subsets: Training, Validation, and Testing. This step is typically part of the Implementation stage of an AI System's life cycle." ;
+                      rdfs:comment "A planned step that has some impact on the AI System where the dataset(s) used to produce the ML Model are merged and/or split. Merging takes place when there is more than one dataset in use. Typically, splitting a dataset component results in three subsets: Training Dataset, Validation Dataset, and Testing Dataset. This step is typically part of the Implementation stage of an AI System's life cycle. If a deviation from the design specification takes place, then the step will also have as an output a member of the class Change Log." ;
                       rdfs:label "Merge and Split Dataset" .
 
 
@@ -1403,7 +1447,7 @@ It is discouraged that the information realization corresponding to the ModelSpe
                                         owl:allValuesFrom :DesignStageAccountabilityPlan
                                       ] ;
                       owl:disjointWith :RealizeComponent ;
-                      rdfs:comment "A planned step describing the creation of a specification that has some impact on the AI System, e.g. the production of the design specification describing the training dataset to be used. This step is typically part of the Design stage of an AI System's life cycle." ;
+                      rdfs:comment "A planned step describing the creation of a specification that has some impact on the AI System, e.g. the production of the design specification describing the training dataset to be used. This step is typically part of the Design stage of an AI System's life cycle and has members of the subclasses of Design Specification as its expected output(s)." ;
                       rdfs:label "Produce Specification" .
 
 
@@ -1445,7 +1489,7 @@ It is discouraged that the information realization corresponding to the ModelSpe
                                     owl:onProperty <https://w3id.org/ep-plan#isStepOfPlan> ;
                                     owl:allValuesFrom :ImplementationStageAccountabilityPlan
                                   ] ;
-                  rdfs:comment "A planned step describing the realization of a component. This includes implementing a component or retrieving it from a different (or third party) source. The realization of the component has some impact on the AI System, e.g. the implementation of the ML model or importing a third party dataset." ;
+                  rdfs:comment "A planned step describing the realization of a component. This includes implementing a component or retrieving it from a different (or third party) source. The realization of the component has some impact on the AI System, e.g. the implementation of the ML model or importing a third party dataset. This step has members of the class Dataset Component, Model Component, and Supporting Infrastructure Component as its expected output(s).  If a deviation from the design specification(s) takes place, then the step will also have as an output a member of the class Change Log." ;
                   rdfs:label "Realize Component" .
 
 
@@ -1571,7 +1615,7 @@ It is advisable that the information realization corresponding to SupportingInfr
 ###  https://w3id.org/rains#SystemDeploymentGuidance
 :SystemDeploymentGuidance rdf:type owl:Class ;
                           rdfs:subClassOf :Guidance ;
-                          rdfs:comment "A specific type of :Guidance which records a specific piece of information about the guidance to how the :AI_System should be deployed." ;
+                          rdfs:comment "A specific type of Guidance which records a specific piece of information about the guidance to how the :AI_System should be deployed. It has two subclasses to further specify information related to installation and user training." ;
                           rdfs:label "System Deployment Guidance" .
 
 
@@ -1593,18 +1637,9 @@ It is advisable that the information realization corresponding to SupportingInfr
                            rdfs:comment """A specific type of :Guideline which represents the description of guidelines for the Deployment stage of the AI System.
 
 It is advisable that the information realization corresponding to the System Deployment Guideline variable contains the following information elements:
-Guidance.
-1. SystemIntegrationGuidance
-2. SystemDeploymentGuidance
-3. SystemDocumentationGuidance""" ;
+1. SystemInstallationGuidance
+2. UserTrainingGuidance""" ;
                            rdfs:label "System Deployment Guideline" .
-
-
-###  https://w3id.org/rains#SystemDocumentationGuidance
-:SystemDocumentationGuidance rdf:type owl:Class ;
-                             rdfs:subClassOf :Guidance ;
-                             rdfs:comment "A specific type of :Guidance which records a specific piece of information about the guidance to how the :AI_System should be documented." ;
-                             rdfs:label "System Documentation Guidance" .
 
 
 ###  https://w3id.org/rains#SystemExplanationMechanism
@@ -1621,18 +1656,67 @@ Guidance.
                                rdfs:label "System Human Oversight Mechanism" .
 
 
-###  https://w3id.org/rains#SystemIntegrationGuidance
-:SystemIntegrationGuidance rdf:type owl:Class ;
-                           rdfs:subClassOf :Guidance ;
-                           rdfs:comment "A specific type of :Guidance which records a specific piece of information about the guidance to how the :AI_System should be integrated with other systems or services." ;
-                           rdfs:label "System Integration Guidance" .
+###  https://w3id.org/rains#SystemInstallationGuidance
+:SystemInstallationGuidance rdf:type owl:Class ;
+                            rdfs:subClassOf :SystemDeploymentGuidance ;
+                            rdfs:comment "A specific type of :Guidance which records a specific piece of information about the guidance to how the :AI_System should be installed. This includes any installations and integrations. It also includes any configurations that are done during the Deployment stage after the installation and integration, but before any user uses the system in the Operation Stage, for example, configuring an app to connect to WiFi as part of its installation." ;
+                            rdfs:label "System Installation Guidance" .
+
+
+###  https://w3id.org/rains#SystemInstallationGuideline
+:SystemInstallationGuideline rdf:type owl:Class ;
+                             rdfs:subClassOf :SystemDeploymentGuideline ,
+                                             [ rdf:type owl:Restriction ;
+                                               owl:onProperty <https://w3id.org/ep-plan#isElementOfPlan> ;
+                                               owl:allValuesFrom :ImplementationStageAccountabilityPlan
+                                             ] ,
+                                             [ rdf:type owl:Restriction ;
+                                               owl:onProperty <https://w3id.org/ep-plan#isOutputVariableOf> ;
+                                               owl:allValuesFrom :GenerateGuideline
+                                             ] ,
+                                             [ rdf:type owl:Restriction ;
+                                               owl:onProperty <https://w3id.org/ep-plan#isVariableOfPlan> ;
+                                               owl:allValuesFrom :ImplementationStageAccountabilityPlan
+                                             ] ;
+                             rdfs:comment """A specific type of System Deployment Guideline which represents the description of guidelines for the Installing AI System, including any integration and configuration done during the Deployment Stage.
+
+It is advisable that the information realization corresponding to the System Deployment Guideline variable contains the information element: SystemInstallationGuidance.""" ;
+                             rdfs:label "System Installation Guideline" .
 
 
 ###  https://w3id.org/rains#SystemMaintenanceGuidance
 :SystemMaintenanceGuidance rdf:type owl:Class ;
-                           rdfs:subClassOf :Guidance ;
+                           rdfs:subClassOf :SystemOperationGuidance ;
                            rdfs:comment "A specific type of :Guidance which records a specific piece of information about the guidance to how the :AI_System should be maintained." ;
                            rdfs:label "System Maintenance Guidance" .
+
+
+###  https://w3id.org/rains#SystemMaintenanceGuideline
+:SystemMaintenanceGuideline rdf:type owl:Class ;
+                            rdfs:subClassOf :SystemOperationGuideline ,
+                                            [ rdf:type owl:Restriction ;
+                                              owl:onProperty <https://w3id.org/ep-plan#isElementOfPlan> ;
+                                              owl:allValuesFrom :ImplementationStageAccountabilityPlan
+                                            ] ,
+                                            [ rdf:type owl:Restriction ;
+                                              owl:onProperty <https://w3id.org/ep-plan#isOutputVariableOf> ;
+                                              owl:allValuesFrom :GenerateGuideline
+                                            ] ,
+                                            [ rdf:type owl:Restriction ;
+                                              owl:onProperty <https://w3id.org/ep-plan#isVariableOfPlan> ;
+                                              owl:allValuesFrom :ImplementationStageAccountabilityPlan
+                                            ] ;
+                            rdfs:comment """A specific type of System Operation Guideline which represents the description of guidelines for how the AI System should be maintained. Typically, such guidance takes the form of a manual. 
+
+It is advisable that the information realization corresponding to the System Maintenance Guideline variable contains the following information element: SystemMaintenanceGuidance.""" ;
+                            rdfs:label "System Maintenance Guideline" .
+
+
+###  https://w3id.org/rains#SystemOperationGuidance
+:SystemOperationGuidance rdf:type owl:Class ;
+                         rdfs:subClassOf :Guidance ;
+                         rdfs:comment "A specific type of :Guidance which records a specific piece of information about the guidance to how the :AI_System should be used and maintained. This class has two subclasses to further specify information related to usage and maintenance." ;
+                         rdfs:label "System Operation Guidance" .
 
 
 ###  https://w3id.org/rains#SystemOperationGuideline
@@ -1650,12 +1734,11 @@ Guidance.
                                             owl:onProperty <https://w3id.org/ep-plan#isVariableOfPlan> ;
                                             owl:allValuesFrom :ImplementationStageAccountabilityPlan
                                           ] ;
-                          rdfs:comment """A specific type of :Guideline which represents the description of guidelines for the Operation stage of the AI System. 
+                          rdfs:comment """A specific type of :Guideline which represents the description of guidelines for the Operation stage of the AI System. Typically, such guidance takes the form of a manual. 
 
-It is advisable that the information realization corresponding to the System Operation  Guideline variable contains the following information elements:
-Guidance.
-1. SystemIntegrationGuidance
-2. SystemUsageGuidance""" ;
+It is advisable that the information realization corresponding to the System Operation Guideline variable contains the following information elements:
+1. SystemUsageGuidance
+2. SystemMaintenanceGuidance""" ;
                           rdfs:label "System Operation Guideline" .
 
 
@@ -1700,9 +1783,30 @@ It is advisable that the information realization corresponding to SystemPurposeS
 
 ###  https://w3id.org/rains#SystemUsageGuidance
 :SystemUsageGuidance rdf:type owl:Class ;
-                     rdfs:subClassOf :Guidance ;
-                     rdfs:comment "A specific type of :Guidance which records a specific piece of information about the guidance to how the :AI_System should be used." ;
+                     rdfs:subClassOf :SystemOperationGuidance ;
+                     rdfs:comment "A specific type of :Guidance which records a specific piece of information about the guidance to how the :AI_System should be used. This includes configuring the system by the user after it the deployment stage and its configurations have ended. For example, configuring an face detection app to recognise new users." ;
                      rdfs:label "System Usage Guidance" .
+
+
+###  https://w3id.org/rains#SystemUsageGuideline
+:SystemUsageGuideline rdf:type owl:Class ;
+                      rdfs:subClassOf :SystemOperationGuideline ,
+                                      [ rdf:type owl:Restriction ;
+                                        owl:onProperty <https://w3id.org/ep-plan#isElementOfPlan> ;
+                                        owl:allValuesFrom :ImplementationStageAccountabilityPlan
+                                      ] ,
+                                      [ rdf:type owl:Restriction ;
+                                        owl:onProperty <https://w3id.org/ep-plan#isOutputVariableOf> ;
+                                        owl:allValuesFrom :GenerateGuideline
+                                      ] ,
+                                      [ rdf:type owl:Restriction ;
+                                        owl:onProperty <https://w3id.org/ep-plan#isVariableOfPlan> ;
+                                        owl:allValuesFrom :ImplementationStageAccountabilityPlan
+                                      ] ;
+                      rdfs:comment """A specific type of System Operation Guideline which represents the description of guidelines for how the AI System should be used. Typically, such guidance takes the form of a manual. 
+
+It is advisable that the information realization corresponding to the System Maintenance Guideline variable contains the following information element: SystemUsageGuidance.""" ;
+                      rdfs:label "System Usage Guideline" .
 
 
 ###  https://w3id.org/rains#ThirdPartyEvaluation
@@ -1750,7 +1854,7 @@ It is advisable that the information realization corresponding to SystemPurposeS
                                    owl:onProperty <https://w3id.org/ep-plan#isVariableOfPlan> ;
                                    owl:allValuesFrom :ImplementationStageAccountabilityPlan
                                  ] ;
-                 rdfs:comment "A specific type of a Dataset Component  which represents a subset of the whole collected and pre-processed datasets after they were merged then split to be fed into the ML Model. This specific type represents the data used to train the ML Model. The other subsets are used to validate and evaluate the model." ;
+                 rdfs:comment "A specific type of a Dataset Component  which represents a subset of the whole collected and pre-processed datasets after they were merged then split to be fed into the ML Model. This specific type represents the data used to train the ML Model. The other subsets are used to validate and evaluate the model. This accountable result is typically part of the Implementation stage of an AI System's life cycle." ;
                  rdfs:label "Training Dataset" .
 
 
@@ -1759,6 +1863,34 @@ It is advisable that the information realization corresponding to SystemPurposeS
          rdfs:subClassOf <https://w3id.org/sao#InformationElement> ;
          rdfs:comment "A sao:InformationElement which records a specific piece of information detailing a situation in which any component of :AI_System or the system as whole could potentially be used." ;
          rdfs:label "Use Case" .
+
+
+###  https://w3id.org/rains#UserTrainingGuidance
+:UserTrainingGuidance rdf:type owl:Class ;
+                      rdfs:subClassOf :SystemDeploymentGuidance ;
+                      rdfs:comment "A specific type of :Guidance which records a specific piece of information about the guidance to how the users of the :AI_System should be trained to use and maintain the system. This is separate from the manuals, as those are expressed using SystemMaintenanceGuidance and SystemUsageGuidance." ;
+                      rdfs:label "User Training Guidance" .
+
+
+###  https://w3id.org/rains#UserTrainingGuideline
+:UserTrainingGuideline rdf:type owl:Class ;
+                       rdfs:subClassOf :SystemDeploymentGuideline ,
+                                       [ rdf:type owl:Restriction ;
+                                         owl:onProperty <https://w3id.org/ep-plan#isElementOfPlan> ;
+                                         owl:allValuesFrom :ImplementationStageAccountabilityPlan
+                                       ] ,
+                                       [ rdf:type owl:Restriction ;
+                                         owl:onProperty <https://w3id.org/ep-plan#isOutputVariableOf> ;
+                                         owl:allValuesFrom :GenerateGuideline
+                                       ] ,
+                                       [ rdf:type owl:Restriction ;
+                                         owl:onProperty <https://w3id.org/ep-plan#isVariableOfPlan> ;
+                                         owl:allValuesFrom :ImplementationStageAccountabilityPlan
+                                       ] ;
+                       rdfs:comment """A specific type of System Deployment Guideline which represents the description of guidelines for the how to train the operators of the AI System on how to use and/or maintain the AI system.
+
+It is advisable that the information realization corresponding to the System Deployment Guideline variable contains the information element: UserTrainingGuidance.""" ;
+                       rdfs:label "User Training Guideline" .
 
 
 ###  https://w3id.org/rains#ValidationDataset
@@ -1780,7 +1912,7 @@ It is advisable that the information realization corresponding to SystemPurposeS
                                      owl:onProperty <https://w3id.org/ep-plan#isVariableOfPlan> ;
                                      owl:allValuesFrom :ImplementationStageAccountabilityPlan
                                    ] ;
-                   rdfs:comment "A specific type of a Dataset Component  which represents a subset of the whole collected and pre-processed datasets after they were merged then split to be fed into the ML Model. This specific type represents the data used to validate the ML Model. The dataset is typically used repeatedly during the hyperparameter tuning process. The other subsets are used to train and evaluate the model." ;
+                   rdfs:comment "A specific type of a Dataset Component  which represents a subset of the whole collected and pre-processed datasets after they were merged then split to be fed into the ML Model. This specific type represents the data used to validate the ML Model. The dataset is typically used repeatedly during the hyperparameter tuning process. The other subsets are used to train and evaluate the model.  This accountable result is typically part of the Implementation stage of an AI System's life cycle." ;
                    rdfs:label "Validation Dataset" .
 
 
@@ -1848,4 +1980,4 @@ It is advisable that the information realization corresponding to SystemPurposeS
 ] .
 
 
-###  Generated by the OWL API (version 5.1.14) https://github.com/owlcs/owlapi/
+###  Generated by the OWL API (version 5.1.9) https://github.com/owlcs/owlapi/
