@@ -1,0 +1,1195 @@
+<div id="changelog">
+<h2 id="changes" class="list">Changes from last version</h2>
+<h3 id="changeClass" class="list">Classes</h3>
+<details><summary><u>Modified classes</u></summary>
+<ul><li><a href="#http://www.w3.org/ns/mls#ModelEvaluation">http://www.w3.org/ns/mls#ModelEvaluation</a>
+<ul>
+<li>Added: rdfs:comment "A  specific rains:EvaluationResult which records a specific piece of  information detailing the result of an evaluation process of a Model Component.
+Imported Definition from ML-Schema: ModelEvaluation is a setting of a value of the performance measure  specified by the evaluation specification. It connects a measure specification with its value."^^xsd:string</li>
+</ul>
+<ul>
+<li>Deleted: rdfs:comment "A  specific rains:EvaluationResult which records a specific piece of  information detailing the result of an evaluation process of a Model Component.
+Imported Definition from ML-Schema: ModelEvaluation is a setting of a value of the performance measure specified by the evaluation specification. It connects a measure specification with its value."^^xsd:string</li>
+</ul>
+</li>
+<li><a href="#ApprovalDecision">https://w3id.org/rains#ApprovalDecision</a>
+<ul>
+<li><li></ul>
+<ul>
+<li><li></ul>
+</li>
+<li><a href="#CertificationDecision">https://w3id.org/rains#CertificationDecision</a>
+<ul>
+<li><li></ul>
+<ul>
+<li><li></ul>
+</li>
+<li><a href="#ChangeJustification">https://w3id.org/rains#ChangeJustification</a>
+<ul>
+<li>Added: rdfs:comment "A sao:InformnationElement which records information describing the justification behind a deviation from the Design Specification or a Guideline, or behind overruling the output of the AI System. For example, the reason behind realizing a dataset other than the one indicated by the Dataset Design Specification was used, or why an evaluation measure was recorded which differed from the one indicated to be expected in an Evaluation Specification, or why a user overrode an AI System's action/decision/recommendation."^^xsd:string</li>
+</ul>
+<ul>
+<li>Deleted: rdfs:comment "A sao:InformnationElement which records information describing the justification behind a deviation from the Design Specification. For example, the reason behind realizing a dataset other than the one indicated by the Dataset Design Specification was used, or why an evaluation measure was recorded which differed from the one indicated to be expected in an Evaluation Specification."^^xsd:string</li>
+</ul>
+</li>
+<li><a href="#ChangeLog">https://w3id.org/rains#ChangeLog</a>
+<ul>
+<li><li><li>Added: rdfs:comment "A specific type of planned Log that describes any change from a design specification or guideline or suggested action/recommendation/decision by the AI system. It is expected to be the result of any accountable action that has an input a design specification or a guideline or specified expected outcome.
+
+It is advisable that the information realization corresponding to the Change Log contains the following information elements:
+1.  Change
+2. ChangeJustification."^^xsd:string</li>
+<li><li>Added: DisjointClasses DisjointClasses(&lt;https://w3id.org/rains#ChangeLog&gt; &lt;https://w3id.org/rains#InstallationLog&gt;)</li>
+</ul>
+<ul>
+<li>Deleted: DisjointClasses DisjointClasses(&lt;https://w3id.org/rains#ChangeLog&gt; &lt;https://w3id.org/rains#HumanDecision&gt;)</li>
+<li>Deleted: DisjointClasses DisjointClasses(&lt;https://w3id.org/rains#ChangeLog&gt; &lt;https://w3id.org/rains#Guideline&gt;)</li>
+<li>Deleted: DisjointClasses DisjointClasses(&lt;https://w3id.org/rains#ChangeLog&gt; &lt;https://w3id.org/rains#SupportingInfrastructureComponent&gt;)</li>
+<li>Deleted: DisjointClasses DisjointClasses(&lt;https://w3id.org/rains#ChangeLog&gt; &lt;https://w3id.org/rains#Evaluation&gt;)</li>
+<li>Deleted: DisjointClasses DisjointClasses(&lt;https://w3id.org/rains#ChangeLog&gt; &lt;https://w3id.org/rains#ModelComponent&gt;)</li>
+<li>Deleted: DisjointClasses DisjointClasses(&lt;https://w3id.org/rains#ChangeLog&gt; &lt;https://w3id.org/rains#DesignSpecification&gt;)</li>
+<li>Deleted: DisjointClasses DisjointClasses(&lt;https://w3id.org/rains#ChangeLog&gt; &lt;https://w3id.org/rains#DatasetComponent&gt;)</li>
+<li><li><li><li>Deleted: rdfs:comment "A specific type of planned sao:AccountableResult that describes any change from a design specification or guideline. It is expected to be the result of any accountable action that has an input a design specification or a guideline.
+
+It is advisable that the information realization corresponding to the Change Log contains the following information elements:
+1.  Change
+2. ChangeJustification."^^xsd:string</li>
+</ul>
+</li>
+<li><a href="#ComplianceAssuranceDecision">https://w3id.org/rains#ComplianceAssuranceDecision</a>
+<ul>
+<li><li></ul>
+<ul>
+<li><li></ul>
+</li>
+<li><a href="#ComplianceSpecification">https://w3id.org/rains#ComplianceSpecification</a>
+<ul>
+<li><li></ul>
+<ul>
+<li><li></ul>
+</li>
+<li><a href="#DatasetComponent">https://w3id.org/rains#DatasetComponent</a>
+<ul>
+<li><li>Added: DisjointClasses DisjointClasses(&lt;https://w3id.org/rains#DatasetComponent&gt; &lt;https://w3id.org/rains#SystemData&gt;)</li>
+<li>Added: DisjointClasses DisjointClasses(&lt;https://w3id.org/rains#DatasetComponent&gt; &lt;https://w3id.org/rains#UserTrainingReport&gt;)</li>
+<li>Added: rdfs:comment "A specific type of planned sao:AccountableResult  which represents the description of an realized dataset, including its characteristics, how it was collected, its risks, etc. The dataset component represents a collection of collected and pre-processed data. Once it is split, the subclasses TestingDataset, ValidationDataset, and EvaluationDataset can be used.
+
+It is advisable that the information realization corresponding to the DatasetComponent variable contains the following information elements:
+1. Dataset, the realized dataset should be an instance of RealizedObject. If the implementation deviates from the design, then an additional dataset should be indicated as an instance of ExcludedObject.
+2. Data Item
+3. DatasetCharacteristic
+4. DataCollectionProcedure
+5. DataPreprocesingProcedure
+6. Funding
+7. Limitation
+8. Risk and its subclass Bias
+9. Tradeoff
+10. The subclasses of Use Case, namely IncorrectUseCase and IntendedUseCase
+11. IntendedUserGroup
+12. The subclasses of Compliance Entity, namely, Hard Law and SoftLaw
+13. LicenseDocument
+
+It is discouraged that the information realization corresponding to the DatasetComponent variable contains the following information elements:
+1. Model
+2. SupportingInfrastructure
+3. The following subclasses of Realizable Object Characteristic: Algorithm, ModelCharacteristic, SystemAuditMechanism, SystemExplanationMechanism, System Feedback from User Mechanism, System Human Oversight Mechanism, and SystemSecurityMechanism
+4. The subclasses of Guidance,namely, System Deployment Guidance, SystemInstallationGuidance, UserTrainingGuidance, SystemOperationGuidance, SystemUsageGuidance, and SystemMaintenanceGuidance
+5. NotificationProof"^^xsd:string</li>
+<li>Added: DisjointClasses DisjointClasses(&lt;https://w3id.org/rains#DatasetComponent&gt; &lt;https://w3id.org/rains#Log&gt;)</li>
+<li></ul>
+<ul>
+<li>Deleted: DisjointClasses DisjointClasses(&lt;https://w3id.org/rains#ChangeLog&gt; &lt;https://w3id.org/rains#DatasetComponent&gt;)</li>
+<li><li>Deleted: rdfs:comment "A specific type of planned sao:AccountableResult  which represents the description of an realized dataset, including its characteristics, how it was collected, its risks, etc. The dataset component represents a collection of collected and pre-processed data. Once it is split, the subclasses TestingDataset, ValidationDataset, and EvaluationDataset can be used.
+
+It is advisable that the information realization corresponding to the DatasetComponent variable contains the following information elements:
+1. Dataset, the realized dataset should be an instance of RealizedObject. If the implementation deviates from the design, then an additional dataset should be indicated as an instance of ExcludedObject.
+2. DatasetCharacteristic
+3. DataCollectionProcedure
+4. DataPreprocesingProcedure
+5. IntendedUseCase
+6. Limitation
+7. Risk
+8. Bias
+9. Tradeoff
+10. IncorrectUseCase
+11. IntendedUserGroup
+12. HardLaw
+13. SoftLaw
+
+It is discouraged that the information realization corresponding to the DtasetComponent variable contains the following information elements:
+1. SystemAuditMechanism
+2. SystemExplanationMechanims
+3. SystemHumanOversightMechanism
+4. SystemSecurityMechanism
+5. SystemIntegrationGuidance
+6. SystemDeploymentGuidance
+7. SystemDocumentationGuidance
+8. SystemIntegrationGuidance
+9. SystemUsageGuidance
+10. Model
+11. ModelCharacteristic
+12. Algorithm"^^xsd:string</li>
+<li></ul>
+</li>
+<li><a href="#DatasetSpecification">https://w3id.org/rains#DatasetSpecification</a>
+<ul>
+<li><li><li>Added: rdfs:comment "A specific type of design specification  which represents the description of planned requirements, characteristics, risks, etc. related to a dataset (e.g., a training dataset for ML model) expected to be used as part of the AI system life cycle.
+
+It is advisable that the information realization corresponding to DatasetSpecification contains the following information elements 
+1. Dataset 
+2. DataItem
+3. DatasetCharacteristic
+3. DataCollectionProcedure and and if applicable DataCollectionSoftware
+4. DataPreprocesingProcedure and if applicable DataPreprocessingSoftware
+5. Funding
+6. Limitation
+7. Risk and its subclass Bias, and if applicable FairnessOrBiasDetectionSoftware
+8. Tradeoff
+9. IntendedUserGroup
+10. The subclasses of Use Case, namely IncorrectUseCase and IntendedUseCase
+11. The subclasses of Compliance Entity, namely, Hard Law and SoftLaw
+12. LicenseDocument
+
+It is discouraged that the information realization corresponding to the Dataset Specification contains the following information elements:
+1. Model
+2. SupportingInfrastructure
+3. The following subclasses of Realizable Object Characteristic: Algorithm, ModelCharacteristic, SystemAuditMechanism, SystemExplanationMechanism, System Feedback from User Mechanism, System Human Oversight Mechanism, and SystemSecurityMechanism
+4. The subclasses of Guidance,namely, System Deployment Guidance, SystemInstallationGuidance, UserTrainingGuidance, SystemOperationGuidance, SystemUsageGuidance, and SystemMaintenanceGuidance
+5. NotificationProof"^^xsd:string</li>
+</ul>
+<ul>
+<li><li><li>Deleted: rdfs:comment "A specific type of design specification  which represents the description of planned requirements, characteristics, risks, etc. related to a dataset (e.g., a training dataset for ML model) expected to be used as part of the AI system life cycle.
+
+It is advisable that the information realization corresponding to DatasetSpecification contains the following information elements 
+1. Dataset 
+2. DatasetCharacteristic
+3. DataCollectionProcedure
+4. DataPreprocesingProcedure
+5. IntendedUseCase
+6. Limitation
+7. Risk
+8. Bias
+9. Tradeoff
+10. IntendedUserGroup
+11. IncorrectUseCase
+12. HardLaw
+13. SoftLaw
+
+It is discouraged that the information realization corresponding to the Dataset Specification contains the following information elements:
+1. SystemAuditMechanism
+2. SystemExplanationMechanims
+3. SystemHumanOversightMechanism
+4. SystemSecurityMechanism
+5. SystemIntegrationGuidance
+6. SystemDeploymentGuidance
+7. SystemDocumentationGuidance
+8. SystemIntegrationGuidance
+9. SystemUsageGuidance
+10. Model
+11. ModelCharacteristic
+12. Algorithm"^^xsd:string</li>
+</ul>
+</li>
+<li><a href="#Decide">https://w3id.org/rains#Decide</a>
+<ul>
+<li><li>Added: DisjointClasses DisjointClasses(&lt;https://w3id.org/rains#Decide&gt; &lt;https://w3id.org/rains#TrainUser&gt;)</li>
+<li><li>Added: DisjointClasses DisjointClasses(&lt;https://w3id.org/rains#Decide&gt; &lt;https://w3id.org/rains#Install&gt;)</li>
+<li>Added: rdfs:comment "A planned step describing a decision to be taken by a human when incorporating accountability in AI Systems, e.g. approve the design of an ML Model. This step has members of the class Human Decision (and its subclasses) as its expected outputs."^^xsd:string</li>
+<li>Added: DisjointClasses DisjointClasses(&lt;https://w3id.org/rains#Decide&gt; &lt;https://w3id.org/rains#SystemAction&gt;)</li>
+</ul>
+<ul>
+<li>Deleted: rdfs:comment "A planned step describing a decision to be taken by a human when incorporating accountability in AI Systems, e.g. approve the design of an ML Model."^^xsd:string</li>
+<li><li></ul>
+</li>
+<li><a href="#DesignSpecification">https://w3id.org/rains#DesignSpecification</a>
+<ul>
+<li><li>Added: DisjointClasses DisjointClasses(&lt;https://w3id.org/rains#DesignSpecification&gt; &lt;https://w3id.org/rains#UserTrainingReport&gt;)</li>
+<li>Added: DisjointClasses DisjointClasses(&lt;https://w3id.org/rains#DesignSpecification&gt; &lt;https://w3id.org/rains#SystemData&gt;)</li>
+<li><li>Added: DisjointClasses DisjointClasses(&lt;https://w3id.org/rains#DesignSpecification&gt; &lt;https://w3id.org/rains#Log&gt;)</li>
+</ul>
+<ul>
+<li>Deleted: DisjointClasses DisjointClasses(&lt;https://w3id.org/rains#ChangeLog&gt; &lt;https://w3id.org/rains#DesignSpecification&gt;)</li>
+<li><li></ul>
+</li>
+<li><a href="#DesignStageAccountabilityPlan">https://w3id.org/rains#DesignStageAccountabilityPlan</a>
+<ul>
+<li>Added: DisjointClasses DisjointClasses(&lt;https://w3id.org/rains#DeploymentStageAccountabilityPlan&gt; &lt;https://w3id.org/rains#DesignStageAccountabilityPlan&gt; &lt;https://w3id.org/rains#ImplementationStageAccountabilityPlan&gt; &lt;https://w3id.org/rains#OperationStageAccountabilityPlan&gt;)</li>
+</ul>
+<ul>
+<li>Deleted: DisjointClasses DisjointClasses(&lt;https://w3id.org/rains#DesignStageAccountabilityPlan&gt; &lt;https://w3id.org/rains#ImplementationStageAccountabilityPlan&gt;)</li>
+</ul>
+</li>
+<li><a href="#Evaluate">https://w3id.org/rains#Evaluate</a>
+<ul>
+<li><li>Added: rdfs:comment "A planned step describing an evaluation, i.e. testing  and producing evaluation metrics, that has some impact on the AI System, e.g. the evaluation of the ML model using a specified Dataset or the AI System undergoing a third party evaluation. This step has a member of the class Evaluation (or its subclass Third Party Evaluation) its expected output.  If a deviation from the design specification(s) or guideline(s) takes place, then this step will also have as an output a member of the class Change Log."^^xsd:string</li>
+<li>Added: DisjointClasses DisjointClasses(&lt;https://w3id.org/rains#Evaluate&gt; &lt;https://w3id.org/rains#TrainUser&gt;)</li>
+<li><li>Added: DisjointClasses DisjointClasses(&lt;https://w3id.org/rains#Evaluate&gt; &lt;https://w3id.org/rains#SystemAction&gt;)</li>
+<li>Added: DisjointClasses DisjointClasses(&lt;https://w3id.org/rains#Evaluate&gt; &lt;https://w3id.org/rains#Install&gt;)</li>
+</ul>
+<ul>
+<li><li><li>Deleted: rdfs:comment "A planned step describing an evaluation, i.e, testing  and producing evaluation metrics, that has some impact on the AI System, e.g. the evaluation of the ML model using a specified Dataset or the :AI_System undergoing a third party evaluation."^^xsd:string</li>
+</ul>
+</li>
+<li><a href="#Evaluation">https://w3id.org/rains#Evaluation</a>
+<ul>
+<li><li>Added: DisjointClasses DisjointClasses(&lt;https://w3id.org/rains#Evaluation&gt; &lt;https://w3id.org/rains#Log&gt;)</li>
+<li>Added: rdfs:comment "A specific type of planned sao:AccountableResult which represents a high level reference to testing at least one component and recording the results of the test(s) (e.g. testing the model with a specified dataset) that is expected to be produced during the implementation stage.
+
+It is advisable that the information realization corresponding to the Evaluation variable contains the following information elements:
+1. Either an instance of mls:EvaluationProcedure (if it is the model being evaluated) or EvaluationProcedure (if it is not the ML model being evaluated). Either should also be an instance of RealizedObject. If the evaluation deviates from the design, then an additional instance of mls:EvaluationProcedure or EvaluationProcedure should be indicated as an instance of ExcludedObject.
+2. Either an instance of mls:EvaluationMeasure (if it is the model being evaluated) or EvaluationMeasure(if it is not the ML model being evaluated). If the evaluation deviates from the design, then an additional instance of mls:EvaluationMeasure or EvaluationMeasure should be indicated as an instance of ExcludedObject.
+3. Either an instance of mls:ModelEvaluation (if it is the model being evaluated) or EvaluationResult (if it is not the ML model being evaluated). If the evaluation deviates from the design, then an additional instance of mls:ModelEvaluation or EvaluationResult should be indicated as an instance of ExcludedObject.
+4. The subclasses of Compliance Entity, namely, Hard Law and SoftLaw
+
+It is discouraged that the information realization corresponding to the Evaluation variable contains the following information elements:
+1. The subclasses of Guidance, namely, System Deployment Guidance, SystemInstallationGuidance, UserTrainingGuidance, SystemOperationGuidance, SystemUsageGuidance, and SystemMaintenanceGuidance
+2. Notification Proof"^^xsd:string</li>
+<li>Added: DisjointClasses DisjointClasses(&lt;https://w3id.org/rains#Evaluation&gt; &lt;https://w3id.org/rains#UserTrainingReport&gt;)</li>
+<li>Added: DisjointClasses DisjointClasses(&lt;https://w3id.org/rains#Evaluation&gt; &lt;https://w3id.org/rains#SystemData&gt;)</li>
+<li></ul>
+<ul>
+<li><li>Deleted: DisjointClasses DisjointClasses(&lt;https://w3id.org/rains#ChangeLog&gt; &lt;https://w3id.org/rains#Evaluation&gt;)</li>
+<li><li>Deleted: rdfs:comment "A specific type of planned sao:AccountableResult which represents a high level reference to testing at least one component and recording the results of the test(s) (e.g. testing the model with a specified dataset) that is expected to be produced during the implementation stage.
+
+It is advisable that the information realization corresponding to the Evaluation variable contains the following information elements:
+1. Either an instance of mls:EvaluationProcedure (if it is the model being evaluated) or EvaluationProcedure (if it is not the ML model being evaluated). Either should also be an instance of RealizedObject. If the evaluation deviates from the design, then an additional instance of mls:EvaluationProcedure or EvaluationProcedure should be indicated as an instance of ExcludedObject.
+2. Either an instance of mls:EvaluationMeasure (if it is the model being evaluated) or EvaluationMeasure(if it is not the ML model being evaluated). If the evaluation deviates from the design, then an additional instance of mls:EvaluationMeasure or EvaluationMeasure should be indicated as an instance of ExcludedObject.
+3. Either an instance of mls:ModelEvaluation (if it is the model being evaluated) or EvaluationResult (if it is not the ML model being evaluated). If the evaluation deviates from the design, then an additional instance of mls:ModelEvaluation or EvaluationResult should be indicated as an instance of ExcludedObject.
+4. HardLaw
+5. SoftLaw
+
+It is discouraged that the information realization corresponding to the Evaluation variable contains the following information elements:
+1. SystemIntegrationGuidance
+2. SystemDeploymentGuidance
+3. SystemDocumentationGuidance
+4. SystemIntegrationGuidance
+5. SystemUsageGuidance"^^xsd:string</li>
+</ul>
+</li>
+<li><a href="#EvaluationDataset">https://w3id.org/rains#EvaluationDataset</a>
+<ul>
+<li><li></ul>
+<ul>
+<li><li></ul>
+</li>
+<li><a href="#ExcludedObject">https://w3id.org/rains#ExcludedObject</a>
+<ul>
+<li>Added: rdfs:comment "A sao:InformationElement which records information detailing a piece of data, software or hardware that should have been realized but was not.
+
+For example, assume the dataset design specification specifies that dataset foobar is to be realised (to be used to train the model), but the implementation team realises dataset xyzzy instead. In this case, the dataset foobar should be indicated by the implementation team as an Excluded Object - whereas the dataset xyzzy should be created as an instance of :RealizedObject."^^xsd:string</li>
+</ul>
+<ul>
+<li>Deleted: rdfs:comment "A sao:InformationElement which records information detailing a piece of data, software or hardware that should have been realized but was not.
+
+For example, assume the dataset design specification specifies that dataset foorbar is to be realised (to be used to train the model), but the implementation team realises dataset xyzzy instead. In this case, the dataset foobar should be indicated by the implementation team as an Excluded Object - whereas the dataset xyzzy should be created as an instance of :RealizedObject."^^xsd:string</li>
+</ul>
+</li>
+<li><a href="#FitnessConfirmationDecision">https://w3id.org/rains#FitnessConfirmationDecision</a>
+<ul>
+<li><li></ul>
+<ul>
+<li><li></ul>
+</li>
+<li><a href="#GenerateGuideline">https://w3id.org/rains#GenerateGuideline</a>
+<ul>
+<li>Added: DisjointClasses DisjointClasses(&lt;https://w3id.org/rains#GenerateGuideline&gt; &lt;https://w3id.org/rains#TrainUser&gt;)</li>
+<li><li>Added: rdfs:comment "A planned step describing the creation or editing of a guideline that has some impact on the AI System, e.g. the production of the deployment guideline describing how the AI System is to be deployed on-site or the editing of the maintenance guideline describing how the AI System is to be maintained. This step is typically part of the Implementation stage or the Deployment of an AI System's life cycle. It has members of the subclasses of Guideline as its expected output(s).  If the step describes the editing of a previously-generated guideline, then it will also have as an output a member of the class Change Log."^^xsd:string</li>
+<li><li>Added: DisjointClasses DisjointClasses(&lt;https://w3id.org/rains#GenerateGuideline&gt; &lt;https://w3id.org/rains#Install&gt;)</li>
+<li>Added: DisjointClasses DisjointClasses(&lt;https://w3id.org/rains#GenerateGuideline&gt; &lt;https://w3id.org/rains#SystemAction&gt;)</li>
+<li></ul>
+<ul>
+<li>Deleted: rdfs:comment "A planned step describing the creation of a guideline that has some impact on the AI System, e.g. the production of the deployment guideline describing how the AI System is to be deployed on-site or the production of the maintenance guideline describing how the AI System is to be maintained."^^xsd:string</li>
+<li><li><li></ul>
+</li>
+<li><a href="#GrantCertification">https://w3id.org/rains#GrantCertification</a>
+<ul>
+<li><li><li>Added: rdfs:comment "A planned step describing a certification granting decision to be taken by a human when incorporating accountability in AI Systems, e.g. grant an ISO certificate. This step has members of the class Certification Decision as its expected output."^^xsd:string</li>
+</ul>
+<ul>
+<li>Deleted: rdfs:comment "A planned step describing a certification granting decision to be taken by a human when incorporating accountability in AI Systems, e.g. grant an ISO certificate."^^xsd:string</li>
+<li><li></ul>
+</li>
+<li><a href="#Guideline">https://w3id.org/rains#Guideline</a>
+<ul>
+<li><li>Added: DisjointClasses DisjointClasses(&lt;https://w3id.org/rains#Guideline&gt; &lt;https://w3id.org/rains#SystemData&gt;)</li>
+<li>Added: DisjointClasses DisjointClasses(&lt;https://w3id.org/rains#Guideline&gt; &lt;https://w3id.org/rains#UserTrainingReport&gt;)</li>
+<li>Added: DisjointClasses DisjointClasses(&lt;https://w3id.org/rains#Guideline&gt; &lt;https://w3id.org/rains#Log&gt;)</li>
+<li></ul>
+<ul>
+<li>Deleted: DisjointClasses DisjointClasses(&lt;https://w3id.org/rains#ChangeLog&gt; &lt;https://w3id.org/rains#Guideline&gt;)</li>
+<li><li></ul>
+</li>
+<li><a href="#HumanDecision">https://w3id.org/rains#HumanDecision</a>
+<ul>
+<li><li>Added: DisjointClasses DisjointClasses(&lt;https://w3id.org/rains#HumanDecision&gt; &lt;https://w3id.org/rains#Log&gt;)</li>
+<li>Added: DisjointClasses DisjointClasses(&lt;https://w3id.org/rains#HumanDecision&gt; &lt;https://w3id.org/rains#UserTrainingReport&gt;)</li>
+<li>Added: DisjointClasses DisjointClasses(&lt;https://w3id.org/rains#HumanDecision&gt; &lt;https://w3id.org/rains#SystemData&gt;)</li>
+<li></ul>
+<ul>
+<li>Deleted: DisjointClasses DisjointClasses(&lt;https://w3id.org/rains#ChangeLog&gt; &lt;https://w3id.org/rains#HumanDecision&gt;)</li>
+<li><li></ul>
+</li>
+<li><a href="#ImplementationStageAccountabilityPlan">https://w3id.org/rains#ImplementationStageAccountabilityPlan</a>
+<ul>
+<li>Added: DisjointClasses DisjointClasses(&lt;https://w3id.org/rains#DeploymentStageAccountabilityPlan&gt; &lt;https://w3id.org/rains#DesignStageAccountabilityPlan&gt; &lt;https://w3id.org/rains#ImplementationStageAccountabilityPlan&gt; &lt;https://w3id.org/rains#OperationStageAccountabilityPlan&gt;)</li>
+</ul>
+<ul>
+<li>Deleted: DisjointClasses DisjointClasses(&lt;https://w3id.org/rains#DesignStageAccountabilityPlan&gt; &lt;https://w3id.org/rains#ImplementationStageAccountabilityPlan&gt;)</li>
+</ul>
+</li>
+<li><a href="#Log">https://w3id.org/rains#Log</a>
+<ul>
+<li>Added: DisjointClasses DisjointClasses(&lt;https://w3id.org/rains#Evaluation&gt; &lt;https://w3id.org/rains#Log&gt;)</li>
+<li>Added: DisjointClasses DisjointClasses(&lt;https://w3id.org/rains#Guideline&gt; &lt;https://w3id.org/rains#Log&gt;)</li>
+<li>Added: DisjointClasses DisjointClasses(&lt;https://w3id.org/rains#DatasetComponent&gt; &lt;https://w3id.org/rains#Log&gt;)</li>
+<li>Added: rdfs:comment "A specific type of planned sao:AccountableResult which represents a high level reference to logs of information pertaining either to Installation or Changes. This class has two subclasses: Installation Log and Change Log.The former is the result of the installation taking place during the Deployment stage (specifically Installation stage), and the latter of reflects changes which occur throughtout the Implementation, Deployment, and Operation Stages."^^xsd:string</li>
+<li>Added: DisjointClasses DisjointClasses(&lt;https://w3id.org/rains#Log&gt; &lt;https://w3id.org/rains#ModelComponent&gt;)</li>
+<li>Added: DisjointClasses DisjointClasses(&lt;https://w3id.org/rains#DesignSpecification&gt; &lt;https://w3id.org/rains#Log&gt;)</li>
+<li>Added: DisjointClasses DisjointClasses(&lt;https://w3id.org/rains#Log&gt; &lt;https://w3id.org/rains#UserTrainingReport&gt;)</li>
+<li>Added: DisjointClasses DisjointClasses(&lt;https://w3id.org/rains#HumanDecision&gt; &lt;https://w3id.org/rains#Log&gt;)</li>
+<li><li><li>Added: DisjointClasses DisjointClasses(&lt;https://w3id.org/rains#Log&gt; &lt;https://w3id.org/rains#SupportingInfrastructureComponent&gt;)</li>
+<li><li>Added: DisjointClasses DisjointClasses(&lt;https://w3id.org/rains#Log&gt; &lt;https://w3id.org/rains#SystemData&gt;)</li>
+</ul>
+<ul>
+<li><li><li><li>Deleted: rdfs:comment "A specific type of planned sao:AccountableResult which represents a high level reference to logs of information pertaining either to Changes. This class has the subclass Change Log, which  reflects changes which occur throughtout the Implementation stage."^^xsd:string</li>
+</ul>
+</li>
+<li><a href="#MergeAndSplitDataset">https://w3id.org/rains#MergeAndSplitDataset</a>
+<ul>
+<li>Added: DisjointClasses DisjointClasses(&lt;https://w3id.org/rains#Install&gt; &lt;https://w3id.org/rains#MergeAndSplitDataset&gt;)</li>
+<li>Added: DisjointClasses DisjointClasses(&lt;https://w3id.org/rains#MergeAndSplitDataset&gt; &lt;https://w3id.org/rains#SystemAction&gt;)</li>
+<li>Added: DisjointClasses DisjointClasses(&lt;https://w3id.org/rains#MergeAndSplitDataset&gt; &lt;https://w3id.org/rains#TrainUser&gt;)</li>
+</ul>
+</li>
+<li><a href="#ModelComponent">https://w3id.org/rains#ModelComponent</a>
+<ul>
+<li><li><li><li>Added: DisjointClasses DisjointClasses(&lt;https://w3id.org/rains#Log&gt; &lt;https://w3id.org/rains#ModelComponent&gt;)</li>
+<li>Added: rdfs:comment "A specific type of planned sao:AccountableResult which represents the description of a realized ML Model, including it characteristics, performance, etc.
+
+It is advisable that the information realization corresponding to the ModelComponent variable contains the following information elements:
+1. Model: the realized model should be an instance of RealizedObject. If the implementation deviates from the design, then an additional model should be indicated as an instance of ExcludedObject. 
+2. ModelCharacteristic
+3. Algorithm
+4. Limitation
+5. Risk and its subclass Bias
+6.Tradeoff
+7. IntendedUserGroup
+8. Parameter and its subclass Hyperparameter
+9. The subclasses of Use Case, namely IncorrectUseCase and IntendedUseCase
+10. The subclasses of Compliance Entity, namely, Hard Law and SoftLaw 
+11. LicenseDocument
+ 12. Funding
+
+It is discouraged that the information realization corresponding to the ModelComponent variable contains the following information elements:
+1. The following subclasses of Realizable Object Characteristic: SystemAuditMechanism, SystemExplanationMechanism, System Feedback from User Mechanism, System Human Oversight Mechanism, and SystemSecurityMechanism
+2. The subclasses of Guidance, namely, System Deployment Guidance, SystemInstallationGuidance, UserTrainingGuidance, SystemOperationGuidance, SystemUsageGuidance, and SystemMaintenanceGuidance
+3. Notification Proof"^^xsd:string</li>
+<li>Added: DisjointClasses DisjointClasses(&lt;https://w3id.org/rains#ModelComponent&gt; &lt;https://w3id.org/rains#SystemData&gt;)</li>
+<li>Added: DisjointClasses DisjointClasses(&lt;https://w3id.org/rains#ModelComponent&gt; &lt;https://w3id.org/rains#UserTrainingReport&gt;)</li>
+</ul>
+<ul>
+<li>Deleted: DisjointClasses DisjointClasses(&lt;https://w3id.org/rains#ChangeLog&gt; &lt;https://w3id.org/rains#ModelComponent&gt;)</li>
+<li>Deleted: rdfs:comment "A specific type of planned sao:AccountableResult which represents the description of a realized ML Model, including it characteristics, performance, etc.
+
+It is advisable that the information realization corresponding to the ModelComponent variable contains the following information elements:
+1. Model: the realized model should be an instance of RealizedObject. If the implementation deviates from the design, then an additional model should be indicated as an instance of ExcludedObject. 
+2. ModelCharacteristic
+3. Algorithm
+4. Parameter
+5. IntendedUseCase
+6. Limitation
+7. Risk
+8. Bias
+9. Tradeoff
+10. IncorrectUseCase
+11. IntendedUserGroup
+12. HardLaw
+13. SoftLaw
+
+It is discouraged that the information realization corresponding to the ModelComponent variable contains the following information elements:
+1. SystemAuditMechanism
+2. SystemExplanationMechanims
+3. SystemHumanOversightMechanism
+4. SystemSecurityMechanism
+5. SystemIntegrationGuidance
+6. SystemDeploymentGuidance
+7. SystemDocumentationGuidance
+8. SystemIntegrationGuidance
+9. SystemUsageGuidance"^^xsd:string</li>
+<li><li><li></ul>
+</li>
+<li><a href="#ModelSpecification">https://w3id.org/rains#ModelSpecification</a>
+<ul>
+<li>Added: rdfs:comment "A specific type of design specification  which represents the description of planned requirements, characteristics, performance, etc. related to an AI model.
+
+It is advisable that the information realization corresponding to ModelSpecification contains the following information elements:
+1. Model 
+2. ModelCharacteristic
+3. Algorithm
+4. Limitation
+5. Risk and its subclass Bias, and if applicable FairnessOrBiasDetectionSoftware
+6.Tradeoff
+7. IntendedUserGroup
+8. Parameter and its subclass Hyperparameter
+9. The subclasses of Use Case, namely IncorrectUseCase and IntendedUseCase
+10. The subclasses of Compliance Entity, namely, Hard Law and SoftLaw
+11. LicenseDocument
+12. Funding
+
+It is discouraged that the information realization corresponding to the ModelSpecification contains the following information elements:
+1. The following subclasses of Realizable Object Characteristic: SystemAuditMechanism, SystemExplanationMechanism, System Feedback from User Mechanism, System Human Oversight Mechanism, and SystemSecurityMechanism
+2. The subclasses of Guidance, namely, System Deployment Guidance, SystemInstallationGuidance, UserTrainingGuidance, SystemOperationGuidance, SystemUsageGuidance, and SystemMaintenanceGuidance
+3. Notification Proof
+4. Installation Log"^^xsd:string</li>
+</ul>
+<ul>
+<li>Deleted: rdfs:comment "A specific type of design specification  which represents the description of planned requirements, characteristics, performance, etc. related to an AI model.
+
+It is advisable that the information realization corresponding to ModelSpecification contains the following information elements:
+1. Model 
+2. ModelCharacteristic
+3. Algorithm
+4. IntendedUseCase
+5. Limitation
+6. Risk
+7. Bias
+8. Tradeoff
+9. IntendedUserGroup
+10. Parameter
+11. Hyperparameter
+12. IncorrectUseCase
+13. HardLaw
+14. SoftLaw
+ 
+It is discouraged that the information realization corresponding to the ModelSpecification contains the following information elements:
+1. SystemAuditMechanism
+2. SystemExplanationMechanims
+3. SystemHumanOversightMechanism
+4. SystemSecurityMechanism
+5. SystemIntegrationGuidance
+6. SystemDeploymentGuidance
+7. SystemDocumentationGuidance
+8. SystemIntegrationGuidance
+9. SystemUsageGuidance"^^xsd:string</li>
+</ul>
+</li>
+<li><a href="#ProduceSpecification">https://w3id.org/rains#ProduceSpecification</a>
+<ul>
+<li>Added: DisjointClasses DisjointClasses(&lt;https://w3id.org/rains#ProduceSpecification&gt; &lt;https://w3id.org/rains#SystemAction&gt;)</li>
+<li>Added: DisjointClasses DisjointClasses(&lt;https://w3id.org/rains#ProduceSpecification&gt; &lt;https://w3id.org/rains#TrainUser&gt;)</li>
+<li><li><li>Added: rdfs:comment "A planned step describing the creation of a specification that has some impact on the AI System, e.g. the production of the design specification describing the training dataset to be used. This step is typically part of the Design stage of an AI System's life cycle and has members of the subclasses of Design Specification as its expected output(s). It can also be part of the Implementation and Deployment (Installation) Stages as as to allow the creation of specifications related to evaluating the AI system."^^xsd:string</li>
+<li>Added: DisjointClasses DisjointClasses(&lt;https://w3id.org/rains#Install&gt; &lt;https://w3id.org/rains#ProduceSpecification&gt;)</li>
+</ul>
+<ul>
+<li><li><li>Deleted: rdfs:comment "A planned step describing the creation of a specification that has some impact on the AI System, e.g. the production of the design specification describing the training dataset to be used. This step is typically part of the Design stage of an AI System's life cycle and has members of the subclasses of Design Specification as its expected output(s)."^^xsd:string</li>
+</ul>
+</li>
+<li><a href="#RealizeComponent">https://w3id.org/rains#RealizeComponent</a>
+<ul>
+<li>Added: DisjointClasses DisjointClasses(&lt;https://w3id.org/rains#RealizeComponent&gt; &lt;https://w3id.org/rains#TrainUser&gt;)</li>
+<li>Added: DisjointClasses DisjointClasses(&lt;https://w3id.org/rains#RealizeComponent&gt; &lt;https://w3id.org/rains#SystemAction&gt;)</li>
+<li>Added: DisjointClasses DisjointClasses(&lt;https://w3id.org/rains#Install&gt; &lt;https://w3id.org/rains#RealizeComponent&gt;)</li>
+</ul>
+</li>
+<li><a href="#RealizededObject">https://w3id.org/rains#RealizededObject</a>
+<ul>
+<li>Added: rdfs:comment "A sao:InformationElement which records information detailing a piece of data, software or hardware that was realized - whether or not it followed a design specification or a guideline.
+
+For example, assume the dataset design specification specifies that dataset foobar is to be realised (to be used to train the model), but the implementation team realises dataset xyzzy. In this case, only dataset xyzzy is created as an instance of Realized Object."^^xsd:string</li>
+</ul>
+<ul>
+<li>Deleted: rdfs:comment "A sao:InformationElement which records information detailing a piece of data, software or hardware that was realized - whether or not it followed a design specification or a guideline.
+
+For example, assume the dataset design specification specifies that dataset foorbar is to be realised (to be used to train the model), but the implementation team realises dataset xyzzy. In this case, only dataset xyzzy is created as an instance of Realized Object."^^xsd:string</li>
+</ul>
+</li>
+<li><a href="#SupportingInfrastructureComponent">https://w3id.org/rains#SupportingInfrastructureComponent</a>
+<ul>
+<li><li><li><li>Added: DisjointClasses DisjointClasses(&lt;https://w3id.org/rains#Log&gt; &lt;https://w3id.org/rains#SupportingInfrastructureComponent&gt;)</li>
+<li>Added: DisjointClasses DisjointClasses(&lt;https://w3id.org/rains#SupportingInfrastructureComponent&gt; &lt;https://w3id.org/rains#UserTrainingReport&gt;)</li>
+<li>Added: DisjointClasses DisjointClasses(&lt;https://w3id.org/rains#SupportingInfrastructureComponent&gt; &lt;https://w3id.org/rains#SystemData&gt;)</li>
+<li>Added: rdfs:comment "A specific type of planned sao:AccountableResult which represents the characteristics, performance, etc. related to all the implemented hardware and software 'plumbing' that is not generally considered part of the AI processes, however, may also be source of erroneous behaviour in AI systems.
+
+It is advisable that the information realization corresponding to the SupportingInfrastructureComponent variable contains the following information elements:
+1. SupportingInfrastructure, the realized supporting infrastructure should be an instance of RealizedObject. If the implementation deviates from the design, then an additional upporting infrastructure should be indicated as an instance of ExcludedObject.
+2. Limitation
+3. Risk its subclass Bias and FairnessOrBiasDetectionSoftware if applicable
+4. Tradeoff
+5. SystemAuditMechanism
+6. SystemExplanationMechanims
+7. SystemFeedbackfromUserMechanism
+8. SystemHumanOversightMechanism
+9. SystemSecurityMechanism
+10. The subclasses of Compliance Entity, namely, Hard Law and SoftLaw
+11. The subclasses of Use Case, namely IncorrectUseCase and IntendedUseCase"^^xsd:string</li>
+</ul>
+<ul>
+<li><li>Deleted: DisjointClasses DisjointClasses(&lt;https://w3id.org/rains#ChangeLog&gt; &lt;https://w3id.org/rains#SupportingInfrastructureComponent&gt;)</li>
+<li>Deleted: rdfs:comment "A specific type of planned sao:AccountableResult which represents the characteristics, performance, etc. related to all the implemented hardware and software 'plumbing' that is not generally considered part of the AI processes, however, may also be source of erroneous behaviour in AI systems.
+
+It is advisable that the information realization corresponding to the SupportingInfrastructureComponent variable contains the following information elements:
+1. SupportingInfrastructure, the realized supporting infrastructure should be an instance of RealizedObject. If the implementation deviates from the design, then an additional upporting infrastructure should be indicated as an instance of ExcludedObject.
+2. Limitation
+3. Risk
+4. Bias
+5. Tradeoff
+6. SystemAuditMechanism
+7. SystemExplanationMechanims
+8. SystemHumanOversightMechanism
+9. SystemSecurityMechanism
+10. HardLaw
+11. SoftLaw"^^xsd:string</li>
+<li><li></ul>
+</li>
+<li><a href="#SupportingInfrastructureSpecification">https://w3id.org/rains#SupportingInfrastructureSpecification</a>
+<ul>
+<li>Added: rdfs:comment "A specific type of design specification which represents the specification description of planned requirements, characteristics, performance, etc. related to all the hardware and software 'plumbing' that is not generally considered part of the AI processes, however, may also be source of erroneous behaviour in AI systems.
+
+It is advisable that the information realization corresponding to SupportingInfrastructureSpecification contains the following information elements:
+1. SupportingInfrastructure
+2. SystemAuditMechanism
+3. SystemExplanationMechanim
+4. SystemFeedbackfromUserMechanism
+5. SystemHumanOversightMechanism
+6. SystemSecurityMechanism
+7. Limitation
+8. Risk and its subclass Bias
+9. Tradeoff
+10. The subclasses of Compliance Entity, namely, Hard Law and SoftLaw
+11. The subclasses of Use Case, namely IncorrectUseCase and IntendedUseCase"^^xsd:string</li>
+</ul>
+<ul>
+<li>Deleted: rdfs:comment "A specific type of design specification which represents the specification description of planned requirements, characteristics, performance, etc. related to all the hardware and software 'plumbing' that is not generally considered part of the AI processes, however, may also be source of erroneous behaviour in AI systems.
+
+It is advisable that the information realization corresponding to SupportingInfrastructureSpecification contains the following information elements:
+1. SupportingInfrastructure
+2. SystemAuditMechanism
+3. SystemExplanationMechanims
+4. SystemHumanOversightMechanism
+5. SystemSecurityMechanism
+6. Limitation
+7. Risk
+8. Bias
+9. Tradeoff
+10. HardLaw
+11. SoftLaw"^^xsd:string</li>
+</ul>
+</li>
+<li><a href="#SystemDeploymentGuideline">https://w3id.org/rains#SystemDeploymentGuideline</a>
+<ul>
+<li><li></ul>
+<ul>
+<li><li></ul>
+</li>
+<li><a href="#SystemInstallationGuideline">https://w3id.org/rains#SystemInstallationGuideline</a>
+<ul>
+<li><li></ul>
+<ul>
+<li><li></ul>
+</li>
+<li><a href="#SystemMaintenanceGuideline">https://w3id.org/rains#SystemMaintenanceGuideline</a>
+<ul>
+<li><li></ul>
+<ul>
+<li><li></ul>
+</li>
+<li><a href="#SystemOperationGuideline">https://w3id.org/rains#SystemOperationGuideline</a>
+<ul>
+<li><li></ul>
+<ul>
+<li><li></ul>
+</li>
+<li><a href="#SystemPurposeSpecification">https://w3id.org/rains#SystemPurposeSpecification</a>
+<ul>
+<li>Added: rdfs:comment "A specific type of design specification which represents  the  description of the purpose(s) for which an AI system is designed and used for.
+
+It is advisable that the information realization corresponding to SystemPurposeSpecification contains the following information elements
+1. IntendedUserGroup
+2. The subclasses of Use Case, namely IncorrectUseCase and IntendedUseCase"^^xsd:string</li>
+<li><li></ul>
+<ul>
+<li><li><li>Deleted: rdfs:comment "A specific type of design specification which represents  the  description of the purpose(s) for which an AI system is designed and used for.
+
+It is advisable that the information realization corresponding to SystemPurposeSpecification contains the following information elements
+1. IntendedUserGroup
+2. IntendedUseCase
+3. IncorrectUseCase"^^xsd:string</li>
+</ul>
+</li>
+<li><a href="#SystemUsageGuideline">https://w3id.org/rains#SystemUsageGuideline</a>
+<ul>
+<li><li></ul>
+<ul>
+<li><li></ul>
+</li>
+<li><a href="#ThirdPartyEvaluation">https://w3id.org/rains#ThirdPartyEvaluation</a>
+<ul>
+<li><li></ul>
+<ul>
+<li><li></ul>
+</li>
+<li><a href="#UserTrainingGuideline">https://w3id.org/rains#UserTrainingGuideline</a>
+<ul>
+<li><li></ul>
+<ul>
+<li><li></ul>
+</li>
+<li><a href="#https://w3id.org/sao#AccountableAgent">https://w3id.org/sao#AccountableAgent</a>
+<ul>
+<li>Added: rdfs:comment "An agent that can be held accountable for his/her actions. While the agent may typically be a human, components of the AI System, namely, Model Component and Supporting Infrastructure Component, may also be considered accountable to the actions they perform within the system context. This is for documentation purposes, and legal accountability should be traced to the human agent accountable for the component in question. For example, in the context of a facial recognition AI System, the model is accountable for generating a decision about whether it can recongnise a user's. However, legally, the humans behing the model are those who are to be held finally held accountable in reality.
+Note that, within the same AI System a human may take on the role of both or either Affected Agent or Accountable Agent. For example, a user may be accountable for installing and configuring a facial recognition AI system, but may later be affected by the AI System's output of recognision or not recognision their face. Then may then also be accountable for overriding the system's output by using a manual passcode."^^xsd:string</li>
+</ul>
+<ul>
+<li>Deleted: rdfs:comment "An agent (typically a human) that can be held accountable for his/her actions."^^xsd:string</li>
+</ul>
+</li>
+</ul></details><details><summary><u>Added classes</u></summary>
+<ul><li><a href="#ActuateOutput">https://w3id.org/rains#ActuateOutput</a>
+<ul>
+<li><li><li>Added: SubClass of https://w3id.org/rains#ReturnOutput</li>
+<li></ul>
+</li>
+<li><a href="#AffectedAgent">https://w3id.org/rains#AffectedAgent</a>
+<ul>
+<li>Added: SubClass of https://w3id.org/sao#InformationElement</li>
+</ul>
+</li>
+<li><a href="#Aggregate">https://w3id.org/rains#Aggregate</a>
+<ul>
+<li>Added: SubClass of https://w3id.org/rains#GenerateOutput</li>
+<li>Added: DisjointClasses DisjointClasses(&lt;https://w3id.org/rains#Aggregate&gt; &lt;https://w3id.org/rains#Override&gt;)</li>
+<li><li><li><li>Added: DisjointClasses DisjointClasses(&lt;https://w3id.org/rains#Aggregate&gt; &lt;https://w3id.org/rains#GenerateModelOutput&gt;)</li>
+</ul>
+</li>
+<li><a href="#AggregationResult">https://w3id.org/rains#AggregationResult</a>
+<ul>
+<li>Added: DisjointClasses DisjointClasses(&lt;https://w3id.org/rains#AggregationResult&gt; &lt;https://w3id.org/rains#ModelOutput&gt;)</li>
+<li><li>Added: DisjointClasses DisjointClasses(&lt;https://w3id.org/rains#AggregationResult&gt; &lt;https://w3id.org/rains#OverrideResult&gt;)</li>
+<li><li><li>Added: SubClass of https://w3id.org/rains#SystemOutput</li>
+</ul>
+</li>
+<li><a href="#ApproveOutput">https://w3id.org/rains#ApproveOutput</a>
+<ul>
+<li>Added: DisjointClasses DisjointClasses(&lt;https://w3id.org/rains#ApproveOutput&gt; &lt;https://w3id.org/rains#GenerateOutput&gt;)</li>
+<li><li><li>Added: DisjointClasses DisjointClasses(&lt;https://w3id.org/rains#ApproveOutput&gt; &lt;https://w3id.org/rains#PreprocessInputData&gt;)</li>
+<li>Added: DisjointClasses DisjointClasses(&lt;https://w3id.org/rains#ApproveOutput&gt; &lt;https://w3id.org/rains#Configure&gt;)</li>
+<li>Added: DisjointClasses DisjointClasses(&lt;https://w3id.org/rains#ApproveOutput&gt; &lt;https://w3id.org/rains#ProvideSystemInputData&gt;)</li>
+<li>Added: DisjointClasses DisjointClasses(&lt;https://w3id.org/rains#ApproveOutput&gt; &lt;https://w3id.org/rains#Justify&gt;)</li>
+<li><li>Added: DisjointClasses DisjointClasses(&lt;https://w3id.org/rains#ApproveOutput&gt; &lt;https://w3id.org/rains#CollectUserFeedback&gt;)</li>
+<li>Added: DisjointClasses DisjointClasses(&lt;https://w3id.org/rains#ApproveOutput&gt; &lt;https://w3id.org/rains#Consent&gt;)</li>
+<li>Added: SubClass of https://w3id.org/rains#SystemAction</li>
+<li>Added: DisjointClasses DisjointClasses(&lt;https://w3id.org/rains#ApproveOutput&gt; &lt;https://w3id.org/rains#NotifyUser&gt;)</li>
+<li>Added: DisjointClasses DisjointClasses(&lt;https://w3id.org/rains#ApproveOutput&gt; &lt;https://w3id.org/rains#Validate&gt;)</li>
+<li>Added: DisjointClasses DisjointClasses(&lt;https://w3id.org/rains#ApproveOutput&gt; &lt;https://w3id.org/rains#Explain&gt;)</li>
+<li>Added: DisjointClasses DisjointClasses(&lt;https://w3id.org/rains#ApproveOutput&gt; &lt;https://w3id.org/rains#ReturnOutput&gt;)</li>
+</ul>
+</li>
+<li><a href="#CollectUserFeedback">https://w3id.org/rains#CollectUserFeedback</a>
+<ul>
+<li>Added: DisjointClasses DisjointClasses(&lt;https://w3id.org/rains#CollectUserFeedback&gt; &lt;https://w3id.org/rains#Consent&gt;)</li>
+<li>Added: DisjointClasses DisjointClasses(&lt;https://w3id.org/rains#CollectUserFeedback&gt; &lt;https://w3id.org/rains#GenerateOutput&gt;)</li>
+<li>Added: DisjointClasses DisjointClasses(&lt;https://w3id.org/rains#CollectUserFeedback&gt; &lt;https://w3id.org/rains#ProvideSystemInputData&gt;)</li>
+<li>Added: DisjointClasses DisjointClasses(&lt;https://w3id.org/rains#CollectUserFeedback&gt; &lt;https://w3id.org/rains#Justify&gt;)</li>
+<li><li>Added: DisjointClasses DisjointClasses(&lt;https://w3id.org/rains#CollectUserFeedback&gt; &lt;https://w3id.org/rains#Configure&gt;)</li>
+<li>Added: DisjointClasses DisjointClasses(&lt;https://w3id.org/rains#CollectUserFeedback&gt; &lt;https://w3id.org/rains#NotifyUser&gt;)</li>
+<li>Added: DisjointClasses DisjointClasses(&lt;https://w3id.org/rains#CollectUserFeedback&gt; &lt;https://w3id.org/rains#Validate&gt;)</li>
+<li>Added: DisjointClasses DisjointClasses(&lt;https://w3id.org/rains#CollectUserFeedback&gt; &lt;https://w3id.org/rains#Explain&gt;)</li>
+<li>Added: DisjointClasses DisjointClasses(&lt;https://w3id.org/rains#CollectUserFeedback&gt; &lt;https://w3id.org/rains#ReturnOutput&gt;)</li>
+<li>Added: SubClass of https://w3id.org/rains#SystemAction</li>
+<li>Added: DisjointClasses DisjointClasses(&lt;https://w3id.org/rains#ApproveOutput&gt; &lt;https://w3id.org/rains#CollectUserFeedback&gt;)</li>
+<li>Added: DisjointClasses DisjointClasses(&lt;https://w3id.org/rains#CollectUserFeedback&gt; &lt;https://w3id.org/rains#PreprocessInputData&gt;)</li>
+<li><li></ul>
+</li>
+<li><a href="#ConfigurationAccountabilityPlan">https://w3id.org/rains#ConfigurationAccountabilityPlan</a>
+<ul>
+<li>Added: SubClass of https://w3id.org/rains#OperationStageAccountabilityPlan</li>
+</ul>
+</li>
+<li><a href="#ConfigurationData">https://w3id.org/rains#ConfigurationData</a>
+<ul>
+<li><li>Added: DisjointClasses DisjointClasses(&lt;https://w3id.org/rains#ConfigurationData&gt; &lt;https://w3id.org/rains#Explanation&gt;)</li>
+<li><li><li>Added: DisjointClasses DisjointClasses(&lt;https://w3id.org/rains#ConfigurationData&gt; &lt;https://w3id.org/rains#UserReview&gt;)</li>
+<li>Added: SubClass of https://w3id.org/rains#SystemData</li>
+<li>Added: DisjointClasses DisjointClasses(&lt;https://w3id.org/rains#ConfigurationData&gt; &lt;https://w3id.org/rains#RuntimeInputData&gt;)</li>
+<li>Added: DisjointClasses DisjointClasses(&lt;https://w3id.org/rains#ConfigurationData&gt; &lt;https://w3id.org/rains#SystemOutput&gt;)</li>
+<li>Added: DisjointClasses DisjointClasses(&lt;https://w3id.org/rains#ConfigurationData&gt; &lt;https://w3id.org/rains#Validation&gt;)</li>
+<li>Added: DisjointClasses DisjointClasses(&lt;https://w3id.org/rains#ConfigurationData&gt; &lt;https://w3id.org/rains#UserConsent&gt;)</li>
+<li>Added: DisjointClasses DisjointClasses(&lt;https://w3id.org/rains#ConfigurationData&gt; &lt;https://w3id.org/rains#Notification&gt;)</li>
+</ul>
+</li>
+<li><a href="#Configure">https://w3id.org/rains#Configure</a>
+<ul>
+<li><li>Added: DisjointClasses DisjointClasses(&lt;https://w3id.org/rains#Configure&gt; &lt;https://w3id.org/rains#GenerateOutput&gt;)</li>
+<li>Added: DisjointClasses DisjointClasses(&lt;https://w3id.org/rains#CollectUserFeedback&gt; &lt;https://w3id.org/rains#Configure&gt;)</li>
+<li>Added: DisjointClasses DisjointClasses(&lt;https://w3id.org/rains#Configure&gt; &lt;https://w3id.org/rains#NotifyUser&gt;)</li>
+<li>Added: DisjointClasses DisjointClasses(&lt;https://w3id.org/rains#Configure&gt; &lt;https://w3id.org/rains#Validate&gt;)</li>
+<li>Added: DisjointClasses DisjointClasses(&lt;https://w3id.org/rains#Configure&gt; &lt;https://w3id.org/rains#ReturnOutput&gt;)</li>
+<li>Added: DisjointClasses DisjointClasses(&lt;https://w3id.org/rains#Configure&gt; &lt;https://w3id.org/rains#Explain&gt;)</li>
+<li>Added: DisjointClasses DisjointClasses(&lt;https://w3id.org/rains#ApproveOutput&gt; &lt;https://w3id.org/rains#Configure&gt;)</li>
+<li>Added: DisjointClasses DisjointClasses(&lt;https://w3id.org/rains#Configure&gt; &lt;https://w3id.org/rains#ProvideSystemInputData&gt;)</li>
+<li><li><li>Added: DisjointClasses DisjointClasses(&lt;https://w3id.org/rains#Configure&gt; &lt;https://w3id.org/rains#Justify&gt;)</li>
+<li>Added: DisjointClasses DisjointClasses(&lt;https://w3id.org/rains#Configure&gt; &lt;https://w3id.org/rains#Consent&gt;)</li>
+<li>Added: SubClass of https://w3id.org/rains#SystemAction</li>
+<li>Added: DisjointClasses DisjointClasses(&lt;https://w3id.org/rains#Configure&gt; &lt;https://w3id.org/rains#PreprocessInputData&gt;)</li>
+</ul>
+</li>
+<li><a href="#Consent">https://w3id.org/rains#Consent</a>
+<ul>
+<li>Added: DisjointClasses DisjointClasses(&lt;https://w3id.org/rains#Consent&gt; &lt;https://w3id.org/rains#NotifyUser&gt;)</li>
+<li>Added: DisjointClasses DisjointClasses(&lt;https://w3id.org/rains#Consent&gt; &lt;https://w3id.org/rains#Justify&gt;)</li>
+<li>Added: DisjointClasses DisjointClasses(&lt;https://w3id.org/rains#CollectUserFeedback&gt; &lt;https://w3id.org/rains#Consent&gt;)</li>
+<li>Added: DisjointClasses DisjointClasses(&lt;https://w3id.org/rains#Consent&gt; &lt;https://w3id.org/rains#Explain&gt;)</li>
+<li><li>Added: SubClass of https://w3id.org/rains#SystemAction</li>
+<li>Added: DisjointClasses DisjointClasses(&lt;https://w3id.org/rains#Consent&gt; &lt;https://w3id.org/rains#PreprocessInputData&gt;)</li>
+<li><li><li>Added: DisjointClasses DisjointClasses(&lt;https://w3id.org/rains#Consent&gt; &lt;https://w3id.org/rains#GenerateOutput&gt;)</li>
+<li>Added: DisjointClasses DisjointClasses(&lt;https://w3id.org/rains#Configure&gt; &lt;https://w3id.org/rains#Consent&gt;)</li>
+<li>Added: DisjointClasses DisjointClasses(&lt;https://w3id.org/rains#ApproveOutput&gt; &lt;https://w3id.org/rains#Consent&gt;)</li>
+<li>Added: DisjointClasses DisjointClasses(&lt;https://w3id.org/rains#Consent&gt; &lt;https://w3id.org/rains#Validate&gt;)</li>
+<li>Added: DisjointClasses DisjointClasses(&lt;https://w3id.org/rains#Consent&gt; &lt;https://w3id.org/rains#ReturnOutput&gt;)</li>
+<li>Added: DisjointClasses DisjointClasses(&lt;https://w3id.org/rains#Consent&gt; &lt;https://w3id.org/rains#ProvideSystemInputData&gt;)</li>
+</ul>
+</li>
+<li><a href="#DeploymentStageAccountabilityPlan">https://w3id.org/rains#DeploymentStageAccountabilityPlan</a>
+<ul>
+<li>Added: SubClass of https://w3id.org/sao#AccountabilityPlan</li>
+<li>Added: DisjointClasses DisjointClasses(&lt;https://w3id.org/rains#DeploymentStageAccountabilityPlan&gt; &lt;https://w3id.org/rains#DesignStageAccountabilityPlan&gt; &lt;https://w3id.org/rains#ImplementationStageAccountabilityPlan&gt; &lt;https://w3id.org/rains#OperationStageAccountabilityPlan&gt;)</li>
+</ul>
+</li>
+<li><a href="#DisclaimerNotification">https://w3id.org/rains#DisclaimerNotification</a>
+<ul>
+<li><li><li><li>Added: SubClass of https://w3id.org/rains#Notification</li>
+</ul>
+</li>
+<li><a href="#ErrorNotification">https://w3id.org/rains#ErrorNotification</a>
+<ul>
+<li>Added: SubClass of https://w3id.org/rains#Notification</li>
+<li><li><li></ul>
+</li>
+<li><a href="#Explain">https://w3id.org/rains#Explain</a>
+<ul>
+<li>Added: DisjointClasses DisjointClasses(&lt;https://w3id.org/rains#Explain&gt; &lt;https://w3id.org/rains#Justify&gt;)</li>
+<li>Added: DisjointClasses DisjointClasses(&lt;https://w3id.org/rains#Consent&gt; &lt;https://w3id.org/rains#Explain&gt;)</li>
+<li><li>Added: DisjointClasses DisjointClasses(&lt;https://w3id.org/rains#Explain&gt; &lt;https://w3id.org/rains#ReturnOutput&gt;)</li>
+<li><li>Added: DisjointClasses DisjointClasses(&lt;https://w3id.org/rains#Explain&gt; &lt;https://w3id.org/rains#PreprocessInputData&gt;)</li>
+<li>Added: DisjointClasses DisjointClasses(&lt;https://w3id.org/rains#CollectUserFeedback&gt; &lt;https://w3id.org/rains#Explain&gt;)</li>
+<li>Added: DisjointClasses DisjointClasses(&lt;https://w3id.org/rains#Configure&gt; &lt;https://w3id.org/rains#Explain&gt;)</li>
+<li>Added: SubClass of https://w3id.org/rains#SystemAction</li>
+<li>Added: DisjointClasses DisjointClasses(&lt;https://w3id.org/rains#Explain&gt; &lt;https://w3id.org/rains#GenerateOutput&gt;)</li>
+<li><li>Added: DisjointClasses DisjointClasses(&lt;https://w3id.org/rains#Explain&gt; &lt;https://w3id.org/rains#Validate&gt;)</li>
+<li>Added: DisjointClasses DisjointClasses(&lt;https://w3id.org/rains#Explain&gt; &lt;https://w3id.org/rains#ProvideSystemInputData&gt;)</li>
+<li>Added: DisjointClasses DisjointClasses(&lt;https://w3id.org/rains#Explain&gt; &lt;https://w3id.org/rains#NotifyUser&gt;)</li>
+<li>Added: DisjointClasses DisjointClasses(&lt;https://w3id.org/rains#ApproveOutput&gt; &lt;https://w3id.org/rains#Explain&gt;)</li>
+</ul>
+</li>
+<li><a href="#Explanation">https://w3id.org/rains#Explanation</a>
+<ul>
+<li>Added: DisjointClasses DisjointClasses(&lt;https://w3id.org/rains#Explanation&gt; &lt;https://w3id.org/rains#UserConsent&gt;)</li>
+<li><li>Added: SubClass of https://w3id.org/rains#SystemData</li>
+<li>Added: DisjointClasses DisjointClasses(&lt;https://w3id.org/rains#ConfigurationData&gt; &lt;https://w3id.org/rains#Explanation&gt;)</li>
+<li>Added: DisjointClasses DisjointClasses(&lt;https://w3id.org/rains#Explanation&gt; &lt;https://w3id.org/rains#UserReview&gt;)</li>
+<li>Added: DisjointClasses DisjointClasses(&lt;https://w3id.org/rains#Explanation&gt; &lt;https://w3id.org/rains#Validation&gt;)</li>
+<li>Added: DisjointClasses DisjointClasses(&lt;https://w3id.org/rains#Explanation&gt; &lt;https://w3id.org/rains#Notification&gt;)</li>
+<li><li><li>Added: DisjointClasses DisjointClasses(&lt;https://w3id.org/rains#Explanation&gt; &lt;https://w3id.org/rains#RuntimeInputData&gt;)</li>
+</ul>
+</li>
+<li><a href="#ExplanationNotification">https://w3id.org/rains#ExplanationNotification</a>
+<ul>
+<li>Added: SubClass of https://w3id.org/rains#Notification</li>
+<li><li><li></ul>
+</li>
+<li><a href="#GenerateModelOutput">https://w3id.org/rains#GenerateModelOutput</a>
+<ul>
+<li>Added: SubClass of https://w3id.org/rains#GenerateOutput</li>
+<li>Added: DisjointClasses DisjointClasses(&lt;https://w3id.org/rains#GenerateModelOutput&gt; &lt;https://w3id.org/rains#Override&gt;)</li>
+<li>Added: DisjointClasses DisjointClasses(&lt;https://w3id.org/rains#Aggregate&gt; &lt;https://w3id.org/rains#GenerateModelOutput&gt;)</li>
+<li><li><li></ul>
+</li>
+<li><a href="#GenerateOutput">https://w3id.org/rains#GenerateOutput</a>
+<ul>
+<li>Added: SubClass of https://w3id.org/rains#SystemAction</li>
+<li>Added: DisjointClasses DisjointClasses(&lt;https://w3id.org/rains#ApproveOutput&gt; &lt;https://w3id.org/rains#GenerateOutput&gt;)</li>
+<li>Added: DisjointClasses DisjointClasses(&lt;https://w3id.org/rains#GenerateOutput&gt; &lt;https://w3id.org/rains#PreprocessInputData&gt;)</li>
+<li>Added: DisjointClasses DisjointClasses(&lt;https://w3id.org/rains#CollectUserFeedback&gt; &lt;https://w3id.org/rains#GenerateOutput&gt;)</li>
+<li><li>Added: DisjointClasses DisjointClasses(&lt;https://w3id.org/rains#Configure&gt; &lt;https://w3id.org/rains#GenerateOutput&gt;)</li>
+<li>Added: DisjointClasses DisjointClasses(&lt;https://w3id.org/rains#GenerateOutput&gt; &lt;https://w3id.org/rains#Validate&gt;)</li>
+<li>Added: DisjointClasses DisjointClasses(&lt;https://w3id.org/rains#GenerateOutput&gt; &lt;https://w3id.org/rains#Justify&gt;)</li>
+<li>Added: DisjointClasses DisjointClasses(&lt;https://w3id.org/rains#Consent&gt; &lt;https://w3id.org/rains#GenerateOutput&gt;)</li>
+<li>Added: DisjointClasses DisjointClasses(&lt;https://w3id.org/rains#Explain&gt; &lt;https://w3id.org/rains#GenerateOutput&gt;)</li>
+<li>Added: DisjointClasses DisjointClasses(&lt;https://w3id.org/rains#GenerateOutput&gt; &lt;https://w3id.org/rains#ReturnOutput&gt;)</li>
+<li>Added: DisjointClasses DisjointClasses(&lt;https://w3id.org/rains#GenerateOutput&gt; &lt;https://w3id.org/rains#NotifyUser&gt;)</li>
+<li>Added: DisjointClasses DisjointClasses(&lt;https://w3id.org/rains#GenerateOutput&gt; &lt;https://w3id.org/rains#ProvideSystemInputData&gt;)</li>
+<li><li></ul>
+</li>
+<li><a href="#Install">https://w3id.org/rains#Install</a>
+<ul>
+<li><li>Added: DisjointClasses DisjointClasses(&lt;https://w3id.org/rains#Install&gt; &lt;https://w3id.org/rains#MergeAndSplitDataset&gt;)</li>
+<li>Added: DisjointClasses DisjointClasses(&lt;https://w3id.org/rains#Install&gt; &lt;https://w3id.org/rains#RealizeComponent&gt;)</li>
+<li>Added: DisjointClasses DisjointClasses(&lt;https://w3id.org/rains#Install&gt; &lt;https://w3id.org/rains#SystemAction&gt;)</li>
+<li><li>Added: DisjointClasses DisjointClasses(&lt;https://w3id.org/rains#Install&gt; &lt;https://w3id.org/rains#TrainUser&gt;)</li>
+<li>Added: DisjointClasses DisjointClasses(&lt;https://w3id.org/rains#Decide&gt; &lt;https://w3id.org/rains#Install&gt;)</li>
+<li>Added: DisjointClasses DisjointClasses(&lt;https://w3id.org/rains#GenerateGuideline&gt; &lt;https://w3id.org/rains#Install&gt;)</li>
+<li><li>Added: SubClass of https://w3id.org/sao#AccountableAction</li>
+<li>Added: DisjointClasses DisjointClasses(&lt;https://w3id.org/rains#Evaluate&gt; &lt;https://w3id.org/rains#Install&gt;)</li>
+<li>Added: DisjointClasses DisjointClasses(&lt;https://w3id.org/rains#Install&gt; &lt;https://w3id.org/rains#ProduceSpecification&gt;)</li>
+</ul>
+</li>
+<li><a href="#InstallationAccountabilityPlan">https://w3id.org/rains#InstallationAccountabilityPlan</a>
+<ul>
+<li>Added: SubClass of https://w3id.org/rains#DeploymentStageAccountabilityPlan</li>
+</ul>
+</li>
+<li><a href="#InstallationLog">https://w3id.org/rains#InstallationLog</a>
+<ul>
+<li><li><li><li>Added: SubClass of https://w3id.org/rains#Log</li>
+<li>Added: DisjointClasses DisjointClasses(&lt;https://w3id.org/rains#ChangeLog&gt; &lt;https://w3id.org/rains#InstallationLog&gt;)</li>
+</ul>
+</li>
+<li><a href="#Justify">https://w3id.org/rains#Justify</a>
+<ul>
+<li>Added: DisjointClasses DisjointClasses(&lt;https://w3id.org/rains#Consent&gt; &lt;https://w3id.org/rains#Justify&gt;)</li>
+<li>Added: DisjointClasses DisjointClasses(&lt;https://w3id.org/rains#Justify&gt; &lt;https://w3id.org/rains#NotifyUser&gt;)</li>
+<li>Added: DisjointClasses DisjointClasses(&lt;https://w3id.org/rains#Explain&gt; &lt;https://w3id.org/rains#Justify&gt;)</li>
+<li>Added: DisjointClasses DisjointClasses(&lt;https://w3id.org/rains#Justify&gt; &lt;https://w3id.org/rains#ProvideSystemInputData&gt;)</li>
+<li>Added: SubClass of https://w3id.org/rains#SystemAction</li>
+<li><li>Added: DisjointClasses DisjointClasses(&lt;https://w3id.org/rains#CollectUserFeedback&gt; &lt;https://w3id.org/rains#Justify&gt;)</li>
+<li>Added: DisjointClasses DisjointClasses(&lt;https://w3id.org/rains#GenerateOutput&gt; &lt;https://w3id.org/rains#Justify&gt;)</li>
+<li><li>Added: DisjointClasses DisjointClasses(&lt;https://w3id.org/rains#Justify&gt; &lt;https://w3id.org/rains#PreprocessInputData&gt;)</li>
+<li>Added: DisjointClasses DisjointClasses(&lt;https://w3id.org/rains#Configure&gt; &lt;https://w3id.org/rains#Justify&gt;)</li>
+<li><li>Added: DisjointClasses DisjointClasses(&lt;https://w3id.org/rains#ApproveOutput&gt; &lt;https://w3id.org/rains#Justify&gt;)</li>
+<li>Added: DisjointClasses DisjointClasses(&lt;https://w3id.org/rains#Justify&gt; &lt;https://w3id.org/rains#ReturnOutput&gt;)</li>
+<li>Added: DisjointClasses DisjointClasses(&lt;https://w3id.org/rains#Justify&gt; &lt;https://w3id.org/rains#Validate&gt;)</li>
+</ul>
+</li>
+<li><a href="#MaintenanceAccountabilityPlan">https://w3id.org/rains#MaintenanceAccountabilityPlan</a>
+<ul>
+<li>Added: SubClass of https://w3id.org/rains#OperationStageAccountabilityPlan</li>
+</ul>
+</li>
+<li><a href="#ManualProductionAccountabilityPlan">https://w3id.org/rains#ManualProductionAccountabilityPlan</a>
+<ul>
+<li>Added: SubClass of https://w3id.org/rains#DeploymentStageAccountabilityPlan</li>
+</ul>
+</li>
+<li><a href="#ModelOutput">https://w3id.org/rains#ModelOutput</a>
+<ul>
+<li>Added: DisjointClasses DisjointClasses(&lt;https://w3id.org/rains#AggregationResult&gt; &lt;https://w3id.org/rains#ModelOutput&gt;)</li>
+<li>Added: DisjointClasses DisjointClasses(&lt;https://w3id.org/rains#ModelOutput&gt; &lt;https://w3id.org/rains#OverrideResult&gt;)</li>
+<li><li><li>Added: SubClass of https://w3id.org/rains#SystemOutput</li>
+<li></ul>
+</li>
+<li><a href="#Notification">https://w3id.org/rains#Notification</a>
+<ul>
+<li>Added: DisjointClasses DisjointClasses(&lt;https://w3id.org/rains#Notification&gt; &lt;https://w3id.org/rains#SystemOutput&gt;)</li>
+<li>Added: DisjointClasses DisjointClasses(&lt;https://w3id.org/rains#Notification&gt; &lt;https://w3id.org/rains#RuntimeInputData&gt;)</li>
+<li><li><li>Added: DisjointClasses DisjointClasses(&lt;https://w3id.org/rains#Explanation&gt; &lt;https://w3id.org/rains#Notification&gt;)</li>
+<li>Added: SubClass of https://w3id.org/rains#SystemData</li>
+<li>Added: DisjointClasses DisjointClasses(&lt;https://w3id.org/rains#Notification&gt; &lt;https://w3id.org/rains#Validation&gt;)</li>
+<li>Added: DisjointClasses DisjointClasses(&lt;https://w3id.org/rains#Notification&gt; &lt;https://w3id.org/rains#UserConsent&gt;)</li>
+<li>Added: DisjointClasses DisjointClasses(&lt;https://w3id.org/rains#Notification&gt; &lt;https://w3id.org/rains#UserReview&gt;)</li>
+<li><li>Added: DisjointClasses DisjointClasses(&lt;https://w3id.org/rains#ConfigurationData&gt; &lt;https://w3id.org/rains#Notification&gt;)</li>
+</ul>
+</li>
+<li><a href="#NotificationProof">https://w3id.org/rains#NotificationProof</a>
+<ul>
+<li>Added: SubClass of https://w3id.org/sao#InformationElement</li>
+</ul>
+</li>
+<li><a href="#NotifyUser">https://w3id.org/rains#NotifyUser</a>
+<ul>
+<li>Added: DisjointClasses DisjointClasses(&lt;https://w3id.org/rains#Consent&gt; &lt;https://w3id.org/rains#NotifyUser&gt;)</li>
+<li>Added: DisjointClasses DisjointClasses(&lt;https://w3id.org/rains#Justify&gt; &lt;https://w3id.org/rains#NotifyUser&gt;)</li>
+<li>Added: DisjointClasses DisjointClasses(&lt;https://w3id.org/rains#NotifyUser&gt; &lt;https://w3id.org/rains#Validate&gt;)</li>
+<li><li>Added: SubClass of https://w3id.org/rains#SystemAction</li>
+<li>Added: DisjointClasses DisjointClasses(&lt;https://w3id.org/rains#CollectUserFeedback&gt; &lt;https://w3id.org/rains#NotifyUser&gt;)</li>
+<li>Added: DisjointClasses DisjointClasses(&lt;https://w3id.org/rains#Configure&gt; &lt;https://w3id.org/rains#NotifyUser&gt;)</li>
+<li>Added: DisjointClasses DisjointClasses(&lt;https://w3id.org/rains#NotifyUser&gt; &lt;https://w3id.org/rains#ProvideSystemInputData&gt;)</li>
+<li>Added: DisjointClasses DisjointClasses(&lt;https://w3id.org/rains#GenerateOutput&gt; &lt;https://w3id.org/rains#NotifyUser&gt;)</li>
+<li>Added: DisjointClasses DisjointClasses(&lt;https://w3id.org/rains#NotifyUser&gt; &lt;https://w3id.org/rains#ReturnOutput&gt;)</li>
+<li>Added: DisjointClasses DisjointClasses(&lt;https://w3id.org/rains#NotifyUser&gt; &lt;https://w3id.org/rains#PreprocessInputData&gt;)</li>
+<li>Added: DisjointClasses DisjointClasses(&lt;https://w3id.org/rains#ApproveOutput&gt; &lt;https://w3id.org/rains#NotifyUser&gt;)</li>
+<li>Added: DisjointClasses DisjointClasses(&lt;https://w3id.org/rains#Explain&gt; &lt;https://w3id.org/rains#NotifyUser&gt;)</li>
+<li><li></ul>
+</li>
+<li><a href="#OperationStageAccountabilityPlan">https://w3id.org/rains#OperationStageAccountabilityPlan</a>
+<ul>
+<li>Added: SubClass of https://w3id.org/sao#AccountabilityPlan</li>
+<li>Added: DisjointClasses DisjointClasses(&lt;https://w3id.org/rains#DeploymentStageAccountabilityPlan&gt; &lt;https://w3id.org/rains#DesignStageAccountabilityPlan&gt; &lt;https://w3id.org/rains#ImplementationStageAccountabilityPlan&gt; &lt;https://w3id.org/rains#OperationStageAccountabilityPlan&gt;)</li>
+</ul>
+</li>
+<li><a href="#Override">https://w3id.org/rains#Override</a>
+<ul>
+<li><li><li>Added: DisjointClasses DisjointClasses(&lt;https://w3id.org/rains#Aggregate&gt; &lt;https://w3id.org/rains#Override&gt;)</li>
+<li><li>Added: SubClass of https://w3id.org/rains#GenerateOutput</li>
+<li>Added: DisjointClasses DisjointClasses(&lt;https://w3id.org/rains#GenerateModelOutput&gt; &lt;https://w3id.org/rains#Override&gt;)</li>
+</ul>
+</li>
+<li><a href="#OverrideResult">https://w3id.org/rains#OverrideResult</a>
+<ul>
+<li>Added: DisjointClasses DisjointClasses(&lt;https://w3id.org/rains#ModelOutput&gt; &lt;https://w3id.org/rains#OverrideResult&gt;)</li>
+<li><li><li>Added: DisjointClasses DisjointClasses(&lt;https://w3id.org/rains#AggregationResult&gt; &lt;https://w3id.org/rains#OverrideResult&gt;)</li>
+<li>Added: SubClass of https://w3id.org/rains#SystemOutput</li>
+<li></ul>
+</li>
+<li><a href="#PreprocessInputData">https://w3id.org/rains#PreprocessInputData</a>
+<ul>
+<li>Added: SubClass of https://w3id.org/rains#SystemAction</li>
+<li><li><li>Added: DisjointClasses DisjointClasses(&lt;https://w3id.org/rains#GenerateOutput&gt; &lt;https://w3id.org/rains#PreprocessInputData&gt;)</li>
+<li>Added: DisjointClasses DisjointClasses(&lt;https://w3id.org/rains#Explain&gt; &lt;https://w3id.org/rains#PreprocessInputData&gt;)</li>
+<li><li>Added: DisjointClasses DisjointClasses(&lt;https://w3id.org/rains#PreprocessInputData&gt; &lt;https://w3id.org/rains#ProvideSystemInputData&gt;)</li>
+<li>Added: DisjointClasses DisjointClasses(&lt;https://w3id.org/rains#Consent&gt; &lt;https://w3id.org/rains#PreprocessInputData&gt;)</li>
+<li>Added: DisjointClasses DisjointClasses(&lt;https://w3id.org/rains#ApproveOutput&gt; &lt;https://w3id.org/rains#PreprocessInputData&gt;)</li>
+<li>Added: DisjointClasses DisjointClasses(&lt;https://w3id.org/rains#Justify&gt; &lt;https://w3id.org/rains#PreprocessInputData&gt;)</li>
+<li>Added: DisjointClasses DisjointClasses(&lt;https://w3id.org/rains#PreprocessInputData&gt; &lt;https://w3id.org/rains#ReturnOutput&gt;)</li>
+<li>Added: DisjointClasses DisjointClasses(&lt;https://w3id.org/rains#NotifyUser&gt; &lt;https://w3id.org/rains#PreprocessInputData&gt;)</li>
+<li>Added: DisjointClasses DisjointClasses(&lt;https://w3id.org/rains#CollectUserFeedback&gt; &lt;https://w3id.org/rains#PreprocessInputData&gt;)</li>
+<li>Added: DisjointClasses DisjointClasses(&lt;https://w3id.org/rains#PreprocessInputData&gt; &lt;https://w3id.org/rains#Validate&gt;)</li>
+<li>Added: DisjointClasses DisjointClasses(&lt;https://w3id.org/rains#Configure&gt; &lt;https://w3id.org/rains#PreprocessInputData&gt;)</li>
+</ul>
+</li>
+<li><a href="#ProvideSystemInputData">https://w3id.org/rains#ProvideSystemInputData</a>
+<ul>
+<li>Added: DisjointClasses DisjointClasses(&lt;https://w3id.org/rains#ProvideSystemInputData&gt; &lt;https://w3id.org/rains#Validate&gt;)</li>
+<li>Added: DisjointClasses DisjointClasses(&lt;https://w3id.org/rains#Justify&gt; &lt;https://w3id.org/rains#ProvideSystemInputData&gt;)</li>
+<li>Added: DisjointClasses DisjointClasses(&lt;https://w3id.org/rains#CollectUserFeedback&gt; &lt;https://w3id.org/rains#ProvideSystemInputData&gt;)</li>
+<li>Added: DisjointClasses DisjointClasses(&lt;https://w3id.org/rains#PreprocessInputData&gt; &lt;https://w3id.org/rains#ProvideSystemInputData&gt;)</li>
+<li>Added: SubClass of https://w3id.org/rains#SystemAction</li>
+<li>Added: DisjointClasses DisjointClasses(&lt;https://w3id.org/rains#NotifyUser&gt; &lt;https://w3id.org/rains#ProvideSystemInputData&gt;)</li>
+<li>Added: DisjointClasses DisjointClasses(&lt;https://w3id.org/rains#ProvideSystemInputData&gt; &lt;https://w3id.org/rains#ReturnOutput&gt;)</li>
+<li>Added: DisjointClasses DisjointClasses(&lt;https://w3id.org/rains#ApproveOutput&gt; &lt;https://w3id.org/rains#ProvideSystemInputData&gt;)</li>
+<li>Added: DisjointClasses DisjointClasses(&lt;https://w3id.org/rains#Configure&gt; &lt;https://w3id.org/rains#ProvideSystemInputData&gt;)</li>
+<li><li><li>Added: DisjointClasses DisjointClasses(&lt;https://w3id.org/rains#GenerateOutput&gt; &lt;https://w3id.org/rains#ProvideSystemInputData&gt;)</li>
+<li>Added: DisjointClasses DisjointClasses(&lt;https://w3id.org/rains#Consent&gt; &lt;https://w3id.org/rains#ProvideSystemInputData&gt;)</li>
+<li><li>Added: DisjointClasses DisjointClasses(&lt;https://w3id.org/rains#Explain&gt; &lt;https://w3id.org/rains#ProvideSystemInputData&gt;)</li>
+</ul>
+</li>
+<li><a href="#ReturnOutput">https://w3id.org/rains#ReturnOutput</a>
+<ul>
+<li>Added: DisjointClasses DisjointClasses(&lt;https://w3id.org/rains#Explain&gt; &lt;https://w3id.org/rains#ReturnOutput&gt;)</li>
+<li>Added: DisjointClasses DisjointClasses(&lt;https://w3id.org/rains#Configure&gt; &lt;https://w3id.org/rains#ReturnOutput&gt;)</li>
+<li>Added: DisjointClasses DisjointClasses(&lt;https://w3id.org/rains#ReturnOutput&gt; &lt;https://w3id.org/rains#Validate&gt;)</li>
+<li><li>Added: DisjointClasses DisjointClasses(&lt;https://w3id.org/rains#CollectUserFeedback&gt; &lt;https://w3id.org/rains#ReturnOutput&gt;)</li>
+<li>Added: DisjointClasses DisjointClasses(&lt;https://w3id.org/rains#ProvideSystemInputData&gt; &lt;https://w3id.org/rains#ReturnOutput&gt;)</li>
+<li>Added: DisjointClasses DisjointClasses(&lt;https://w3id.org/rains#PreprocessInputData&gt; &lt;https://w3id.org/rains#ReturnOutput&gt;)</li>
+<li>Added: DisjointClasses DisjointClasses(&lt;https://w3id.org/rains#GenerateOutput&gt; &lt;https://w3id.org/rains#ReturnOutput&gt;)</li>
+<li>Added: DisjointClasses DisjointClasses(&lt;https://w3id.org/rains#NotifyUser&gt; &lt;https://w3id.org/rains#ReturnOutput&gt;)</li>
+<li><li><li>Added: DisjointClasses DisjointClasses(&lt;https://w3id.org/rains#Justify&gt; &lt;https://w3id.org/rains#ReturnOutput&gt;)</li>
+<li>Added: DisjointClasses DisjointClasses(&lt;https://w3id.org/rains#Consent&gt; &lt;https://w3id.org/rains#ReturnOutput&gt;)</li>
+<li>Added: SubClass of https://w3id.org/rains#SystemAction</li>
+<li>Added: DisjointClasses DisjointClasses(&lt;https://w3id.org/rains#ApproveOutput&gt; &lt;https://w3id.org/rains#ReturnOutput&gt;)</li>
+</ul>
+</li>
+<li><a href="#RuntimeAccountabilityPlan">https://w3id.org/rains#RuntimeAccountabilityPlan</a>
+<ul>
+<li>Added: SubClass of https://w3id.org/rains#OperationStageAccountabilityPlan</li>
+</ul>
+</li>
+<li><a href="#RuntimeInputData">https://w3id.org/rains#RuntimeInputData</a>
+<ul>
+<li><li>Added: DisjointClasses DisjointClasses(&lt;https://w3id.org/rains#RuntimeInputData&gt; &lt;https://w3id.org/rains#SystemOutput&gt;)</li>
+<li>Added: DisjointClasses DisjointClasses(&lt;https://w3id.org/rains#Notification&gt; &lt;https://w3id.org/rains#RuntimeInputData&gt;)</li>
+<li>Added: DisjointClasses DisjointClasses(&lt;https://w3id.org/rains#RuntimeInputData&gt; &lt;https://w3id.org/rains#UserConsent&gt;)</li>
+<li><li>Added: DisjointClasses DisjointClasses(&lt;https://w3id.org/rains#RuntimeInputData&gt; &lt;https://w3id.org/rains#UserReview&gt;)</li>
+<li>Added: DisjointClasses DisjointClasses(&lt;https://w3id.org/rains#RuntimeInputData&gt; &lt;https://w3id.org/rains#Validation&gt;)</li>
+<li><li>Added: SubClass of https://w3id.org/rains#SystemData</li>
+<li>Added: DisjointClasses DisjointClasses(&lt;https://w3id.org/rains#Explanation&gt; &lt;https://w3id.org/rains#RuntimeInputData&gt;)</li>
+<li>Added: DisjointClasses DisjointClasses(&lt;https://w3id.org/rains#ConfigurationData&gt; &lt;https://w3id.org/rains#RuntimeInputData&gt;)</li>
+</ul>
+</li>
+<li><a href="#SystemAction">https://w3id.org/rains#SystemAction</a>
+<ul>
+<li>Added: DisjointClasses DisjointClasses(&lt;https://w3id.org/rains#ProduceSpecification&gt; &lt;https://w3id.org/rains#SystemAction&gt;)</li>
+<li><li>Added: DisjointClasses DisjointClasses(&lt;https://w3id.org/rains#RealizeComponent&gt; &lt;https://w3id.org/rains#SystemAction&gt;)</li>
+<li><li><li>Added: DisjointClasses DisjointClasses(&lt;https://w3id.org/rains#SystemAction&gt; &lt;https://w3id.org/rains#TrainUser&gt;)</li>
+<li>Added: DisjointClasses DisjointClasses(&lt;https://w3id.org/rains#Install&gt; &lt;https://w3id.org/rains#SystemAction&gt;)</li>
+<li>Added: DisjointClasses DisjointClasses(&lt;https://w3id.org/rains#MergeAndSplitDataset&gt; &lt;https://w3id.org/rains#SystemAction&gt;)</li>
+<li>Added: SubClass of https://w3id.org/sao#AccountableAction</li>
+<li>Added: DisjointClasses DisjointClasses(&lt;https://w3id.org/rains#Evaluate&gt; &lt;https://w3id.org/rains#SystemAction&gt;)</li>
+<li>Added: DisjointClasses DisjointClasses(&lt;https://w3id.org/rains#GenerateGuideline&gt; &lt;https://w3id.org/rains#SystemAction&gt;)</li>
+<li>Added: DisjointClasses DisjointClasses(&lt;https://w3id.org/rains#Decide&gt; &lt;https://w3id.org/rains#SystemAction&gt;)</li>
+</ul>
+</li>
+<li><a href="#SystemData">https://w3id.org/rains#SystemData</a>
+<ul>
+<li><li>Added: DisjointClasses DisjointClasses(&lt;https://w3id.org/rains#DatasetComponent&gt; &lt;https://w3id.org/rains#SystemData&gt;)</li>
+<li>Added: DisjointClasses DisjointClasses(&lt;https://w3id.org/rains#Guideline&gt; &lt;https://w3id.org/rains#SystemData&gt;)</li>
+<li>Added: DisjointClasses DisjointClasses(&lt;https://w3id.org/rains#Evaluation&gt; &lt;https://w3id.org/rains#SystemData&gt;)</li>
+<li><li>Added: DisjointClasses DisjointClasses(&lt;https://w3id.org/rains#SupportingInfrastructureComponent&gt; &lt;https://w3id.org/rains#SystemData&gt;)</li>
+<li><li>Added: DisjointClasses DisjointClasses(&lt;https://w3id.org/rains#SystemData&gt; &lt;https://w3id.org/rains#UserTrainingReport&gt;)</li>
+<li>Added: DisjointClasses DisjointClasses(&lt;https://w3id.org/rains#DesignSpecification&gt; &lt;https://w3id.org/rains#SystemData&gt;)</li>
+<li>Added: SubClass of https://w3id.org/sao#AccountableResult</li>
+<li>Added: DisjointClasses DisjointClasses(&lt;https://w3id.org/rains#HumanDecision&gt; &lt;https://w3id.org/rains#SystemData&gt;)</li>
+<li>Added: DisjointClasses DisjointClasses(&lt;https://w3id.org/rains#ModelComponent&gt; &lt;https://w3id.org/rains#SystemData&gt;)</li>
+<li>Added: DisjointClasses DisjointClasses(&lt;https://w3id.org/rains#Log&gt; &lt;https://w3id.org/rains#SystemData&gt;)</li>
+</ul>
+</li>
+<li><a href="#SystemFeedbackFromUserMechanism">https://w3id.org/rains#SystemFeedbackFromUserMechanism</a>
+<ul>
+<li>Added: SubClass of https://w3id.org/rains#RealizableObjectCharacteristic</li>
+</ul>
+</li>
+<li><a href="#SystemOutput">https://w3id.org/rains#SystemOutput</a>
+<ul>
+<li>Added: DisjointClasses DisjointClasses(&lt;https://w3id.org/rains#RuntimeInputData&gt; &lt;https://w3id.org/rains#SystemOutput&gt;)</li>
+<li><li>Added: DisjointClasses DisjointClasses(&lt;https://w3id.org/rains#Notification&gt; &lt;https://w3id.org/rains#SystemOutput&gt;)</li>
+<li>Added: DisjointClasses DisjointClasses(&lt;https://w3id.org/rains#SystemOutput&gt; &lt;https://w3id.org/rains#Validation&gt;)</li>
+<li>Added: SubClass of https://w3id.org/rains#SystemData</li>
+<li>Added: DisjointClasses DisjointClasses(&lt;https://w3id.org/rains#SystemOutput&gt; &lt;https://w3id.org/rains#UserConsent&gt;)</li>
+<li>Added: DisjointClasses DisjointClasses(&lt;https://w3id.org/rains#ConfigurationData&gt; &lt;https://w3id.org/rains#SystemOutput&gt;)</li>
+<li><li>Added: DisjointClasses DisjointClasses(&lt;https://w3id.org/rains#SystemOutput&gt; &lt;https://w3id.org/rains#UserReview&gt;)</li>
+<li></ul>
+</li>
+<li><a href="#TrainUser">https://w3id.org/rains#TrainUser</a>
+<ul>
+<li>Added: DisjointClasses DisjointClasses(&lt;https://w3id.org/rains#GenerateGuideline&gt; &lt;https://w3id.org/rains#TrainUser&gt;)</li>
+<li>Added: DisjointClasses DisjointClasses(&lt;https://w3id.org/rains#ProduceSpecification&gt; &lt;https://w3id.org/rains#TrainUser&gt;)</li>
+<li>Added: DisjointClasses DisjointClasses(&lt;https://w3id.org/rains#Decide&gt; &lt;https://w3id.org/rains#TrainUser&gt;)</li>
+<li>Added: DisjointClasses DisjointClasses(&lt;https://w3id.org/rains#RealizeComponent&gt; &lt;https://w3id.org/rains#TrainUser&gt;)</li>
+<li><li>Added: DisjointClasses DisjointClasses(&lt;https://w3id.org/rains#SystemAction&gt; &lt;https://w3id.org/rains#TrainUser&gt;)</li>
+<li>Added: DisjointClasses DisjointClasses(&lt;https://w3id.org/rains#Evaluate&gt; &lt;https://w3id.org/rains#TrainUser&gt;)</li>
+<li><li>Added: DisjointClasses DisjointClasses(&lt;https://w3id.org/rains#Install&gt; &lt;https://w3id.org/rains#TrainUser&gt;)</li>
+<li>Added: DisjointClasses DisjointClasses(&lt;https://w3id.org/rains#MergeAndSplitDataset&gt; &lt;https://w3id.org/rains#TrainUser&gt;)</li>
+<li><li>Added: SubClass of https://w3id.org/sao#AccountableAction</li>
+</ul>
+</li>
+<li><a href="#UserConsent">https://w3id.org/rains#UserConsent</a>
+<ul>
+<li>Added: DisjointClasses DisjointClasses(&lt;https://w3id.org/rains#Explanation&gt; &lt;https://w3id.org/rains#UserConsent&gt;)</li>
+<li><li>Added: DisjointClasses DisjointClasses(&lt;https://w3id.org/rains#RuntimeInputData&gt; &lt;https://w3id.org/rains#UserConsent&gt;)</li>
+<li>Added: DisjointClasses DisjointClasses(&lt;https://w3id.org/rains#UserConsent&gt; &lt;https://w3id.org/rains#UserReview&gt;)</li>
+<li>Added: DisjointClasses DisjointClasses(&lt;https://w3id.org/rains#SystemOutput&gt; &lt;https://w3id.org/rains#UserConsent&gt;)</li>
+<li><li>Added: DisjointClasses DisjointClasses(&lt;https://w3id.org/rains#Notification&gt; &lt;https://w3id.org/rains#UserConsent&gt;)</li>
+<li>Added: DisjointClasses DisjointClasses(&lt;https://w3id.org/rains#UserConsent&gt; &lt;https://w3id.org/rains#Validation&gt;)</li>
+<li><li>Added: DisjointClasses DisjointClasses(&lt;https://w3id.org/rains#ConfigurationData&gt; &lt;https://w3id.org/rains#UserConsent&gt;)</li>
+<li>Added: SubClass of https://w3id.org/rains#SystemData</li>
+</ul>
+</li>
+<li><a href="#UserReview">https://w3id.org/rains#UserReview</a>
+<ul>
+<li>Added: DisjointClasses DisjointClasses(&lt;https://w3id.org/rains#Explanation&gt; &lt;https://w3id.org/rains#UserReview&gt;)</li>
+<li>Added: DisjointClasses DisjointClasses(&lt;https://w3id.org/rains#UserConsent&gt; &lt;https://w3id.org/rains#UserReview&gt;)</li>
+<li>Added: DisjointClasses DisjointClasses(&lt;https://w3id.org/rains#RuntimeInputData&gt; &lt;https://w3id.org/rains#UserReview&gt;)</li>
+<li>Added: DisjointClasses DisjointClasses(&lt;https://w3id.org/rains#UserReview&gt; &lt;https://w3id.org/rains#Validation&gt;)</li>
+<li>Added: SubClass of https://w3id.org/rains#SystemData</li>
+<li><li>Added: DisjointClasses DisjointClasses(&lt;https://w3id.org/rains#ConfigurationData&gt; &lt;https://w3id.org/rains#UserReview&gt;)</li>
+<li><li>Added: DisjointClasses DisjointClasses(&lt;https://w3id.org/rains#Notification&gt; &lt;https://w3id.org/rains#UserReview&gt;)</li>
+<li>Added: DisjointClasses DisjointClasses(&lt;https://w3id.org/rains#SystemOutput&gt; &lt;https://w3id.org/rains#UserReview&gt;)</li>
+<li></ul>
+</li>
+<li><a href="#UserTrainingAccountabilityPlan">https://w3id.org/rains#UserTrainingAccountabilityPlan</a>
+<ul>
+<li>Added: SubClass of https://w3id.org/rains#DeploymentStageAccountabilityPlan</li>
+</ul>
+</li>
+<li><a href="#UserTrainingReport">https://w3id.org/rains#UserTrainingReport</a>
+<ul>
+<li><li>Added: DisjointClasses DisjointClasses(&lt;https://w3id.org/rains#DesignSpecification&gt; &lt;https://w3id.org/rains#UserTrainingReport&gt;)</li>
+<li>Added: DisjointClasses DisjointClasses(&lt;https://w3id.org/rains#HumanDecision&gt; &lt;https://w3id.org/rains#UserTrainingReport&gt;)</li>
+<li><li>Added: DisjointClasses DisjointClasses(&lt;https://w3id.org/rains#ModelComponent&gt; &lt;https://w3id.org/rains#UserTrainingReport&gt;)</li>
+<li>Added: SubClass of https://w3id.org/sao#AccountableResult</li>
+<li>Added: DisjointClasses DisjointClasses(&lt;https://w3id.org/rains#Log&gt; &lt;https://w3id.org/rains#UserTrainingReport&gt;)</li>
+<li>Added: DisjointClasses DisjointClasses(&lt;https://w3id.org/rains#SystemData&gt; &lt;https://w3id.org/rains#UserTrainingReport&gt;)</li>
+<li>Added: DisjointClasses DisjointClasses(&lt;https://w3id.org/rains#DatasetComponent&gt; &lt;https://w3id.org/rains#UserTrainingReport&gt;)</li>
+<li>Added: DisjointClasses DisjointClasses(&lt;https://w3id.org/rains#Guideline&gt; &lt;https://w3id.org/rains#UserTrainingReport&gt;)</li>
+<li>Added: DisjointClasses DisjointClasses(&lt;https://w3id.org/rains#Evaluation&gt; &lt;https://w3id.org/rains#UserTrainingReport&gt;)</li>
+<li>Added: DisjointClasses DisjointClasses(&lt;https://w3id.org/rains#SupportingInfrastructureComponent&gt; &lt;https://w3id.org/rains#UserTrainingReport&gt;)</li>
+<li></ul>
+</li>
+<li><a href="#Validate">https://w3id.org/rains#Validate</a>
+<ul>
+<li>Added: SubClass of https://w3id.org/rains#SystemAction</li>
+<li>Added: DisjointClasses DisjointClasses(&lt;https://w3id.org/rains#ProvideSystemInputData&gt; &lt;https://w3id.org/rains#Validate&gt;)</li>
+<li><li>Added: DisjointClasses DisjointClasses(&lt;https://w3id.org/rains#NotifyUser&gt; &lt;https://w3id.org/rains#Validate&gt;)</li>
+<li>Added: DisjointClasses DisjointClasses(&lt;https://w3id.org/rains#GenerateOutput&gt; &lt;https://w3id.org/rains#Validate&gt;)</li>
+<li>Added: DisjointClasses DisjointClasses(&lt;https://w3id.org/rains#CollectUserFeedback&gt; &lt;https://w3id.org/rains#Validate&gt;)</li>
+<li>Added: DisjointClasses DisjointClasses(&lt;https://w3id.org/rains#Configure&gt; &lt;https://w3id.org/rains#Validate&gt;)</li>
+<li>Added: DisjointClasses DisjointClasses(&lt;https://w3id.org/rains#ReturnOutput&gt; &lt;https://w3id.org/rains#Validate&gt;)</li>
+<li><li>Added: DisjointClasses DisjointClasses(&lt;https://w3id.org/rains#Explain&gt; &lt;https://w3id.org/rains#Validate&gt;)</li>
+<li>Added: DisjointClasses DisjointClasses(&lt;https://w3id.org/rains#Consent&gt; &lt;https://w3id.org/rains#Validate&gt;)</li>
+<li>Added: DisjointClasses DisjointClasses(&lt;https://w3id.org/rains#Justify&gt; &lt;https://w3id.org/rains#Validate&gt;)</li>
+<li><li>Added: DisjointClasses DisjointClasses(&lt;https://w3id.org/rains#PreprocessInputData&gt; &lt;https://w3id.org/rains#Validate&gt;)</li>
+<li>Added: DisjointClasses DisjointClasses(&lt;https://w3id.org/rains#ApproveOutput&gt; &lt;https://w3id.org/rains#Validate&gt;)</li>
+</ul>
+</li>
+<li><a href="#Validation">https://w3id.org/rains#Validation</a>
+<ul>
+<li><li>Added: DisjointClasses DisjointClasses(&lt;https://w3id.org/rains#Explanation&gt; &lt;https://w3id.org/rains#Validation&gt;)</li>
+<li>Added: DisjointClasses DisjointClasses(&lt;https://w3id.org/rains#SystemOutput&gt; &lt;https://w3id.org/rains#Validation&gt;)</li>
+<li>Added: DisjointClasses DisjointClasses(&lt;https://w3id.org/rains#UserReview&gt; &lt;https://w3id.org/rains#Validation&gt;)</li>
+<li>Added: DisjointClasses DisjointClasses(&lt;https://w3id.org/rains#RuntimeInputData&gt; &lt;https://w3id.org/rains#Validation&gt;)</li>
+<li><li>Added: DisjointClasses DisjointClasses(&lt;https://w3id.org/rains#Notification&gt; &lt;https://w3id.org/rains#Validation&gt;)</li>
+<li>Added: DisjointClasses DisjointClasses(&lt;https://w3id.org/rains#UserConsent&gt; &lt;https://w3id.org/rains#Validation&gt;)</li>
+<li>Added: SubClass of https://w3id.org/rains#SystemData</li>
+<li>Added: DisjointClasses DisjointClasses(&lt;https://w3id.org/rains#ConfigurationData&gt; &lt;https://w3id.org/rains#Validation&gt;)</li>
+<li></ul>
+</li>
+<li><a href="#ValidationResult">https://w3id.org/rains#ValidationResult</a>
+<ul>
+<li>Added: SubClass of https://w3id.org/sao#InformationElement</li>
+</ul>
+</li>
+</ul></details><h3 id="changeProp" class="list">Object Properties</h3>
+<details><summary><u>Modified object properties</u></summary>
+<ul><li><a href="#hasEvaluationResult">https://w3id.org/rains#hasEvaluationResult</a>
+<ul>
+<li>Added: rdfs:comment "A relation that links some evaluation measure to one or more results produced for this measure."^^xsd:string</li>
+</ul>
+<ul>
+<li>Deleted: rdfs:comment "A relation that links some evaluation measure to one or more results produced for this measure. This property is the inverse of hasEvaluationResult."^^xsd:string</li>
+</ul>
+</li>
+<li><a href="#isCharacteristicOfRealizableObject">https://w3id.org/rains#isCharacteristicOfRealizableObject</a>
+<ul>
+<li>Added: rdfs:comment "Inverse of hasRealizableObjectCharacteristic."^^xsd:string</li>
+</ul>
+<ul>
+<li>Deleted: rdfs:comment "Inverse of hasRealizableObjectCharacteristic"^^xsd:string</li>
+</ul>
+</li>
+<li><a href="#isEvaluationResultOf">https://w3id.org/rains#isEvaluationResultOf</a>
+<ul>
+<li>Added: rdfs:comment "A relation that links a result to some evaluation measure for which the result was produced. This property is the inverse of hasEvaluationResult."^^xsd:string</li>
+</ul>
+<ul>
+<li>Deleted: rdfs:comment "A relation that links a result to some evaluation measure for which the result was produced."^^xsd:string</li>
+</ul>
+</li>
+</ul></details><details><summary><u>Added object properties</u></summary>
+<ul><li><a href="#hasExplanation">https://w3id.org/rains#hasExplanation</a>
+<ul>
+<li>Added: InverseObjectProperties InverseObjectProperties(&lt;https://w3id.org/rains#hasExplanation&gt; &lt;https://w3id.org/rains#isExplanationOf&gt;)</li>
+<li>Added: Range https://w3id.org/rains#Explanation</li>
+<li>Added: domain https://w3id.org/rains#SystemOutput</li>
+</ul>
+</li>
+<li><a href="#hasJustification">https://w3id.org/rains#hasJustification</a>
+<ul>
+<li>Added: Range https://w3id.org/rains#ChangeLog</li>
+<li>Added: domain https://w3id.org/rains#OverrideResult</li>
+<li>Added: InverseObjectProperties InverseObjectProperties(&lt;https://w3id.org/rains#hasJustification&gt; &lt;https://w3id.org/rains#isJustificationOf&gt;)</li>
+</ul>
+</li>
+<li><a href="#isExplanationOf">https://w3id.org/rains#isExplanationOf</a>
+<ul>
+<li>Added: InverseObjectProperties InverseObjectProperties(&lt;https://w3id.org/rains#hasExplanation&gt; &lt;https://w3id.org/rains#isExplanationOf&gt;)</li>
+</ul>
+</li>
+<li><a href="#isJustificationOf">https://w3id.org/rains#isJustificationOf</a>
+<ul>
+<li>Added: InverseObjectProperties InverseObjectProperties(&lt;https://w3id.org/rains#hasJustification&gt; &lt;https://w3id.org/rains#isJustificationOf&gt;)</li>
+</ul>
+</li>
+</ul></details><h3 id="changeDataProp" class="list">Data Properties</h3>
+<details><summary><u>Added data properties</u></summary>
+<ul><li><a href="#hasConfidenceLevel">https://w3id.org/rains#hasConfidenceLevel</a>
+<ul>
+<li>Added: Range http://www.w3.org/2001/XMLSchema#decimal</li>
+<li>Added: Domain https://w3id.org/rains#SystemOutput</li>
+</ul>
+</li>
+<li><a href="#isFinalSystemOutput">https://w3id.org/rains#isFinalSystemOutput</a>
+<ul>
+<li>Added: Domain https://w3id.org/rains#SystemOutput</li>
+<li>Added: Range http://www.w3.org/2001/XMLSchema#boolean</li>
+</ul>
+</li>
+</ul></details></div>

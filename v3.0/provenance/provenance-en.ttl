@@ -1,0 +1,16 @@
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix dc: <http://purl.org/dc/terms/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix : <> .
+<..\index-en.html> a prov:Entity;
+	 dc:title "The RAInS Ontology";
+	 prov:wasAttributedTo <https://www.abdn.ac.uk/ncs/profiles/iman.naja>;
+	 dc:creator <https://www.abdn.ac.uk/ncs/profiles/iman.naja>;
+	 prov:wasAttributedTo <https://www.abdn.ac.uk/ncs/profiles/milan.markovic/>;
+	 dc:creator <https://www.abdn.ac.uk/ncs/profiles/milan.markovic/>;
+	 prov:wasAttributedTo <https://www.abdn.ac.uk/ncs/profiles/p.edwards>;
+	 dc:creator <https://www.abdn.ac.uk/ncs/profiles/p.edwards>;
+	 prov:wasAttributedTo <https://github.com/dgarijo/Widoco/>,<http://www.essepuntato.it/lode/>;
+	 prov:specializationOf <https://w3id.org/rains#>;
+	 prov:wasRevisionOf <https://w3id.org/rains/v2.0>;
+.
