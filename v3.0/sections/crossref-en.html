@@ -431,9 +431,7 @@ This section provides details for each class and property defined by The RAInS O
   <h3>Change Log<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
   <p><strong>IRI:</strong> https://w3id.org/rains#ChangeLog</p>
   <div class="comment">
-   <span class="markdown">A specific type of planned Log that describes any change from a design specification or guideline or suggested action/recommendation/decision by the AI system. It is expected to be the result of any accountable action that has an input a design specification or a guideline or specified expected outcome. It is advisable that the information realization corresponding to the Change Log contains the following information elements: 
-    1. Change 
-    2. ChangeJustification.</span>
+   <span class="markdown">A specific type of planned Log that describes any change from a design specification or guideline or suggested action/recommendation/decision by the AI system. It is expected to be the result of any accountable action that has an input a design specification or a guideline or specified expected outcome. It is advisable that the information realization corresponding to the Change Log contains the following information elements: 1. Change 2. ChangeJustification.</span>
   </div>
   <dl class="description">
    <dt>
@@ -529,9 +527,7 @@ This section provides details for each class and property defined by The RAInS O
   <h3>Compliance Specification<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
   <p><strong>IRI:</strong> https://w3id.org/rains#ComplianceSpecification</p>
   <div class="comment">
-   <span class="markdown">A specific type of design specification which represents the description of a compliance requirement. It is advisable that the information realization corresponding to SystemPurposeSpecification contains the following information elements 
-    1. HardLaw 
-    2. SoftLaw</span>
+   <span class="markdown">A specific type of design specification which represents the description of a compliance requirement. It is advisable that the information realization corresponding to SystemPurposeSpecification contains the following information elements 1. HardLaw 2. SoftLaw</span>
   </div>
   <dl class="description">
    <dt>
@@ -567,11 +563,7 @@ This section provides details for each class and property defined by The RAInS O
   <h3>Configuration Data<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
   <p><strong>IRI:</strong> https://w3id.org/rains#ConfigurationData</p>
   <div class="comment">
-   <span class="markdown">A specific type of planned System Data which represents the data used to configure the AI System, either during the Operation stage or after the system has been installed during the Deployment Stage. For example, in a facial recognition AI system, the configuration data may be the WiFi password or a picture of the user. It is advisable that the information realization corresponding to the Configuration Data variable contains the following information elements: 
-    1. Data Item 
-    2. DataCollectionProcedure 
-    3. DataPreprocesingProcedure. 
-    4. Affected Agent if the AI System is involved in making decisions/recommendations/actions affecting human users and the configuration data can be linked to the affected human (e.g. in a facial recognition AI System, the Affected Agent is also the user who configured the AI System to recognise their face).</span>
+   <span class="markdown">A specific type of planned System Data which represents the data used to configure the AI System, either during the Operation stage or after the system has been installed during the Deployment Stage. For example, in a facial recognition AI system, the configuration data may be the WiFi password or a picture of the user. It is advisable that the information realization corresponding to the Configuration Data variable contains the following information elements: 1. Data Item 2. DataCollectionProcedure 3. DataPreprocesingProcedure. 4. Affected Agent if the AI System is involved in making decisions/recommendations/actions affecting human users and the configuration data can be linked to the affected human (e.g. in a facial recognition AI System, the Affected Agent is also the user who configured the AI System to recognise their face).</span>
   </div>
   <dl class="description">
    <dt>
@@ -751,27 +743,7 @@ This section provides details for each class and property defined by The RAInS O
   <h3>Dataset Component<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
   <p><strong>IRI:</strong> https://w3id.org/rains#DatasetComponent</p>
   <div class="comment">
-   <span class="markdown">A specific type of planned sao:AccountableResult which represents the description of an realized dataset, including its characteristics, how it was collected, its risks, etc. The dataset component represents a collection of collected and pre-processed data. Once it is split, the subclasses TestingDataset, ValidationDataset, and EvaluationDataset can be used. It is advisable that the information realization corresponding to the DatasetComponent variable contains the following information elements: 
-    1. Dataset, the realized dataset should be an instance of RealizedObject. If the implementation deviates from the design, then an additional dataset should be indicated as an instance of ExcludedObject. 
-    2. Data Item 
-    3. DatasetCharacteristic 
-    4. DataCollectionProcedure 
-    5. DataPreprocesingProcedure 
-    6. Funding 
-    7. Limitation 
-    8. Risk and its subclass Bias 
-    9. Tradeoff 
-    10. The subclasses of Use Case, namely IncorrectUseCase and IntendedUseCase 
-    11. IntendedUserGroup 
-    12. The subclasses of Compliance Entity, namely, Hard Law and SoftLaw 
-    13. LicenseDocument 
-    
-    It is discouraged that the information realization corresponding to the DatasetComponent variable contains the following information elements: 
-    1. Model 
-    2. SupportingInfrastructure 
-    3. The following subclasses of Realizable Object Characteristic: Algorithm, ModelCharacteristic, SystemAuditMechanism, SystemExplanationMechanism, System Feedback from User Mechanism, System Human Oversight Mechanism, and SystemSecurityMechanism 
-    4. The subclasses of Guidance,namely, System Deployment Guidance, SystemInstallationGuidance, UserTrainingGuidance, SystemOperationGuidance, SystemUsageGuidance, and SystemMaintenanceGuidance 
-    5. NotificationProof</span>
+   <span class="markdown">A specific type of planned sao:AccountableResult which represents the description of an realized dataset, including its characteristics, how it was collected, its risks, etc. The dataset component represents a collection of collected and pre-processed data. Once it is split, the subclasses TestingDataset, ValidationDataset, and EvaluationDataset can be used. It is advisable that the information realization corresponding to the DatasetComponent variable contains the following information elements: 1. Dataset, the realized dataset should be an instance of RealizedObject. If the implementation deviates from the design, then an additional dataset should be indicated as an instance of ExcludedObject. 2. Data Item 3. DatasetCharacteristic 4. DataCollectionProcedure 5. DataPreprocesingProcedure 6. Funding 7. Limitation 8. Risk and its subclass Bias 9. Tradeoff 10. The subclasses of Use Case, namely IncorrectUseCase and IntendedUseCase 11. IntendedUserGroup 12. The subclasses of Compliance Entity, namely, Hard Law and SoftLaw 13. LicenseDocument It is discouraged that the information realization corresponding to the DatasetComponent variable contains the following information elements: 1. Model 2. SupportingInfrastructure 3. The following subclasses of Realizable Object Characteristic: Algorithm, ModelCharacteristic, SystemAuditMechanism, SystemExplanationMechanism, System Feedback from User Mechanism, System Human Oversight Mechanism, and SystemSecurityMechanism 4. The subclasses of Guidance,namely, System Deployment Guidance, SystemInstallationGuidance, UserTrainingGuidance, SystemOperationGuidance, SystemUsageGuidance, and SystemMaintenanceGuidance 5. NotificationProof</span>
   </div>
   <dl class="description">
    <dt>
@@ -798,25 +770,7 @@ This section provides details for each class and property defined by The RAInS O
   <h3>Dataset Specification<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
   <p><strong>IRI:</strong> https://w3id.org/rains#DatasetSpecification</p>
   <div class="comment">
-   <span class="markdown">A specific type of design specification which represents the description of planned requirements, characteristics, risks, etc. related to a dataset (e.g., a training dataset for ML model) expected to be used as part of the AI system life cycle. It is advisable that the information realization corresponding to DatasetSpecification contains the following information elements 
-    1. Dataset 
-    2. DataItem 
-    3. DatasetCharacteristic 
-    4. DataCollectionProcedure and and if applicable DataCollectionSoftware 
-    5. DataPreprocesingProcedure and if applicable DataPreprocessingSoftware 
-    6. Funding 
-    7. Limitation 
-    8. Risk and its subclass Bias, and if applicable FairnessOrBiasDetectionSoftware 
-    9. Tradeoff 
-    10. IntendedUserGroup 
-    11. The subclasses of Use Case, namely IncorrectUseCase and IntendedUseCase 
-    12. The subclasses of Compliance Entity, namely, Hard Law and SoftLaw 
-    13. LicenseDocument 
-    
-    It is discouraged that the information realization corresponding to the Dataset Specification contains the following information elements: 1. Model 2. SupportingInfrastructure 
-    3. The following subclasses of Realizable Object Characteristic: Algorithm, ModelCharacteristic, SystemAuditMechanism, SystemExplanationMechanism, System Feedback from User Mechanism, System Human Oversight Mechanism, and SystemSecurityMechanism 
-    4. The subclasses of Guidance,namely, System Deployment Guidance, SystemInstallationGuidance, UserTrainingGuidance, SystemOperationGuidance, SystemUsageGuidance, and SystemMaintenanceGuidance 
-    5. NotificationProof</span>
+   <span class="markdown">A specific type of design specification which represents the description of planned requirements, characteristics, risks, etc. related to a dataset (e.g., a training dataset for ML model) expected to be used as part of the AI system life cycle. It is advisable that the information realization corresponding to DatasetSpecification contains the following information elements 1. Dataset 2. DataItem 3. DatasetCharacteristic 3. DataCollectionProcedure and and if applicable DataCollectionSoftware 4. DataPreprocesingProcedure and if applicable DataPreprocessingSoftware 5. Funding 6. Limitation 7. Risk and its subclass Bias, and if applicable FairnessOrBiasDetectionSoftware 8. Tradeoff 9. IntendedUserGroup 10. The subclasses of Use Case, namely IncorrectUseCase and IntendedUseCase 11. The subclasses of Compliance Entity, namely, Hard Law and SoftLaw 12. LicenseDocument It is discouraged that the information realization corresponding to the Dataset Specification contains the following information elements: 1. Model 2. SupportingInfrastructure 3. The following subclasses of Realizable Object Characteristic: Algorithm, ModelCharacteristic, SystemAuditMechanism, SystemExplanationMechanism, System Feedback from User Mechanism, System Human Oversight Mechanism, and SystemSecurityMechanism 4. The subclasses of Guidance,namely, System Deployment Guidance, SystemInstallationGuidance, UserTrainingGuidance, SystemOperationGuidance, SystemUsageGuidance, and SystemMaintenanceGuidance 5. NotificationProof</span>
   </div>
   <dl class="description">
    <dt>
@@ -939,9 +893,7 @@ This section provides details for each class and property defined by The RAInS O
   <h3>Disclaimer Notification<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
   <p><strong>IRI:</strong> https://w3id.org/rains#DisclaimerNotification</p>
   <div class="comment">
-   <span class="markdown">A specific type of Notification which describes a disclaimer that the user is using or interacting with an AI System. Similar to Notification, it is advisable that the information realization corresponding to the Disclaimer Notification variable contains the following information elements: 
-    1. Affected Agent, describing the user who was notified. 
-    2. Notification Proof, documenting how the user was notified, e.g. a screenshot of the disclaimer shown to the user.</span>
+   <span class="markdown">A specific type of Notification which describes a disclaimer that the user is using or interacting with an AI System. Similar to Notification, it is advisable that the information realization corresponding to the Disclaimer Notification variable contains the following information elements: 1. Affected Agent, describing the user who was notified. 2. Notification Proof, documenting how the user was notified, e.g. a screenshot of the disclaimer shown to the user.</span>
   </div>
   <dl class="description">
    <dt>
@@ -956,9 +908,7 @@ This section provides details for each class and property defined by The RAInS O
   <h3>Error Notification<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
   <p><strong>IRI:</strong> https://w3id.org/rains#ErrorNotification</p>
   <div class="comment">
-   <span class="markdown">A specific type of Notification which represents a notification of an error which has occurred to the user. For example, if the input data could not be validated then this class is used to model the notification of the validation error to the user. Similar to Notification, it is advisable that the information realization corresponding to the Error Notification variable contains the following information elements: 
-    1. Affected Agent, describing the user who was notified. 
-    2. Notification Proof, documenting how the user was notified, e.g. a screenshot of the error notification shown to the user.</span>
+   <span class="markdown">A specific type of Notification which represents a notification of an error which has occurred to the user. For example, if the input data could not be validated then this class is used to model the notification of the validation error to the user. Similar to Notification, it is advisable that the information realization corresponding to the Error Notification variable contains the following information elements: 1. Affected Agent, describing the user who was notified. 2. Notification Proof, documenting how the user was notified, e.g. a screenshot of the error notification shown to the user.</span>
   </div>
   <dl class="description">
    <dt>
@@ -994,15 +944,7 @@ This section provides details for each class and property defined by The RAInS O
   <h3>Evaluation<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
   <p><strong>IRI:</strong> https://w3id.org/rains#Evaluation</p>
   <div class="comment">
-   <span class="markdown">A specific type of planned sao:AccountableResult which represents a high level reference to testing at least one component and recording the results of the test(s) (e.g. testing the model with a specified dataset) that is expected to be produced during the implementation stage. It is advisable that the information realization corresponding to the Evaluation variable contains the following information elements: 
-    1. Either an instance of mls:EvaluationProcedure (if it is the model being evaluated) or EvaluationProcedure (if it is not the ML model being evaluated). Either should also be an instance of RealizedObject. If the evaluation deviates from the design, then an additional instance of mls:EvaluationProcedure or EvaluationProcedure should be indicated as an instance of ExcludedObject. 
-    2. Either an instance of mls:EvaluationMeasure (if it is the model being evaluated) or EvaluationMeasure(if it is not the ML model being evaluated). If the evaluation deviates from the design, then an additional instance of mls:EvaluationMeasure or EvaluationMeasure should be indicated as an instance of ExcludedObject. 
-    3. Either an instance of mls:ModelEvaluation (if it is the model being evaluated) or EvaluationResult (if it is not the ML model being evaluated). If the evaluation deviates from the design, then an additional instance of mls:ModelEvaluation or EvaluationResult should be indicated as an instance of ExcludedObject. 
-    4. The subclasses of Compliance Entity, namely, Hard Law and SoftLaw 
-    
-    It is discouraged that the information realization corresponding to the Evaluation variable contains the following information elements: 
-    1. The subclasses of Guidance, namely, System Deployment Guidance, SystemInstallationGuidance, UserTrainingGuidance, SystemOperationGuidance, SystemUsageGuidance, and SystemMaintenanceGuidance 
-    2. Notification Proof</span>
+   <span class="markdown">A specific type of planned sao:AccountableResult which represents a high level reference to testing at least one component and recording the results of the test(s) (e.g. testing the model with a specified dataset) that is expected to be produced during the implementation stage. It is advisable that the information realization corresponding to the Evaluation variable contains the following information elements: 1. Either an instance of mls:EvaluationProcedure (if it is the model being evaluated) or EvaluationProcedure (if it is not the ML model being evaluated). Either should also be an instance of RealizedObject. If the evaluation deviates from the design, then an additional instance of mls:EvaluationProcedure or EvaluationProcedure should be indicated as an instance of ExcludedObject. 2. Either an instance of mls:EvaluationMeasure (if it is the model being evaluated) or EvaluationMeasure(if it is not the ML model being evaluated). If the evaluation deviates from the design, then an additional instance of mls:EvaluationMeasure or EvaluationMeasure should be indicated as an instance of ExcludedObject. 3. Either an instance of mls:ModelEvaluation (if it is the model being evaluated) or EvaluationResult (if it is not the ML model being evaluated). If the evaluation deviates from the design, then an additional instance of mls:ModelEvaluation or EvaluationResult should be indicated as an instance of ExcludedObject. 4. The subclasses of Compliance Entity, namely, Hard Law and SoftLaw It is discouraged that the information realization corresponding to the Evaluation variable contains the following information elements: 1. The subclasses of Guidance, namely, System Deployment Guidance, SystemInstallationGuidance, UserTrainingGuidance, SystemOperationGuidance, SystemUsageGuidance, and SystemMaintenanceGuidance 2. Notification Proof</span>
   </div>
   <dl class="description">
    <dt>
@@ -1161,19 +1103,7 @@ This section provides details for each class and property defined by The RAInS O
   <h3>Evaluation Specification<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
   <p><strong>IRI:</strong> https://w3id.org/rains#EvaluationSpecification</p>
   <div class="comment">
-   <span class="markdown">A specific type of design specification which represents the description of a planned evaluation process. It is advisable that the information realization corresponding to EvaluationSpecification contains the following information elements: 
-    1. Either an instance of mls:EvaluationProcedure (if it is the model being evaluated) or EvaluationProcedure (if it is not the ML model being evaluated). 
-    2. Either an instance of mls: EvaluationMeasure (if it is the model being evaluated) or EvaluationMeasure (if it is not the ML model being evaluated). 
-    3. If available: Either an instance of mls:ModelEvaluation (if it is the model being evaluated) or EvaluationResult (if it is not the ML model being evaluated). 
-    4. HardLaw 
-    5. SoftLaw 
-    
-    It is discouraged that the information realization corresponding to the Evaluation Specification contains the following information elements: 
-    1. SystemIntegrationGuidance 
-    2. SystemDeploymentGuidance 
-    3. SystemDocumentationGuidance 
-    4. SystemIntegrationGuidance 
-    5. SystemUsageGuidance</span>
+   <span class="markdown">A specific type of design specification which represents the description of a planned evaluation process. It is advisable that the information realization corresponding to EvaluationSpecification contains the following information elements: 1. Either an instance of mls:EvaluationProcedure (if it is the model being evaluated) or EvaluationProcedure (if it is not the ML model being evaluated). 2. Either an instance of mls: EvaluationMeasure (if it is the model being evaluated) or EvaluationMeasure (if it is not the ML model being evaluated). 3. If available: Either an instance of mls:ModelEvaluation (if it is the model being evaluated) or EvaluationResult (if it is not the ML model being evaluated). 4. HardLaw 5. SoftLaw It is discouraged that the information realization corresponding to the Evaluation Specification contains the following information elements: 1. SystemIntegrationGuidance 2. SystemDeploymentGuidance 3. SystemDocumentationGuidance 4. SystemIntegrationGuidance 5. SystemUsageGuidance</span>
   </div>
   <dl class="description">
    <dt>
@@ -1269,9 +1199,7 @@ This section provides details for each class and property defined by The RAInS O
   <h3>Explanation Notification<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
   <p><strong>IRI:</strong> https://w3id.org/rains#ExplanationNotification</p>
   <div class="comment">
-   <span class="markdown">A specific type of Notification which represents a notification of the explanation of an output to the user. Similar to Notification, it is advisable that the information realization corresponding to the Explanation Notification variable contains the following information elements: 
-    1. Affected Agent, describing the user who was notified. 
-    2. Notification Proof, documenting how the user was notified, e.g. a screenshot of the explanation shown to the user.</span>
+   <span class="markdown">A specific type of Notification which represents a notification of the explanation of an output to the user. Similar to Notification, it is advisable that the information realization corresponding to the Explanation Notification variable contains the following information elements: 1. Affected Agent, describing the user who was notified. 2. Notification Proof, documenting how the user was notified, e.g. a screenshot of the explanation shown to the user.</span>
   </div>
   <dl class="description">
    <dt>
@@ -1859,24 +1787,7 @@ This section provides details for each class and property defined by The RAInS O
   <h3>Model Component<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
   <p><strong>IRI:</strong> https://w3id.org/rains#ModelComponent</p>
   <div class="comment">
-   <span class="markdown">A specific type of planned sao:AccountableResult which represents the description of a realized ML Model, including it characteristics, performance, etc. It is advisable that the information realization corresponding to the ModelComponent variable contains the following information elements: 
-    1. Model: the realized model should be an instance of RealizedObject. If the implementation deviates from the design, then an additional model should be indicated as an instance of ExcludedObject. 
-    2. ModelCharacteristic 
-    3. Algorithm 
-    4. Limitation 
-    5. Risk and its subclass Bias 
-    6.Tradeoff 
-    7. IntendedUserGroup 
-    8. Parameter and its subclass Hyperparameter 
-    9. The subclasses of Use Case, namely IncorrectUseCase and IntendedUseCase 
-    10. The subclasses of Compliance Entity, namely, Hard Law and SoftLaw 
-    11. LicenseDocument 
-    12. Funding 
-    
-    It is discouraged that the information realization corresponding to the ModelComponent variable contains the following information elements: 
-    1. The following subclasses of Realizable Object Characteristic: SystemAuditMechanism, SystemExplanationMechanism, System Feedback from User Mechanism, System Human Oversight Mechanism, and SystemSecurityMechanism 
-    2. The subclasses of Guidance, namely, System Deployment Guidance, SystemInstallationGuidance, UserTrainingGuidance, SystemOperationGuidance, SystemUsageGuidance, and SystemMaintenanceGuidance 
-    3. Notification Proof</span>
+   <span class="markdown">A specific type of planned sao:AccountableResult which represents the description of a realized ML Model, including it characteristics, performance, etc. It is advisable that the information realization corresponding to the ModelComponent variable contains the following information elements: 1. Model: the realized model should be an instance of RealizedObject. If the implementation deviates from the design, then an additional model should be indicated as an instance of ExcludedObject. 2. ModelCharacteristic 3. Algorithm 4. Limitation 5. Risk and its subclass Bias 6.Tradeoff 7. IntendedUserGroup 8. Parameter and its subclass Hyperparameter 9. The subclasses of Use Case, namely IncorrectUseCase and IntendedUseCase 10. The subclasses of Compliance Entity, namely, Hard Law and SoftLaw 11. LicenseDocument 12. Funding It is discouraged that the information realization corresponding to the ModelComponent variable contains the following information elements: 1. The following subclasses of Realizable Object Characteristic: SystemAuditMechanism, SystemExplanationMechanism, System Feedback from User Mechanism, System Human Oversight Mechanism, and SystemSecurityMechanism 2. The subclasses of Guidance, namely, System Deployment Guidance, SystemInstallationGuidance, UserTrainingGuidance, SystemOperationGuidance, SystemUsageGuidance, and SystemMaintenanceGuidance 3. Notification Proof</span>
   </div>
   <dl class="description">
    <dt>
@@ -1933,25 +1844,7 @@ This section provides details for each class and property defined by The RAInS O
   <h3>Model Specification<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
   <p><strong>IRI:</strong> https://w3id.org/rains#ModelSpecification</p>
   <div class="comment">
-   <span class="markdown">A specific type of design specification which represents the description of planned requirements, characteristics, performance, etc. related to an AI model. It is advisable that the information realization corresponding to ModelSpecification contains the following information elements: 
-    1. Model 
-    2. ModelCharacteristic 
-    3. Algorithm 
-    4. Limitation 
-    5. Risk and its subclass Bias, and if applicable FairnessOrBiasDetectionSoftware 
-    6.Tradeoff 
-    7. IntendedUserGroup 
-    8. Parameter and its subclass Hyperparameter 
-    9. The subclasses of Use Case, namely IncorrectUseCase and IntendedUseCase 
-    10. The subclasses of Compliance Entity, namely, Hard Law and SoftLaw 
-    11. LicenseDocument 
-    12. Funding 
-    
-    It is discouraged that the information realization corresponding to the ModelSpecification contains the following information elements: 
-    1. The following subclasses of Realizable Object Characteristic: SystemAuditMechanism, SystemExplanationMechanism, System Feedback from User Mechanism, System Human Oversight Mechanism, and SystemSecurityMechanism 
-    2. The subclasses of Guidance, namely, System Deployment Guidance, SystemInstallationGuidance, UserTrainingGuidance, SystemOperationGuidance, SystemUsageGuidance, and SystemMaintenanceGuidance 
-    3. Notification Proof 
-    4. Installation Log</span>
+   <span class="markdown">A specific type of design specification which represents the description of planned requirements, characteristics, performance, etc. related to an AI model. It is advisable that the information realization corresponding to ModelSpecification contains the following information elements: 1. Model 2. ModelCharacteristic 3. Algorithm 4. Limitation 5. Risk and its subclass Bias, and if applicable FairnessOrBiasDetectionSoftware 6.Tradeoff 7. IntendedUserGroup 8. Parameter and its subclass Hyperparameter 9. The subclasses of Use Case, namely IncorrectUseCase and IntendedUseCase 10. The subclasses of Compliance Entity, namely, Hard Law and SoftLaw 11. LicenseDocument 12. Funding It is discouraged that the information realization corresponding to the ModelSpecification contains the following information elements: 1. The following subclasses of Realizable Object Characteristic: SystemAuditMechanism, SystemExplanationMechanism, System Feedback from User Mechanism, System Human Oversight Mechanism, and SystemSecurityMechanism 2. The subclasses of Guidance, namely, System Deployment Guidance, SystemInstallationGuidance, UserTrainingGuidance, SystemOperationGuidance, SystemUsageGuidance, and SystemMaintenanceGuidance 3. Notification Proof 4. Installation Log</span>
   </div>
   <dl class="description">
    <dt>
@@ -1972,9 +1865,7 @@ This section provides details for each class and property defined by The RAInS O
   <h3>Notification<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
   <p><strong>IRI:</strong> https://w3id.org/rains#Notification</p>
   <div class="comment">
-   <span class="markdown">A specific type of planned System Data which describes a notification presented to the user of the AI System. This class has three subclasses: Disclaimer Notification, Error Notification, and Explanation Notification. It is advisable that the information realization corresponding to the Notification variable contains the following information elements: 
-    1. Affected Agent, describing the user who was notified. 
-    2. Notification Proof, documenting how the user was notified, e.g. a screenshot of the a disclaimer shown to the user.</span>
+   <span class="markdown">A specific type of planned System Data which describes a notification presented to the user of the AI System. This class has three subclasses: Disclaimer Notification, Error Notification, and Explanation Notification. It is advisable that the information realization corresponding to the Notification variable contains the following information elements: 1. Affected Agent, describing the user who was notified. 2. Notification Proof, documenting how the user was notified, e.g. a screenshot of the a disclaimer shown to the user.</span>
   </div>
   <dl class="description">
    <dt>
@@ -2379,11 +2270,7 @@ This section provides details for each class and property defined by The RAInS O
   <h3>Runtime Input Data<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
   <p><strong>IRI:</strong> https://w3id.org/rains#RuntimeInputData</p>
   <div class="comment">
-   <span class="markdown">A specific type of planned System Data which represents the data used to operate the AI System during the Operation stage. For example, in a facial recognition AI system, the runtime data may be the picture of the user, the sensor data, and the environment data. It is advisable that the information realization corresponding to the Runtime Input Data variable contains the following information elements: 
-    1. Data Item 
-    2. DataCollectionProcedure 
-    3. DataPreprocesingProcedure. 
-    4. Affected Agent if the AI System is involved in making decisions/recommendations/actions affecting human users and the input data can be linked to the affected human (whether they are a user or not).</span>
+   <span class="markdown">A specific type of planned System Data which represents the data used to operate the AI System during the Operation stage. For example, in a facial recognition AI system, the runtime data may be the picture of the user, the sensor data, and the environment data. It is advisable that the information realization corresponding to the Runtime Input Data variable contains the following information elements: 1. Data Item 2. DataCollectionProcedure 3. DataPreprocesingProcedure. 4. Affected Agent if the AI System is involved in making decisions/recommendations/actions affecting human users and the input data can be linked to the affected human (whether they are a user or not).</span>
   </div>
   <dl class="description">
    <dt>
@@ -2491,18 +2378,7 @@ This section provides details for each class and property defined by The RAInS O
   <h3>Supporting Infrastructure Component<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
   <p><strong>IRI:</strong> https://w3id.org/rains#SupportingInfrastructureComponent</p>
   <div class="comment">
-   <span class="markdown">A specific type of planned sao:AccountableResult which represents the characteristics, performance, etc. related to all the implemented hardware and software 'plumbing' that is not generally considered part of the AI processes, however, may also be source of erroneous behaviour in AI systems. It is advisable that the information realization corresponding to the SupportingInfrastructureComponent variable contains the following information elements: 
-    1. SupportingInfrastructure, the realized supporting infrastructure should be an instance of RealizedObject. If the implementation deviates from the design, then an additional upporting infrastructure should be indicated as an instance of ExcludedObject. 
-    2. Limitation 
-    3. Risk its subclass Bias and FairnessOrBiasDetectionSoftware if applicable 
-    4. Tradeoff 
-    5. SystemAuditMechanism 
-    6. SystemExplanationMechanims 
-    7. SystemFeedbackfromUserMechanism 
-    8. SystemHumanOversightMechanism 
-    9. SystemSecurityMechanism 
-    10. The subclasses of Compliance Entity, namely, Hard Law and SoftLaw 
-    11. The subclasses of Use Case, namely IncorrectUseCase and IntendedUseCase</span>
+   <span class="markdown">A specific type of planned sao:AccountableResult which represents the characteristics, performance, etc. related to all the implemented hardware and software 'plumbing' that is not generally considered part of the AI processes, however, may also be source of erroneous behaviour in AI systems. It is advisable that the information realization corresponding to the SupportingInfrastructureComponent variable contains the following information elements: 1. SupportingInfrastructure, the realized supporting infrastructure should be an instance of RealizedObject. If the implementation deviates from the design, then an additional upporting infrastructure should be indicated as an instance of ExcludedObject. 2. Limitation 3. Risk its subclass Bias and FairnessOrBiasDetectionSoftware if applicable 4. Tradeoff 5. SystemAuditMechanism 6. SystemExplanationMechanims 7. SystemFeedbackfromUserMechanism 8. SystemHumanOversightMechanism 9. SystemSecurityMechanism 10. The subclasses of Compliance Entity, namely, Hard Law and SoftLaw 11. The subclasses of Use Case, namely IncorrectUseCase and IntendedUseCase</span>
   </div>
   <dl class="description">
    <dt>
@@ -2523,18 +2399,7 @@ This section provides details for each class and property defined by The RAInS O
   <h3>Supporting Infrastructure Specification<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
   <p><strong>IRI:</strong> https://w3id.org/rains#SupportingInfrastructureSpecification</p>
   <div class="comment">
-   <span class="markdown">A specific type of design specification which represents the specification description of planned requirements, characteristics, performance, etc. related to all the hardware and software 'plumbing' that is not generally considered part of the AI processes, however, may also be source of erroneous behaviour in AI systems. It is advisable that the information realization corresponding to SupportingInfrastructureSpecification contains the following information elements: 
-    1. SupportingInfrastructure 
-    2. SystemAuditMechanism 
-    3. SystemExplanationMechanim 
-    4. SystemFeedbackfromUserMechanism
-    5. SystemHumanOversightMechanism 
-    6. SystemSecurityMechanism 
-    7. Limitation 
-    8. Risk and its subclass Bias 
-    9. Tradeoff 
-    10. The subclasses of Compliance Entity, namely, Hard Law and SoftLaw 
-    11. The subclasses of Use Case, namely IncorrectUseCase and IntendedUseCase</span>
+   <span class="markdown">A specific type of design specification which represents the specification description of planned requirements, characteristics, performance, etc. related to all the hardware and software 'plumbing' that is not generally considered part of the AI processes, however, may also be source of erroneous behaviour in AI systems. It is advisable that the information realization corresponding to SupportingInfrastructureSpecification contains the following information elements: 1. SupportingInfrastructure 2. SystemAuditMechanism 3. SystemExplanationMechanim 4. SystemFeedbackfromUserMechanism 5. SystemHumanOversightMechanism 6. SystemSecurityMechanism 7. Limitation 8. Risk and its subclass Bias 9. Tradeoff 10. The subclasses of Compliance Entity, namely, Hard Law and SoftLaw 11. The subclasses of Use Case, namely IncorrectUseCase and IntendedUseCase</span>
   </div>
   <dl class="description">
    <dt>
@@ -2651,9 +2516,7 @@ This section provides details for each class and property defined by The RAInS O
   <h3>System Deployment Guideline<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
   <p><strong>IRI:</strong> https://w3id.org/rains#SystemDeploymentGuideline</p>
   <div class="comment">
-   <span class="markdown">A specific type of :Guideline which represents the description of guidelines for the Deployment stage of the AI System. It is advisable that the information realization corresponding to the System Deployment Guideline variable contains the following information elements: 
-    1. SystemInstallationGuidance 
-    2. UserTrainingGuidance</span>
+   <span class="markdown">A specific type of :Guideline which represents the description of guidelines for the Deployment stage of the AI System. It is advisable that the information realization corresponding to the System Deployment Guideline variable contains the following information elements: 1. SystemInstallationGuidance 2. UserTrainingGuidance</span>
   </div>
   <dl class="description">
    <dt>
@@ -2812,9 +2675,7 @@ This section provides details for each class and property defined by The RAInS O
   <h3>System Operation Guideline<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
   <p><strong>IRI:</strong> https://w3id.org/rains#SystemOperationGuideline</p>
   <div class="comment">
-   <span class="markdown">A specific type of :Guideline which represents the description of guidelines for the Operation stage of the AI System. Typically, such guidance takes the form of a manual. It is advisable that the information realization corresponding to the System Operation Guideline variable contains the following information elements: 
-    1. SystemUsageGuidance 
-    2. SystemMaintenanceGuidance</span>
+   <span class="markdown">A specific type of :Guideline which represents the description of guidelines for the Operation stage of the AI System. Typically, such guidance takes the form of a manual. It is advisable that the information realization corresponding to the System Operation Guideline variable contains the following information elements: 1. SystemUsageGuidance 2. SystemMaintenanceGuidance</span>
   </div>
   <dl class="description">
    <dt>
@@ -2868,9 +2729,7 @@ This section provides details for each class and property defined by The RAInS O
   <h3>System Purpose Specification<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
   <p><strong>IRI:</strong> https://w3id.org/rains#SystemPurposeSpecification</p>
   <div class="comment">
-   <span class="markdown">A specific type of design specification which represents the description of the purpose(s) for which an AI system is designed and used for. It is advisable that the information realization corresponding to SystemPurposeSpecification contains the following information elements 
-    1. IntendedUserGroup 
-    2. The subclasses of Use Case, namely IncorrectUseCase and IntendedUseCase</span>
+   <span class="markdown">A specific type of design specification which represents the description of the purpose(s) for which an AI system is designed and used for. It is advisable that the information realization corresponding to SystemPurposeSpecification contains the following information elements 1. IntendedUserGroup 2. The subclasses of Use Case, namely IncorrectUseCase and IntendedUseCase</span>
   </div>
   <dl class="description">
    <dt>
@@ -3158,9 +3017,7 @@ This section provides details for each class and property defined by The RAInS O
   <h3>Validation<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
   <p><strong>IRI:</strong> https://w3id.org/rains#Validation</p>
   <div class="comment">
-   <span class="markdown">A specific type of planned System Data which represents the information related to validating Configuration Data, Runtime Input Data, Model Output, or System Output.. It is advisable that the information realization corresponding to the Validation variable contains the following information elements: 
-    1. Validation Result 
-    2. Affected Agent if the AI System is involved in making decisions/recommendations/actions affecting human users.</span>
+   <span class="markdown">A specific type of planned System Data which represents the information related to validating Configuration Data, Runtime Input Data, Model Output, or System Output.. It is advisable that the information realization corresponding to the Validation variable contains the following information elements: 1. Validation Result 2. Affected Agent if the AI System is involved in making decisions/recommendations/actions affecting human users.</span>
   </div>
   <dl class="description">
    <dt>
